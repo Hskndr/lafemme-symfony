@@ -8,4 +8,4 @@ app_publication:
 
 app_homepage:
   path: /
-  defaults: { _controller: AppBundle:User:login }
+  defaults: { _controller: AppBundle:HomePage:homePage }

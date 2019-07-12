@@ -1,0 +1,43 @@
+/* Fonts */
+@font-face {
+    font-family: Futura Md BT;
+    font-style: normal;
+    src: local('Futura Md BT'), url('../font/futura_lt_bt_light-webfont.woff') format('woff');
+}
+
+/* GENERAL */
+
+
+
+/* HEADER */
+
+
+#avatar-content {
+    background-color: #fff;
+    border-radius: 500px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+    margin-right: 12px;
+    margin-top: -7px;
+}
+#avatar {
+    height: 100%;
+    text-align: center;
+}
+
+/* REGISTER */
+.box-form{
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    padding: 20px;
+    padding-top: 0px;
+    margin: 0px auto;
+    float: none;
+}
+
+.box-form input{
+    margin-bottom: 10px;
+}
+
