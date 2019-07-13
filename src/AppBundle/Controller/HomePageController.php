@@ -10,7 +10,6 @@ class HomePageController extends Controller
 {
 //    ROUTING TO LOGIN
     public function homePageAction(Request $request){
-        echo "Action Home Page";
-        die();
+        return $this->render('AppBundle:HomePage:home-page.html.twig');
     }
 }

@@ -188,5 +188,12 @@ class UserController extends Controller
         ));
     }
 
+// PEOPLE SECTION: FIND OTHER USERS
+
+public function usersAction(Request $request){
+
+        var_dump("Users_action");
+        die();
+}
 
 }
