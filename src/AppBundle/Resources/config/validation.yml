@@ -1,0 +1,9 @@
+BackendBundle\Entity\User:
+  properties:
+    nick:
+      - NotBlank: {message: "Field can not be empty!"}
+    email:
+      - NotBlank: {message: "Field can not be empty!"}
+      - Email:
+          message: The email {{ value }} is not valid
+          checkMX: true

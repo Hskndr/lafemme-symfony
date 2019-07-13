@@ -8,14 +8,11 @@
 /* GENERAL */
 body{
     background-color: #eee;
-    
 }
-
 
 /* HEADER */
 
-
-#avatar-content {
+.navbar-collapse .avatar {
     background-color: #fff;
     border-radius: 500px;
     width: 30px;
@@ -23,9 +20,9 @@ body{
     overflow: hidden;
     float: left;
     margin-right: 12px;
-    margin-top: -7px;
+    margin-top: -5px;
 }
-#avatar {
+.navbar-collapse .avatar img {
     height: 100%;
     text-align: center;
 }
