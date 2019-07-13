@@ -141,9 +141,8 @@ class UserController extends Controller
 
                 $user_isset = $query->getResult();
 
-                if (($user->getEmail() == $user_isset[0]->getEmail() &&
-                        $user->getNick() == $user_isset[0]->getNick()) ||
-                    count($user_isset) == 0) {
+                if (count($user_isset) == 0 || ($user->getEmail() == $user_isset[0]->getEmail() &&
+                        $user->getNick() == $user_isset[0]->getNick())) {
                     //UPLOAD FILE
                     $file = $form["image"]->getData();
 
@@ -151,8 +150,8 @@ class UserController extends Controller
                         //  CHECK FILE EXTENSION
                         $ext = $file->guessExtension();
                         if ($ext == 'jpg' || $ext == 'jpeg' || $ext == 'png' || $ext == 'gif') {
-                            $file_name = $user->getId().time().'.'.$ext;
-                            $file->move("uploads/user",$file_name);
+                            $file_name = $user->getId() . time() . '.' . $ext;
+                            $file->move("uploads/user", $file_name);
 
                             $user->setImage($file_name);
                         }
@@ -190,10 +189,24 @@ class UserController extends Controller
 
 // PEOPLE SECTION: FIND OTHER USERS
 
-public function usersAction(Request $request){
+    public function usersAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $dql = "SELECT u FROM BackendBundle:User u";
+        $query = $em->createQuery($dql);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, $request->query->getInt('page', 1), 5
+        );
+
+        return $this->render('AppBundle:User:users.html.twig',array(
+            'pagination' => $pagination
+        ));
 
         var_dump("Users_action");
         die();
-}
+    }
 
 }

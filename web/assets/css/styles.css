@@ -28,7 +28,7 @@ body{
 }
 
 /* REGISTER AND LOGIN*/
-.box-form{
+.box-form .box-default{
     background: #FFFFFF;
     border: 1px solid #ccc;
     padding: 20px;
@@ -41,3 +41,21 @@ body{
     margin-bottom: 10px;
 }
 
+/* PEOPLE */
+.user-item .avatar {
+    background-color: #cccccc;
+    border-radius: 550px;
+    widows: 75px;
+    height: 75px;
+    overflow: hidden;
+    float: left;
+}
+
+.user-item .avatar img {
+    height: 100%;
+    text-align: center;
+}
+.user-item .user-item-content {
+    padding: 10px;
+    margin-left: 85px;
+}
