@@ -7,9 +7,18 @@ use AppBundle\Form\RegisterType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
+
 
 class UserController extends Controller
 {
+    private $session;
+
+    public function __construct()
+    {
+        $this->session = new Session();
+    }
+
 //    ROUTING TO LOGIN
     public function loginAction(Request $request)
     {
@@ -52,6 +61,7 @@ class UserController extends Controller
 
                     if ($flush == null) {
                         $status = "Register Successfully ¡¡";
+                        $this->session->getFlashBag()->add("status", $status);
 
                         return $this->redirect("login");
                     } else {
@@ -65,6 +75,8 @@ class UserController extends Controller
             } else {
                 $status = "Register Failed !!";
             }
+
+            $this->session->getFlashBag()->add("status", $status);
         }
 
         return $this->render('AppBundle:User:register.html.twig', array(

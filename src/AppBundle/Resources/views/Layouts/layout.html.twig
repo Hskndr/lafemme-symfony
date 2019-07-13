@@ -45,7 +45,7 @@
                     <li><a href="{{ path("login") }}">
                             <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
                             &nbsp;Login</a></li>
-                    <li><a href="{{ path("login") }}">
+                    <li><a href="{{ path("register") }}">
                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                             &nbsp;Sign In</a></li>
                 </ul>
@@ -54,10 +54,27 @@
     </nav>
 </header>
 <section id="content">
+    {#  STATUS  NOTIFICATION #}
+    <div class="container">
+        <div class="col-lg-11">
+            {% for message in app.session.flashbag().get('status') %}
+                <div class="alert alert-success">{{ message }}</div>
+            {% endfor %}
+        </div>
+        <div class="clearfix"></div>
+    </div>
     {% block content %}
         {#      content default      #}
     {% endblock %}
-
+    {#  STATUS  NOTIFICATION #}
+    <div class="container">
+        <div class="col-lg-11">
+            {% for message in app.session.flashbag().get('status') %}
+                <div class="alert alert-success">{{ message }}</div>
+            {% endfor %}
+        </div>
+        <div class="clearfix"></div>
+    </div>
 </section>
 <footer class="col-lg-12">
     <hr>
