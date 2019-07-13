@@ -6,7 +6,10 @@
 }
 
 /* GENERAL */
-
+body{
+    background-color: #eee;
+    
+}
 
 
 /* HEADER */
@@ -27,7 +30,7 @@
     text-align: center;
 }
 
-/* REGISTER */
+/* REGISTER AND LOGIN*/
 .box-form{
     background: #FFFFFF;
     border: 1px solid #ccc;
