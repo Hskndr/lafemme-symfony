@@ -1,5 +1,13 @@
-{# HEREDA DE LAYOUT #}
+{# EXTENDS OF LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
+
+{# USE JAVASCRIPT #}
+{% block javascripts %}
+    {# ALLOW THE NEW SCRIPT DONT PUT THE PREVIOUS #}
+    {{ parent() }}
+    <script src="{{ asset('assets/js/custom/nick-test.js') }}"></script>
+{% endblock %}
+
 {% block content %}
     <div class="col-lg-6 box-form">
         <div class="box-form">
