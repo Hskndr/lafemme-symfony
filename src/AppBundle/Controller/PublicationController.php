@@ -10,7 +10,8 @@ class PublicationController extends Controller
 {
 //    ROUTING TO PUBLICATION
     public function indexAction(Request $request){
-        echo "Action Publication";
-        die();
+        return $this->render('AppBundle:Publication:home.html.twig');
+
     }
+
 }
