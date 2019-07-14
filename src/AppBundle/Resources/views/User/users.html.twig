@@ -1,5 +1,9 @@
 {# HEREDA DE LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('assets/js/custom/users.js') }}"></script>
+{% endblock %}
 {% block content %}
     <div class="container">
         <div class="col-lg-8 box-default">
