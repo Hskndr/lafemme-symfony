@@ -6,7 +6,7 @@
 }
 
 /* GENERAL */
-body{
+body {
     background-color: #eee;
 }
 
@@ -22,22 +22,22 @@ body{
     margin-right: 12px;
     margin-top: -5px;
 }
+
 .navbar-collapse .avatar img {
     height: 100%;
     text-align: center;
 }
 
 /* REGISTER AND LOGIN*/
-.box-form .box-default{
-    background: #FFFFFF;
-    border: 1px solid #ccc;
+.box-form .box-default {
+    background-color: #ffffff;
     padding: 20px;
     padding-top: 0px;
     margin: 0px auto;
     float: none;
 }
 
-.box-form input{
+.box-form input {
     margin-bottom: 10px;
 }
 
@@ -55,7 +55,61 @@ body{
     height: 100%;
     text-align: center;
 }
+
 .user-item .user-item-content {
     padding: 10px;
     margin-left: 85px;
 }
+
+/*HOME PUBLICATIONS*/
+#timeline {
+    margin-right: 20px;
+    background-color: white;
+    min-height: 750px;
+    padding-bottom: 20px;
+}
+
+.box-header {
+    border-bottom: 1px solid #cccccc;
+    padding: 10px;
+    padding-top: 0px;
+    font-size: 25px;
+}
+
+#user-card, #new-publication {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+#user-card .avatar {
+    background-color: #eeeeee;
+    border-radius: 500px;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    float: left;
+}
+
+#user-card .avatar img {
+    height: 100%;
+    text-align: center;
+}
+
+#user-card .name-surname {
+    float: left;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#user-card .name-surname a {
+    color: black;
+}
+
+#user-card .nickname a {
+    opacity: 0.7;
+}
+
+
+
+
