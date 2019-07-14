@@ -106,10 +106,9 @@ class PublicationController extends Controller
 
         $following_array = array();
         foreach ($following as $follow) {
-            $following_array[] = $$follow->getFollowed();
+            $following_array[] = $follow->getFollowed();
         }
-
-        $query = $publications_repo->createQueryBuilder('p')
+        $query=$publications_repo->createQueryBuilder('p')
             ->where('p.user = (:user_id) OR p.user IN (:following)')
             ->setParameter('user_id', $user->getId())
             ->setParameter('following', $following_array)
