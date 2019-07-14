@@ -7,7 +7,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * User
  */
-class User implements UserInterface
+class User implements UserInterface, \Serializable
 {
     /**
      * @var integer
@@ -180,6 +180,26 @@ class User implements UserInterface
         // USED LIKE A STRING
         return $this->name;
 
+    }
+
+    // METHOD SERIALIZABLE
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->email,
+            $this->password,
+        ));
+    }
+
+    public function unserialize($serialized)
+    {
+        list(
+            $this->id,
+            $this->email,
+            $this->password,
+            ) = unserialize($serialized);
     }
 
     /**
