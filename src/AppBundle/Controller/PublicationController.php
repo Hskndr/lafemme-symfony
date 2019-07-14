@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Form\PublicationType;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 class PublicationController extends Controller
@@ -51,7 +52,7 @@ class PublicationController extends Controller
                 if (!empty($doc) && $doc != null) {
                     $ext = $doc->guessExtension();
                     if ($ext == 'pdf') {
-                        $file_name = $user->getId().time().".".$ext;
+                        $file_name = $user->getId() . time() . "." . $ext;
                         $doc->move("uploads/documents/images", $file_name);
 
                         $publication->setDocument($file_name);
@@ -91,7 +92,8 @@ class PublicationController extends Controller
     }
 
     // QUERY TO GET THE PUBLICATIONS
-    public function getPublications($request){
+    public function getPublications($request)
+    {
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
 
@@ -100,28 +102,51 @@ class PublicationController extends Controller
 
         // Query
 
-        $following = $following_repo->findBy(array('user'=> $user));
+        $following = $following_repo->findBy(array('user' => $user));
 
         $following_array = array();
-        foreach($following as $follow){
+        foreach ($following as $follow) {
             $following_array[] = $$follow->getFollowed();
         }
 
         $query = $publications_repo->createQueryBuilder('p')
             ->where('p.user = (:user_id) OR p.user IN (:following)')
-            ->setParameter('user_id',$user->getId())
-            ->setParameter('following',$following_array)
-            ->orderBy('p.id','DESC')
+            ->setParameter('user_id', $user->getId())
+            ->setParameter('following', $following_array)
+            ->orderBy('p.id', 'DESC')
             ->getQuery();
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query,
-            $request->query->getInt('page',1),
+            $request->query->getInt('page', 1),
             5
         );
         return $pagination;
 
     }
 
+// REMOVE PUBLICATIONS
+
+    public function removePublicationAction(Request $request, $id = null)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $publication_repo = $em->getRepository('BackendBundle:Publication');
+        $publication = $publication_repo->find($id);
+        $user = $this->getUser();
+        if ($user->getId() == $publication->getUser()->getId()) {
+
+            $em->remove($publication);
+            $flush = $em->flush();
+
+            if ($flush == null) {
+                $status = 'Publication Trashed';
+            } else {
+                $status = 'Publication Not Trashed';
+            }
+        } else {
+            $status = 'Publication Not Trashed';
+        }
+        return new Response($status);
+    }
 }
