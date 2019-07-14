@@ -33,20 +33,50 @@ $(document).ready(function () {
 
 // FOLLOW FUNCTION BUTTON
 function buttons() {
+    //BUTTON LIKE, METHOD TOOLTIP FROM BOOTSTRAP
+    $('[data-toggle="tooltip"]').tooltip();
+
     // SHOW AND HIDE IMAGE
     $(".btn-img").unbind("click").click(function () {
         $(this).parent().find('.pub-image').fadeToggle();
     });
     // REMOVE PUBLICATIONS
-    $(".btn-delete-pub").unbind('click').click(function(){
-       $(this).parent().parent().addClass('hidden');
+    $(".btn-delete-pub").unbind('click').click(function () {
+        $(this).parent().parent().addClass('hidden');
 
-       $.ajax({
-           url: URL+'/publication/remove/'+$(this).attr("data-id"),
-           type: 'GET',
-           success: function (response) {
-               console.log(response);
-           }
-       })
+        $.ajax({
+            url: URL + '/publication/remove/' + $(this).attr("data-id"),
+            type: 'GET',
+            success: function (response) {
+                console.log(response);
+            }
+        })
+    });
+
+    // LIKES
+    $(".btn-like").unbind('click').click(function () {
+        $(this).addClass("hidden");
+        $(this).parent().find('.btn-unlike').removeClass("hidden");
+
+        $.ajax({
+            url: URL + '/like/' + $(this).attr("data-id"),
+            type: 'GET',
+            success: function (response) {
+                console.log(response);
+            }
+        })
+    });
+
+    $(".btn-unlike").unbind('click').click(function () {
+        $(this).addClass("hidden");
+        $(this).parent().find('.btn-like').removeClass("hidden");
+
+        $.ajax({
+            url: URL + '/unlike/' + $(this).attr("data-id"),
+            type: 'GET',
+            success: function (response) {
+                console.log(response);
+            }
+        })
     });
 }
