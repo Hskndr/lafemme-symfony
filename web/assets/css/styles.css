@@ -63,6 +63,10 @@ a:hover {
 }
 
 /* PEOPLE AND TIMELINE*/
+.user_link {
+    color: #444444;
+}
+
 .user-item .avatar,
 .publication-item .avatar {
     background-color: #cccccc;
@@ -144,29 +148,26 @@ a:hover {
     margin-top: 10px;
 }
 
-#user-card .following-data a{
+#user-card .following-data a {
     color: #444444;
     text-decoration: none;
 }
 
-#user-card .following-data a:hover{
-    color: black!important;
-
-    /**/
-    background-color: hotpink !important;
+#user-card .following-data a:hover {
+    color: black !important;
 }
 
-#user-card .following-data .label-stat{
+#user-card .following-data .label-stat {
     display: block;
 }
 
-#user-card .following-data .number-stat{
+#user-card .following-data .number-stat {
     display: block;
     font-size: 16px;
     font-weight: bold;
 }
 
-    /*  PUBLICATIONS */
+/*  PUBLICATIONS */
 .pub-name-link {
     font-weight: bold;
     color: black;
@@ -209,3 +210,64 @@ a:hover {
     color: red !important;
 }
 
+/* PROFILES STYLES */
+.profile-box {
+    padding: 20px;
+    margin: 0px auto;
+    float: none;
+}
+
+.profile-box > .avatar {
+    background: #eee;
+    border-radius: 1000px;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.profile-box > .avatar img {
+    height: 100%;
+    text-align: center;
+}
+
+.profile-box .name-surname {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.profile-box .bio {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-box #user_stats {
+    margin: 0px auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    width: 52%;
+    text-align: center !important;
+}
+
+.profile-box #user_stats .following-data {
+    float: left;
+}
+
+.profile-box #user_stats a {
+    color: #444;
+}
+
+.profile-box #user_stats .label-stat {
+    display: block;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.profile-box #user_stats .number-stat {
+    font-weight: bold;
+}
