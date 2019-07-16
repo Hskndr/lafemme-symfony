@@ -241,7 +241,8 @@ class UserController extends Controller
             $user_repo = $em->getRepository('BackendBundle:User');
             $user = $user_repo->findOneBy(array("nick" => $nickname));
         } else {
-            $user = $this->getDoctrine();
+             $user = $this->getUser();
+            // review $user = $this->getDoctrine();
         }
         if (empty($user) || !is_object($user)) {
             return $this->redirect($this->generateUrl('home_publications'));
