@@ -40,6 +40,13 @@ class FollowingController extends Controller
         $flush = $em->flush();
 
         if ($flush == null) {
+
+            $notification = $this->get('app.notification_service');
+            $notification->set(
+                $followed,
+                'follow', $user->getId()
+            );
+
             $status = "Following";
         } else {
             $status = "Not Following";

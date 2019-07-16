@@ -30,6 +30,14 @@ class LikeController extends Controller
         $flush = $em->flush();
 
         if ($flush == null) {
+//            NOTIFICATION SERVICES
+            $notification = $this->get('app.notification_service');
+            $notification->set(
+                $publication->getUser(),
+                'like', $user->getId(),
+                $publication->getId()
+            );
+            // NORMAL CODE
             $status = 'like it!';
         } else {
             $status = 'like failed!';
