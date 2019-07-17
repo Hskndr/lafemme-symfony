@@ -93,10 +93,86 @@ class PrivateMessageController extends Controller
 
         }
 
+        $private_messages = $this->getPrivateMessages($request);
+        $this->setReaded($em, $user);
         return $this->render('AppBundle:PrivateMessage:index.html.twig', array(
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'pagination' => $private_messages
         ));
     }
+
+    //LIST SENT MESSAGES
+    public function sendedAction(Request $request)
+    {
+        $private_messages = $this->getPrivateMessages($request, "sended");
+
+        return $this->render('AppBundle:PrivateMessage:sended.html.twig', array(
+            'pagination' => $private_messages
+        ));
+    }
+
+    public function getPrivateMessages($request, $type = null)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $user = $this->getUser();
+        $user_id = $user->getId();
+
+        if ($type == "sended") {
+            $dql = "SELECT p FROM BackendBundle:PrivateMessage p WHERE"
+                . " p.emitter = $user_id ORDER BY p.id DESC";
+        } else {
+            $dql = "SELECT p FROM BackendBundle:PrivateMessage p WHERE"
+                . " p.receiver = $user_id ORDER BY p.id DESC";
+        }
+        $query = $em->createQuery($dql);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1),
+            5
+        );
+        return $pagination;
+    }
+
+    // NOTIFICATION PRIVATE MESSAGES
+    public function notReadedAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+
+        $private_message_repo = $em->getRepository('BackendBundle:PrivateMessage');
+        $count_not_readed_msg = count($private_message_repo->findBy(array(
+            'receiver' => $user,
+            'readed' => 0
+        )));
+
+        return new Response($count_not_readed_msg);
+    }
+
+    private function setReaded($em, $user)
+    {
+        $private_message_repo = $em->getRepository('BackendBundle:PrivateMessage');
+        $messages = $private_message_repo->findBy(array(
+            'receiver' => $user,
+            'readed' => 0
+        ));
+
+        foreach ($messages as $msg) {
+            $msg->setReaded(1);
+            $em->persist($msg);
+        }
+            $flush = $em->flush();
+
+            if ($flush == null) {
+                $result = true;
+            } else {
+                $result = false;
+            }
+            return $result;
+
+        }
 
 // END CLASS
 }

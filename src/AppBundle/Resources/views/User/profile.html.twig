@@ -3,6 +3,7 @@
 
 {% block javascripts %}
     {{ parent() }}
+    <script type="text/javascript" src="{{ asset('assets/js/custom/buttons-following.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/custom/profile.js') }}"></script>
 {% endblock %}
 
@@ -20,6 +21,46 @@
 
 
         <div class="name-surname">
+
+            {# BUTTON FOLLOW UNFOLLO#}
+
+            {% if app.user.id != user.id %}
+                <div class="buttons-following">
+
+                    {% if  user|following(app.user)== true %}
+                        <button class="" btn btn-sm btn-disable disable>
+                            Follow you
+                        </button>
+                    {% else %}
+                        <button class="" btn btn-sm btn-disable disable>
+                            Not follow you
+                        </button>
+                    {% endif %}
+
+                    <button class="btn btn-sm btn-success btn-follow
+                                        {% if app.user | following(user) ==true %}
+                                            hidden
+                                        {% endif %} "
+                            data-followed="{{ user.id }}">
+                                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true">
+                                        follow
+                                    </span>
+                    </button>
+
+                    <button class="btn btn-sm btn-default btn-unfollow
+                                        {% if app.user | following(user) ==false %}
+                                            hidden
+                                        {% endif %}"
+
+                            data-followed="{{ user.id }}">
+                                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true">
+                                        unfollow
+                                    </span>
+                    </button>
+                </div>
+            {% endif %}
+
+
             <h2>{{ user.name }} {{ user.surname }}</h2>
             <div class="clearfix"></div>
             <span class="nickname">

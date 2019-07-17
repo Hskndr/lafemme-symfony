@@ -22,6 +22,7 @@ $(document).ready(function () {
     //METHOD TO FOLLOW BUTTON
     ias.on('ready', function (event) {
         buttons();
+        followButtons()
     });
 
     ias.on('rendered', function (event) {
@@ -79,4 +80,5 @@ function buttons() {
             }
         })
     });
-}
+
+    }

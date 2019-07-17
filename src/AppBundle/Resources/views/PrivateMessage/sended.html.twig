@@ -7,21 +7,19 @@
 {% block content %}
     <div class="col-lg-12 box-default">
         <h1 class="box-header">
-            Mail Box
+            Mail Box (Sent box)
         </h1>
-        <div class="col-lg-6 box-private-message">
-            <h4> Send new message</h4>
-            {{ form_start(form,{'action':'','method':'POST'}) }}
-            {{ form_end(form) }}
+        <div class="col-lg-7">
 
-            <br>
-            <a href="{{ path('private_message_sended') }}" class="btn btn-warning">Sent Messages</a>
+            <a href="{{ path('private_message_index') }}" class="btn btn-primary">
+                Send a Message
+            </a>
         </div>
 
-        {#        HSKNDR: QUICK WAY, REMOVE AND DEVELOP A NEW PAGE#}
-        <div class="col-lg-6">
-            <h4>Inbox</h4>
+        <div class="col-lg-7">
+            <h4>Sent box</h4>
             <hr>
+            {# HSKNDR: REVIEW TO DEVELOP AN INCLUDE #}
             <div class="box-content box-message">
 
                 {% for message in pagination %}
