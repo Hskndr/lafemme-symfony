@@ -53,7 +53,7 @@ class PublicationController extends Controller
                     $ext = $doc->guessExtension();
                     if ($ext == 'pdf') {
                         $file_name = $user->getId() . time() . "." . $ext;
-                        $doc->move("uploads/documents/images", $file_name);
+                        $doc->move("uploads/publications/documents", $file_name);
 
                         $publication->setDocument($file_name);
                     } else {
