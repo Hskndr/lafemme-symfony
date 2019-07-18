@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6c0ac252-1782-4d10-9e1a-51b7ca0962d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/PrivateMessage/sended.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/PrivateMessage/sended.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/homepage.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/homepage.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,40 +57,37 @@
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="la-femme" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+        <entry file="file://$PROJECT_DIR$/web/assets/js/custom/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+            <state relative-caret-position="46">
+              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="73" column="49" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
+              <folding>
+                <element signature="e#630#944#0#Twig" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/PrivateMessage/sended.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="42" column="92" selection-start-line="42" selection-start-column="92" selection-end-line="42" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/assets/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5733">
-              <caret line="273" column="26" selection-start-line="273" selection-start-column="26" selection-end-line="273" selection-end-column="26" />
+            <state relative-caret-position="217">
+              <caret line="171" column="18" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -107,6 +106,7 @@
       <find>follo</find>
       <find>pagina</find>
       <find>pagin</find>
+      <find>btn-l</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/HomePageController.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -126,7 +125,6 @@
         <option value="$PROJECT_DIR$/web/assets/js/custom/users.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/PublicationType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Twig/LongTimeExtension.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/publication.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/LikedController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Twig/LikedExtension.php" />
         <option value="$PROJECT_DIR$/web/assets/js/custom/home.js" />
@@ -148,15 +146,12 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/notification.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Services/NotificationService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/NotificationController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PrivateMessagesController.php" />
         <option value="$PROJECT_DIR$/src/BackendBundle/Resources/config/doctrine/User.orm.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/PrivateMessageType.php" />
         <option value="$PROJECT_DIR$/src/BackendBundle/Repository/UserRepository.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/PrivateMessage/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/private_message.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/js/custom/common.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PrivateMessageController.php" />
@@ -164,8 +159,13 @@
         <option value="$PROJECT_DIR$/web/assets/js/custom/buttons-following.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/js/custom/profile.js" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/PrivateMessage/sended.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/homepage.yml" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/publication.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -211,9 +211,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="760" />
+    <option name="x" value="753" />
     <option name="y" value="23" />
-    <option name="width" value="676" />
+    <option name="width" value="683" />
     <option name="height" value="807" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -224,7 +224,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -274,23 +273,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="la-femme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="la-femme" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="la-femme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="la-femme" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,51 +283,6 @@
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="la-femme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="la-femme" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Like" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="la-femme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="la-femme" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Notification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="la-femme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="la-femme" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="PrivateMessage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="la-femme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="la-femme" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Publication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="la-femme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="la-femme" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="la-femme" type="b2602c69:ProjectViewProjectNode" />
@@ -425,6 +362,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -488,12 +426,13 @@
       <workItem from="1563257385140" duration="12548000" />
       <workItem from="1563345239370" duration="10395000" />
       <workItem from="1563411669648" duration="1247000" />
-      <workItem from="1563431838289" duration="1470000" />
+      <workItem from="1563431838289" duration="1811000" />
+      <workItem from="1563436055441" duration="3375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145316000" />
+    <option name="totallyTimeSpent" value="149032000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,12 +444,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="760" y="23" width="676" height="807" extended-state="0" />
+    <frame x="753" y="23" width="683" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.533123" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865952" weight="0.7628705" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.5013405" side_tool="true" weight="0.3110048" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.28255528" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -520,8 +459,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923833" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3280098" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.26412776" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.46638054" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.37339056" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.46638054" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3676681" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -596,27 +535,11 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/uploads/publications/images/51563113506.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/publications/images/51563113599.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/publications/images/51563113740.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/uploads/publications/images/51563113941.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/uploads/publications/images/51563113997.jpeg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/publication.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
     </entry>
     <entry file="das://aa9cedac-cd52-4545-ac7e-22a7f5706caa/schema/lafemme1new/table/publications">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -658,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/custom/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://aa9cedac-cd52-4545-ac7e-22a7f5706caa/schema/lafemme1new/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="77e5eb8c-77ca-4d01-bea7-b5cdb70dfe43">
@@ -674,34 +590,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/user.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackendBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Like/likes.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/like.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/following.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="73" selection-start-line="14" selection-end-line="16" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -758,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/notification.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -776,13 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -857,37 +735,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#630#944#0#Twig" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/PrivateMessage/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/private_message.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#77#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -938,13 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5733">
-          <caret line="273" column="26" selection-start-line="273" selection-start-column="26" selection-end-line="273" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/User/users.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -952,24 +796,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        <state relative-caret-position="5733">
+          <caret line="273" column="26" selection-start-line="273" selection-start-column="26" selection-end-line="273" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/PrivateMessage/sended.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="42" column="92" selection-start-line="42" selection-start-column="92" selection-end-line="42" selection-end-column="92" />
+        <state relative-caret-position="245">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackendBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/following.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="73" selection-start-line="14" selection-end-line="16" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/user.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#77#0#PHP" expanded="true" />
+            <element signature="e#3103#3141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/publication.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HomePageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/private_message.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/notification.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/like.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/homepage.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/js/custom/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="73" column="49" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
+          <folding>
+            <element signature="e#630#944#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="171" column="18" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
         </state>
       </provider>
     </entry>

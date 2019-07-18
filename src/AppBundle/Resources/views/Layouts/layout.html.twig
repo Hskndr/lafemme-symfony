@@ -29,10 +29,13 @@
 </head>
 
 <body>
+{# PUT LA FEMME HEADERS #}
 <header>
     <h1>LA FEMME</h1>
+    {# NAV BAR #}
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
+            {# MAIN BUTTON  #}
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapse" data-toggle="collapse"
                         data-targert="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -41,12 +44,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                {#CHECK THIS LINK WHEN THE USER IS LOGGED IN#}
+                {# HSKNDR SET HOME OTHER PAGE WITHOUT NAVBAR#}
                 <a href="{{ path("app_homepage") }}" class="navbar-brand">
                     <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
                     La Femme
                 </a>
             </div>
+
+            {# LOGIN AND REGISTER BUTTONS  #}
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     {% if app.user == null %}
@@ -72,6 +78,9 @@
                                 People
                             </a>
                         </li>
+
+                        {# SEARCH SECTION  #}
+
                         <li>
                             <form action="{{ path('user_search') }}" class="navbar-form navbar-left" method="get">
                                 <div class="form-group">
@@ -85,6 +94,9 @@
 
                     {% endif %}
                 </ul>
+
+                {# MESSAGES AND NOTIFICATIONS BUTTONS  #}
+
                 {% if app.user != null %}
                     <ul class="nav navbar-nav navbar-right">
 
@@ -105,6 +117,8 @@
                                 </span>
                             </a>
                         </li>
+
+                        {# PROFILE MENU, IT HOULD BE AN HAMBURGUER IN RESPONSIVE  #}
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -154,8 +168,13 @@
         </div>
     </nav>
 </header>
+
+{# SECTION OR MAIN  #}
+
 <section id="content">
+
     {#  STATUS  NOTIFICATION #}
+
     <div class="container">
         <div class="col-lg-11">
             {% for message in app.session.flashbag().get('status') %}

@@ -25,4 +25,5 @@ app_private_message:
 
 app_homepage:
   path: /
-  defaults: { _controller: AppBundle:HomePage:homePage }
+  # defaults: { _controller: AppBundle:HomePage:homePage }
+  defaults: { _controller: AppBundle:User:login }
