@@ -22,11 +22,11 @@ app_private_message:
   resource: "@AppBundle/Resources/config/routing/private_message.yml"
   prefix: /
 
-app_mainpage:
-  resource: "@AppBundle/Resources/config/routing/mainpage.yml"
-  prefix: /
+#app_mainpage:
+  #resource: "@AppBundle/Resources/config/routing/mainpage.yml"
+  #prefix: /
 
 app_homepage:
   path: /
-  # defaults: { _controller: AppBundle:HomePage:homePage }
-  defaults: { _controller: AppBundle:User:login }
+  defaults: { _controller: AppBundle:MainPage:mainPage }
+  #defaults: { _controller: AppBundle:User:login }

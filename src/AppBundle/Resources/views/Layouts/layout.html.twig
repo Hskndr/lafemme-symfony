@@ -34,7 +34,7 @@
 
     {# NAV BAR #}
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" id="main-nav">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 {# HSKNDR SET HOME OTHER PAGE WITHOUT NAVBAR#}
-                <a href="{{ path("main-page") }}" class="navbar-brand">
+                <a href="{{ path("app_homepage") }}" class="navbar-brand">
                     <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
                     La Femme
                 </a>
@@ -67,7 +67,7 @@
                     {% else %}
 
                     <li>
-                        <a href="{{ path("app_homepage") }}">
+                        <a href="{{ path("home_publications") }}">
                             <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                             Home
                         </a>
@@ -201,13 +201,13 @@
 
 {# SECTION OR MAIN  #}
 
-<section id="content" class="container ">
+<section id="content" class="container">
 
     {#  STATUS  NOTIFICATION #}
 
     <div class="container">
 
-        <div class="col-lg-11">
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
             {% for message in app.session.flashbag().get('status') %}
                 <div class="alert alert-success">{{ message }}</div>
             {% endfor %}

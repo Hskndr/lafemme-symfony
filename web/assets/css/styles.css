@@ -8,14 +8,13 @@
 /* GENERAL */
 body {
     background-color: rgba(32, 21, 61, 0.728) !important;
-
 }
 
 /* SECTION */
 #content {
     background-color: rgba(32, 21, 61, 0.728) !important;
     color: gray; /*CHANGE*/
-    width: 70%;
+    width: 95rem;
     margin-top: 0px;
     margin: auto;
     /*
@@ -318,6 +317,7 @@ a:hover {
 .box-private-message select {
     margin-bottom: 10px;
 }
+
 /* FUNCTIONALITY */
 .border {
     border: 1px solid gray;
