@@ -25,7 +25,7 @@ class UserType extends AbstractType
                 'label' => 'Username',
                 'required' => 'required',
                 'attr' => array(
-                    'class' => 'form-nick form-control '
+                    'class' => 'form-nick-edit form-control'
                 )
             ))
 
@@ -33,42 +33,42 @@ class UserType extends AbstractType
                 'label' => 'Name',
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-name form-control '
+                    'class' => 'form-name-edit form-control'
                 )
             ))
             ->add('surname', TextType::class, array(
                 'label' => 'Sur Name',
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-surname form-control '
+                    'class' => 'form-surname-edit form-control'
                 )
             ))
             ->add('country', TextType::class, array(
                 'label' => 'Country',
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-country form-control'
+                    'class' => 'form-country-edit form-control'
                 )
             ))
             ->add('state', TextType::class, array(
                 'label' => 'State',
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-state form-control'
+                    'class' => 'form-state-edit form-control'
                 )
             ))
             ->add('postalcode', TextType::class, array(
                 'label' => 'Postal Zip Code',
                 'required' => 'required',
                 'attr' => array(
-                    'class' => 'form-postal form-control'
+                    'class' => 'form-postal-edit form-control'
                 )
             ))
             ->add('datebirth', TextType::class, array(
                 'label' => 'Date of Birth',
                 'required' => 'required',
                 'attr' => array(
-                    'class' => 'form-date form-control'
+                    'class' => 'form-date-edit form-control'
                 )
             ))
             ->add('race', ChoiceType::class, array(
@@ -87,21 +87,21 @@ class UserType extends AbstractType
                 ],
                 'required' => 'required',
                 'attr' => array(
-                    'class' => 'form-race form-control'
+                    'class' => 'form-race-edit form-control'
                 )
             ))
             ->add('email', EmailType::class, array(
                 'label' => 'Email',
                 'required' => 'required',
                 'attr' => array(
-                    'class' => 'form-email form-control'
+                    'class' => 'form-email-edit form-control'
                 )
             ))
             ->add('bio', TextareaType::class, array(
                 'label' => 'Bio ',
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-bio form-control'
+                    'class' => 'form-bio-edit form-control'
                 )
             ))
             ->add('image', FileType::class, array(
@@ -109,7 +109,7 @@ class UserType extends AbstractType
                 'required' => false,
                 'data_class' => null,
                 'attr' => array(
-                    'class' => 'form-avatar form-control'
+                    'class' => 'form-avatar-edit form-control'
                 )
             ))
 //            OTHER FIELDS
@@ -126,7 +126,7 @@ class UserType extends AbstractType
                 ],
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-lookingfor form-control '
+                    'class' => 'form-lookingfor-edit form-control'
                 )
             ))
             ->add('bodytype', ChoiceType::class, array(
@@ -144,7 +144,7 @@ class UserType extends AbstractType
                 ],
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-bodytype form-control '
+                    'class' => 'form-bodytype-edit form-control'
                 )
             ))
             ->add('height', ChoiceType::class, array(
@@ -172,7 +172,7 @@ class UserType extends AbstractType
                 ],
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-height form-control '
+                    'class' => 'form-height-edit form-control'
                 )
             ))
             ->add('height', ChoiceType::class, array(
@@ -228,7 +228,7 @@ class UserType extends AbstractType
                 ],
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-height form-control '
+                    'class' => 'form-height-edit form-control'
                 )
             ))
             ->add('coloreyes', ChoiceType::class, array(
@@ -243,7 +243,7 @@ class UserType extends AbstractType
                 ],
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-eyes-color form-control '
+                    'class' => 'form-eyes-color-edit form-control'
                 )
             ))
             ->add('colorhair', ChoiceType::class, array(
@@ -259,7 +259,7 @@ class UserType extends AbstractType
                 ],
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-hair-color form-control '
+                    'class' => 'form-hair-color-edit form-control'
                 )
             ))
             ->add('hairlength', ChoiceType::class, array(
@@ -272,7 +272,7 @@ class UserType extends AbstractType
                 ],
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-hair-lenght form-control '
+                    'class' => 'form-hair-lenght-edit form-control'
                 )
             ))
             ->add('tatoos', ChoiceType::class, array(
@@ -284,7 +284,7 @@ class UserType extends AbstractType
                 ],
                 'required' => false,
                 'attr' => array(
-                    'class' => 'form-tattoo form-control '
+                    'class' => 'form-tattoo-edit form-control'
                 )
             ))
 
@@ -307,7 +307,7 @@ class UserType extends AbstractType
                 ],
                 'required' => 'required',
                 'attr' => array(
-                    'class' => 'form-relation form-control'
+                    'class' => 'form-relation-edit form-control'
                 )
             ])
             ->add('Save', SubmitType::class, array(

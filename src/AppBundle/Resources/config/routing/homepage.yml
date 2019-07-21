@@ -1,3 +1,0 @@
-homepage:
-  path: /main-page
-  defaults: { _controller: AppBundle:HomePage:homePage }

@@ -6,10 +6,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class HomePageController extends Controller
+class MainPageController extends Controller
 {
 //    ROUTING TO LOGIN
-    public function homePageAction(Request $request){
-        return $this->render('AppBundle:HomePage:home-page.html.twig');
+    public function mainPageAction(Request $request){
+        return $this->render('AppBundle:MainPage:main-page.html.twig');
+        // echo "main page";
+        // die();
     }
 }
