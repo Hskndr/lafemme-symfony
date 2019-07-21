@@ -24,16 +24,16 @@ class RegisterType extends AbstractType
                 'choices' => [
                     'Please Select' => 'select',
                     'Male' => [
-                        'Attached Male Seeking Female' => 'attached_male',
-                        'Male seeking Males' => 'male_males',
-                        'Sugar Daddies Seeking Females' => 'sugar_daddies',
-                        'Male Seeking Sugar Mommies' => 'male_sugarMommies',
+                        'Attached Male Seeking Female' => 'Attached Male Seeking Female',
+                        'Male seeking Males' => 'Male seeking Males',
+                        'Sugar Daddies Seeking Females' => 'Sugar Daddies Seeking Females',
+                        'Male Seeking Sugar Mommies' => 'Male Seeking Sugar Mommies',
                     ],
                     'female' => [
-                        'Attached Female Seeking Male' => 'attached_female',
-                        'Female seeking Females' => 'female_females',
-                        'Sugar Mommies Seeking Males' => 'sugar_mommies',
-                        'Female Seeking Sugar Daddies' => 'female_sugarDaddies',
+                        'Attached Female Seeking Male' => 'Attached Female Seeking Male',
+                        'Female seeking Females' => 'Female seeking Females',
+                        'Sugar Mommies Seeking Males' => 'Sugar Mommies Seeking Males',
+                        'Female Seeking Sugar Daddies' =>  'Female Seeking Sugar Daddies',
                     ],
                 ],
                 'required' => 'required',
@@ -50,7 +50,7 @@ class RegisterType extends AbstractType
 
             ))
             ->add('nick', TextType::class, array(
-                'label' => 'Nick',
+                'label' => 'Username',
                 'required' => 'required',
                 'attr' => array(
                     'class' => 'form-nick form-control nick-input'
@@ -98,30 +98,57 @@ class RegisterType extends AbstractType
                     'class' => 'form-age form-control'
                 )
             ))
-            ->add('zodiacsing', TextType::class, array(
+            ->add('zodiacsing', ChoiceType::class, array(
                 'label' => 'Zodiac Sign',
+                'choices' => [
+                    'Please Select' => 'select',
+                    'Aries' => 'aries',
+                    'Taurus' => 'taurus',
+                    'Gemini' => 'gemini',
+                    'Cancer' => 'cancer',
+                    'Leo' => 'leo',
+                    'Virgo' => 'virgo',
+                    'Libra' => 'libra',
+                    'Scorpio' => 'scorpio',
+                    'Sagittarius' => 'sagittarius',
+                    'Capricorn' => 'capricorn',
+                    'Aquarius' => 'aquarius',
+                    'Pisces' => 'pisces',
+                ],
                 'required' => 'required',
                 'attr' => array(
                     'class' => 'form-zodiac form-control'
                 )
             ))
-            ->add('race', TextType::class, array(
-                'label'=>'Race / Ethnic',
-                'required'=>'required',
+            ->add('race', ChoiceType::class, array(
+                'label' => 'Race / Ethnic',
+                'choices' => [
+                    'Please Select' => 'select',
+                    'Asian' => 'asian',
+                    'Black/African' => 'black-african',
+                    'Caucasian' => 'caucasian',
+                    'Hispanic/Latino' => 'hispanic-Latino',
+                    'Native American' => 'native-american',
+                    'Pacific Islander' => 'pacific-islander',
+                    'Mixed Race' => 'mixed-race',
+                    'Other' => 'other',
+
+                ],
+                'required' => 'required',
                 'attr' => array(
                     'class' => 'form-race form-control'
                 )
             ))
             ->add('email', EmailType::class, array(
-                'label'=>'Email',
-                'required'=>'required',
+                'label' => 'Email',
+                'required' => 'required',
                 'attr' => array(
                     'class' => 'form-email form-control'
                 )
             ))
             ->add('Signin', SubmitType::class, array(
                 "attr" => array(
-                    "class" => "form-submit btn btn-success"
+                    "class" => "form-submit-register btn btn-secondary"
                 )
             ));
     }

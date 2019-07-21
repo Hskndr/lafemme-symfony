@@ -1,0 +1,47 @@
+/*REGISTER STYLE*/
+
+.box-content-white {
+    background-color: white;
+    color: rgb(32, 21, 61);
+    padding: 20px;
+}
+.box-content-white p{
+    margin-top: 20px;
+    text-align: justify;
+}
+    /*IMAGE CONTENT*/
+
+.box-image img {
+    height: 150px;
+}
+
+/*FORM REGISTER*/
+.form-control {
+
+}
+
+.box-form .box-default-register {
+
+    padding: 20px;
+    padding-top: 0px;
+    margin: 0px auto;
+    float: none;
+
+
+}
+
+/*BUTTON*/
+.form-submit-register {
+    /* background-color: pink;*/
+    height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.form-submit-register:hover {
+    background-color: gray;
+    color: #FFFFFF;
+}
+
+
+

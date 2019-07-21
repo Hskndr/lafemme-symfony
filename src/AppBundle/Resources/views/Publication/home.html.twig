@@ -15,16 +15,26 @@
                 {% for publication in pagination %}
                     <div class="col-lg-12 publication-item">
                         <div class="avatar">
+                            {# AVATAR #}
                             {% if publication.user.image == null %}
-                                <img src="{{ asset('assets/images/default.png') }}" alt="">
+                                {# USER DEFAULT AVATAR #}
+                                {% if publication.user.gender == 'male' %}
+                                    <img src="{{ asset('assets/images/default.png') }}" alt=""
+                                         class="img-rounded h-100 w-100">
+                                {% else %}
+                                    <img src="{{ asset('assets/images/defaultF.png') }}" alt=""
+                                         class="img-rounded h-100 w-100">
 
+                                {% endif %}
                             {% else %}
-                                <img src="{{ asset('uploads/user/'~publication.user.image) }}" alt="">
+                                <img src="{{ asset('uploads/user/'~publication.user.image) }}" alt=""
+                                     class="img-rounded h-100 w-100">
                             {% endif %}
                         </div>
                         <div class="publication-item-content">
                             <p>
-                                <a class="pub-name-link" href="{{ path('user_profile',{'nickname':publication.user.nick}) }}">
+                                <a class="pub-name-link"
+                                   href="{{ path('user_profile',{'nickname':publication.user.nick}) }}">
                                     {{ publication.user.name }} {{ publication.user.surname }}
                                 </a>
                                 -
@@ -91,11 +101,17 @@
 
         <div id="user-card" class="col-lg-4 pull-left box-default">
             <div class="avatar">
+                {# AVATAR #}
                 {% if app.user.image == null %}
-                    <img src="{{ asset('assets/images/default.png') }}" alt="">
+                    {# USER DEFAULT AVATAR #}
+                    {% if app.user.gender == 'male' %}
+                        <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
+                    {% else %}
+                        <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
 
+                    {% endif %}
                 {% else %}
-                    <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="">
+                    <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="" class="img-rounded h-100 w-100">
                 {% endif %}
             </div>
 

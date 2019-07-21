@@ -7,7 +7,22 @@
 
 /* GENERAL */
 body {
-    background-color: #eee;
+    background-color: rgba(32, 21, 61, 0.728) !important;
+
+}
+
+/* SECTION */
+#content {
+    background-color: rgba(32, 21, 61, 0.728) !important;
+    color: gray; /*CHANGE*/
+    /*width: 70%;*/
+    margin-top: 0px;
+    margin: auto;
+    /*
+    border: 1px solid blue;
+    */
+    min-height: 100vh;
+
 }
 
 /* HEADER */
@@ -32,6 +47,9 @@ a:hover {
 }*/
 
 /*LA FEMME STYLES*/
+.navbar {
+    margin-bottom: 0px;
+}
 
 .navbar-collapse .avatar {
     background-color: #fff;
@@ -49,13 +67,31 @@ a:hover {
     text-align: center;
 }
 
+/* FOOTER */
+#footer {
+    background-color: rgba(0, 0, 0, 0.728) !important;
+    border-color: black;
+}
+
 /* REGISTER AND LOGIN*/
+.box-form {
+    /*
+    border: 1px solid red;
+    */
+    width: 100%;
+
+}
+
 .box-form .box-default {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     padding: 20px;
     padding-top: 0px;
     margin: 0px auto;
     float: none;
+    /*
+    border: 2px solid pink;
+    */
+
 }
 
 .box-form input {
@@ -271,12 +307,19 @@ a:hover {
 .profile-box #user_stats .number-stat {
     font-weight: bold;
 }
+
 .profile-box .name-surname .buttons-following {
     margin-top: 20px;
 }
+
 /* PRIVATE MESSAGES */
 .box-private-message input,
 .box-private-message textarea,
 .box-private-message select {
     margin-bottom: 10px;
+}
+/* FUNCTIONALITY */
+.border {
+    border: 1px solid gray;
+    margin: 5px;
 }

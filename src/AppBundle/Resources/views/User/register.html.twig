@@ -1,6 +1,13 @@
 {# EXTENDS OF LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
 
+{# USE STYLESHEET #}
+{% block stylesheets %}
+    {{ parent() }}
+    {#<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">#}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/register.css') }}">
+{% endblock %}
+
 {# USE JAVASCRIPT #}
 {% block javascripts %}
     {# ALLOW THE NEW SCRIPT DONT PUT THE PREVIOUS #}
@@ -9,9 +16,66 @@
 {% endblock %}
 
 {% block content %}
-    <div class="col-lg-6 box-form">
-        <div class="box-form">
-            <h2>Sign In</h2>
+    <div class="box-form">
+        {# LA FEMME CONTENT#}
+        <section class="box-content-white ">
+            <div class="">
+                <h5 class="text-center h2 mt-5 mb-5">
+                    How to Anonymously Safeguard Your Privacy
+                </h5>
+
+                <div class="row ">
+                    <div class="col-xs-6 col-md-4">
+                        <a href="#" class="thumbnail">
+                            <img src="{{ asset('assets/image/LF35.jpg') }}" class="img-responsive" alt="Responsive image">
+                        </a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <a href="#" class="thumbnail">
+                            <img src="{{ asset('assets/image/LF05.jpg') }}" class="img-responsive" alt="Responsive image">
+                        </a>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4">
+                        <a href="#" class="thumbnail">
+                            <img src="{{ asset('assets/image/LF36.jpg') }}" class="img-responsive" alt="Responsive image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="">
+                    <p class="h4 mt-3 mb-3"> Privacy is important because it provides functional benefits. For example,
+                        privacy
+                        can be followed and protected
+                        by being anonymous. Anonymity can allow the person to participate without a care in mind with La
+                        femme other
+                        members and families and friends
+                        . To ease any privacy concerns, we suggest
+                        creating a new email to sign up with La Femme. Gmail and Hotmail are free and do not require a
+                        home
+                        address or phone number.
+                    </p>
+                    <p class="h4 mt-3 mb-3"> When creating a new email, avoid using
+                        terms that may specifically identify you in any way. </p>
+                    <p class="h4 mt-3 mb-3"> While on La Femme, use our email
+                        system to
+                        avoid sharing your phone number, personal email or social media. Use your new La Femme email to
+                        fulfill
+                        all your dreams and fantasies with people you'll meet at La Femme! </p>
+
+                </div>
+            </div>
+        </section>
+        <div class="text-center">
+            <h2 class="h4 pb-3"> CREATE YOUR PROFILE </h2>
+            <p class="h5 pb-3"> Someone will acknowledge you with Desire, Passion and Excitement. </p>
+        </div>
+
+        <div class="box-default-register col-lg-8 col-md-8">
+
+
             <hr>
             {{ form_start(form, {'action':'', 'method':'POST'}) }}
             {{ form_errors(form) }}

@@ -21,7 +21,11 @@
                     <div class="col-lg-12 user-item">
                         <div class="avatar">
                             {% if user.image == null %}
-                                <img src="{{ asset('assets/images/default.png') }}" alt="">
+                                {% if user.gender == 'male' %}
+                                    <img src="{{ asset('assets/images/default.png') }}" alt="">
+                                {% else %}
+                                    <img src="{{ asset('assets/images/defaultF.png') }}" alt="">
+                                {% endif %}
 
                             {% else %}
                                 <img src="{{ asset('uploads/user/'~user.image) }}" alt="">

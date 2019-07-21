@@ -9,7 +9,7 @@
     {% block stylesheets %}
         {#      styles      #}
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">
+        {#<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">#}
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.css') }}">
     {% endblock %}
 
@@ -31,15 +31,16 @@
 <body>
 {# PUT LA FEMME HEADERS #}
 <header>
-    <h1>LA FEMME</h1>
+
     {# NAV BAR #}
+
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            {# MAIN BUTTON  #}
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapse" data-toggle="collapse"
-                        data-targert="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Navegation</span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -50,50 +51,60 @@
                     La Femme
                 </a>
             </div>
-
             {# LOGIN AND REGISTER BUTTONS  #}
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    {#  IF USER IS LOGGED OUT  #}
                     {% if app.user == null %}
-                        {#  LINK TO LOGIN  #}
-                        <li><a href="{{ path("login") }}">
-                                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-                                &nbsp;Login</a></li>
-                        {#  LINK TO REGISTER  #}
-                        <li><a href="{{ path("register") }}">
-                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                &nbsp;Sign In</a></li>
+                    {#  LINK TO LOGIN  #}
+                    <li><a href="{{ path("login") }}">
+                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                            &nbsp;Login</a></li>
+                    {#  LINK TO REGISTER  #}
+                    <li><a href="{{ path("register") }}">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            &nbsp;Sign In</a></li>
                     {% else %}
 
-                        <li>
-                            <a href="{{ path("app_homepage") }}">
-                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ path("user_list") }}">
-                                <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-                                People
-                            </a>
-                        </li>
+                    <li>
+                        <a href="{{ path("app_homepage") }}">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path("user_list") }}">
+                            <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                            People
+                        </a>
+                    </li>
 
-                        {# SEARCH SECTION  #}
+                    {# SEARCH SECTION  #}
 
-                        <li>
-                            <form action="{{ path('user_search') }}" class="navbar-form navbar-left" method="get">
-                                <div class="form-group">
-                                    <input type="text" name="search" class="form-control" placeholder="Search">
-                                </div>
-                                <button type="submit" class="btn btn-default">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
-                            </form>
-                        </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Search <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form action="{{ path('user_search') }}" class="navbar-form navbar-left" method="get">
+                                    <div class="form-group">
+                                        <input type="text" name="search" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </button>
+                                </form>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
 
-                    {% endif %}
+                        </ul>
+
+                        {% endif %}
+
                 </ul>
+
+
 
                 {# MESSAGES AND NOTIFICATIONS BUTTONS  #}
 
@@ -112,7 +123,7 @@
                         <li>
                             <a href="{{ path("notifications_page") }}">
                                 <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-                             Notifications
+                                Notifications
                                 <span class="label label-success label-notifications">
                                 </span>
                             </a>
@@ -124,12 +135,19 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-haspopup="true" aria-expanded="false">
                                 <div class="avatar">
-                                    {% if app.user.image == null %}
-                                        <img src="{{ asset('assets/images/default.png') }}" alt="">
+                                    {# AVATAR #}
 
-                                    {% else %}
-                                        <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="">
-                                    {% endif %}
+                                        {% if app.user.image == null %}
+                                            {# USER DEFAULT AVATAR #}
+                                            {% if app.user.gender =='male' %}
+                                                <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
+                                            {% else %}
+                                                <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
+
+                                            {% endif %}
+                                        {% else %}
+                                            <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="" class="img-rounded h-100 w-100">
+                                        {% endif %}
                                 </div>
                                 {{ app.user.name }} {{ app.user.surname }}
                                 <span class="caret"></span>
@@ -154,28 +172,41 @@
                                         Logout
                                     </a>
                                 </li>
+
+                                <li class="divider" role="separator"></li>
+
                                 <li>
                                     <a href="">
                                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                                         Help
                                     </a>
                                 </li>
+
+                                <li>
+                                    <a href="">
+                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                        Virtual Office
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 {% endif %}
-            </div>
-        </div>
+
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
     </nav>
 </header>
 
 {# SECTION OR MAIN  #}
 
-<section id="content">
+<section id="content" class="container ">
 
     {#  STATUS  NOTIFICATION #}
 
     <div class="container">
+
         <div class="col-lg-11">
             {% for message in app.session.flashbag().get('status') %}
                 <div class="alert alert-success">{{ message }}</div>
@@ -187,20 +218,14 @@
         {#      content default      #}
     {% endblock %}
     {#  STATUS  NOTIFICATION #}
-    <div class="container">
-        <div class="col-lg-11">
-            {% for message in app.session.flashbag().get('status') %}
-                <div class="alert alert-success">{{ message }}</div>
-            {% endfor %}
-        </div>
-        <div class="clearfix"></div>
-    </div>
+
 </section>
-<footer class="col-lg-12">
+<footer id="footer" class="container-fluid">
     <hr>
     <div class="container">
-        <p class="text-muted">Developer Hskndr</p>
+        <p class="text-muted border">Developer Hskndr</p>
     </div>
+
 
 </footer>
 </body>

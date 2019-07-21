@@ -1,0 +1,93 @@
+/*PROFILE STYLE*/
+.profile-box {
+    width: 100%;
+    padding: 1px;
+}
+
+.profile-content {
+    margin: 0;
+    background-color: #FFFFFF;
+    padding: 5px;
+}
+
+.content-avatar {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+}
+
+.avatar-profile img {
+    margin: auto;
+    height: 55%;
+    width: 55%;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+}
+
+.user-title {
+    font-size: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+/* GENDER  */
+.user-male {
+    background-color: gray;
+    border: #444444;
+}
+
+.user-female {
+    background-color: deeppink;
+    border: hotpink;
+}
+
+/* PROFILE-LABEL */
+.backg-dark {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+}
+
+.content-label-profile {
+    background-color: #FFFFFF;
+    margin: 5px;
+    height: 33px;
+}
+
+.label-profile {
+    background-color: #f6f6f6;
+    color: rgb(32, 18, 74);
+}
+
+.label-profile-info {
+    background-color: #ffffff;
+    color: #444444;
+}
+
+/* profile-buttons */
+.profile-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.profile-buttons button {
+    width: 200px;
+    margin: 1em 0em 1em 0em;
+    background-color: rgb(32, 18, 74);
+    border-color: white;
+    font-size: 1.3rem;
+}
+
+.htop {
+    background-color: rgb(32, 18, 74);
+    color: white;
+    margin-bottom: 0.5em;
+    border: 2px solid white;
+    padding: 0.5em, 0.5em, 0.5em, 0.5em;
+    height: 3em;
+}
+

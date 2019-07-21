@@ -7,197 +7,400 @@
     <script type="text/javascript" src="{{ asset('assets/js/custom/profile.js') }}"></script>
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {#      styles      #}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/profile.css') }}">
+{% endblock %}
+
 {% block content %}
     <div class="col-lg-10 box-default profile-box">
 
-        <div class="avatar">
-            {% if user.image == null %}
-                <img src="{{ asset('assets/images/default.png') }}" alt="">
+        <div class="row profile-content">
 
-            {% else %}
-                <img src="{{ asset('uploads/user/'~user.image) }}" alt="">
-            {% endif %}
-        </div>
+            <div class="col-xs-12 col-md-3 content-avatar">
 
+                {# AVATAR #}
+                <div class="avatar-profile">
+                    {% if user.image == null %}
+                        {# USER DEFAULT AVATAR #}
+                        {% if user.gender =='male' %}
+                            <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded">
+                        {% else %}
+                            <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded">
 
-        <div class="name-surname">
-
-            {# BUTTON FOLLOW UNFOLLO#}
-
-            {% if app.user.id != user.id %}
-                <div class="buttons-following">
-
-                    {% if  user|following(app.user)== true %}
-                        <button class="" btn btn-sm btn-disable disable>
-                            Follow you
-                        </button>
+                        {% endif %}
                     {% else %}
-                        <button class="" btn btn-sm btn-disable disable>
-                            Not follow you
-                        </button>
+                        <img src="{{ asset('uploads/user/'~user.image) }}" alt="" class="img-rounded">
                     {% endif %}
 
-                    <button class="btn btn-sm btn-success btn-follow
-                                        {% if app.user | following(user) ==true %}
-                                            hidden
-                                        {% endif %} "
-                            data-followed="{{ user.id }}">
-                                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true">
-                                        follow
-                                    </span>
-                    </button>
 
-                    <button class="btn btn-sm btn-default btn-unfollow
-                                        {% if app.user | following(user) ==false %}
-                                            hidden
-                                        {% endif %}"
-
-                            data-followed="{{ user.id }}">
-                                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true">
-                                        unfollow
-                                    </span>
-                    </button>
                 </div>
-            {% endif %}
+                {# LIKES #}
+                <div id="user_stats">
 
-
-            <h2>{{ user.name }} {{ user.surname }}</h2>
-            <div class="clearfix"></div>
-            <span class="nickname">
-                {{ user.nick }}
-            </span>
-            <div class="bio">
-                {{ user.bio }}
-            </div>
-            <div id="user_stats">
-
-                <!-- 1 -->
-                {% set user_stats = user|user_stats %}
-                <div class="following-data">
-                    <a href="{{ path('following_users',{'nickname':user.nick}) }}">
-                    <span class="label-stat">
-                        Following
-                    </span>
-                        <span class="number-stat">
-                        {{ user_stats.following }}
-                    </span>
-                    </a>
-                </div>
-                <!-- 2 -->
-                <div class="following-data">
-                    <a href="{{ path('followed_users',{'nickname':user.nick}) }}">
-                    <span class="label-stat">
-                        Followed
-                    </span>
-                        <span class="number-stat">
-                         {{ user_stats.followers }}
-                    </span>
-                    </a>
-                </div>
-                <!-- 3 -->
-                <div class="following-data">
-                    <a href="{{ path('user_profile',{'nickname':user.nick}) }}">
-                    <span class="label-stat">
-                        Publications
-                    </span>
-                        <span class="number-stat">
-                         {{ user_stats.publications }}
-                    </span>
-                    </a>
-                </div>
-                <!-- 4 -->
-                <div class="following-data">
-                    <a href="{{ path('user_likes',{'nickname':user.nick}) }}">
-                    <span class="label-stat">
-                        Likes
-                    </span>
-                        <span class="number-stat">
-                         {{ user_stats.likes }}
-                    </span>
-                    </a>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-
-        <div id="user-publication">
-            {% for publication in pagination %}
-                <div class="col-lg-12 publication-item">
-                    <div class="avatar">
-                        {% if publication.user.image == null %}
-                            <img src="{{ asset('assets/images/default.png') }}" alt="">
-
-                        {% else %}
-                            <img src="{{ asset('uploads/user/'~publication.user.image) }}" alt="">
-                        {% endif %}
+                    <!-- 1 -->
+                    {% set user_stats = user|user_stats %}
+                    <div class="">
+                        <a href="{{ path('following_users',{'nickname':user.nick}) }}">
+                            <span class="">Following</span>
+                            <span class="number-stat">{{ user_stats.following }}</span>
+                        </a>
                     </div>
-                    <div class="publication-item-content">
-                        <p>
-                            <a class="pub-name-link"
-                               href="{{ path('user_profile',{'nickname': publication.user.nick}) }}">
-                                {{ publication.user.name }} {{ publication.user.surname }}
-                            </a>
-                            -
-                            {{ publication.user.nick }}
-                            <span class="pub-date">
-                                   - {{ publication.createdAt | long_time }}
-                                </span>
-                        </p>
-                        <p>
-                            {{ publication.text }}
-                        </p>
-
-                        {% if(publication.user.id is defined ) and (publication.user.id == app.user.id) %}
-                            <span class="btn-delete-pub glyphicon glyphicon-trash" aria-hidden="true"
-                                  data-id="{{ publication.id }}"></span>
-                        {% endif %}
-
-                        {% if (publication.document is defined) and (publication.document != null) %}
-                            <a href="{{ asset('uploads/documents/images/'~publication.document) }}"
-                               class="btn-doc glyphicon glyphicon-save"
-                               aria-hidden="true" target="_blank"></a>
-                        {% endif %}
-
-                        {% if (publication.image is defined) and (publication.image != null) %}
-                            <span class="btn-img glyphicon glyphicon-picture" aria-hidden="true"></span>
-                            <div class="clearfix"></div>
-                            <div class="pub-image">
-                                <img src="{{ asset('uploads/publications/images/'~publication.image) }}"/>
-                            </div>
-                        {% endif %}
-
-                        <div class="pull-right like">
-                                <span data-id="{{ publication.id }}"
-                                      class="
-                                      {% if app.user|liked(publication) == true %}
-                                      hidden
-                                      {% endif %} btn-like glyphicon glyphicon-heart-empty"
-                                      aria-hidden="true"
-                                      data-toggle="tooltip"
-                                      data-placement="bottom"
-                                      title="like"></span>
-
-                            <span data-id="{{ publication.id }}"
-                                  class="
-                                      {% if app.user|liked(publication) == false %}
-                                      hidden
-                                      {% endif %}btn-unlike hidden active glyphicon glyphicon-heart-empty"
-                                  aria-hidden="true"
-                                  data-toggle="tooltip"
-                                  data-placement="bottom"
-                                  title="unlike"></span>
-                        </div>
+                    <!-- 2 -->
+                    <div class="">
+                        <a href="{{ path('followed_users',{'nickname':user.nick}) }}">
+                            <span class="">Followed</span>
+                            <span class="number-stat">{{ user_stats.followers }}</span>
+                        </a>
+                    </div>
+                    <!-- 3 -->
+                    <div class="">
+                        <a href="{{ path('user_profile',{'nickname':user.nick}) }}">
+                            <span class="">Publications</span>
+                            <span class="number-stat">{{ user_stats.publications }}</span>
+                        </a>
+                    </div>
+                    <!-- 4 -->
+                    <div class="">
+                        <a href="{{ path('user_likes',{'nickname':user.nick}) }}">
+                            <span class="">Likes</span>
+                            <span class="number-stat">{{ user_stats.likes }}</span>
+                        </a>
                     </div>
                     <div class="clearfix"></div>
-                    <hr>
                 </div>
-            {% endfor %}
 
-            <div class="navigation">
-                {{ knp_pagination_render(pagination) }}
             </div>
-            <div class="clearfix"></div>
+
+            <div class="col-xs-12 col-md-5 backg-dark">
+
+                <div class="col-12 user-title {% if user.gender == 'male' %} user-male {% elseif user.gender == 'female' %} user-female {% endif %}">
+                    {{ user.relationmatch }}
+                </div>
+
+                <div class="h4 ml-2">{{ user.name }} {{ user.surname }}</div>
+
+                <div class="row ">
+                    <div class="col-xs-4 col-lg-4">Member Since:</div>
+                    <div class="col-xs-8 col-lg-8 ">'register'</div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-4 col-lg-4">Looking for:</div>
+                    <div class="col-xs-8 col-lg-8 ">{{ user.lookingfor }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-4 col-lg-4 label-profile">Age:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.age }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-4 col-lg-4 label-profile">Zodiac Sign:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.zodiacsing }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-4 col-lg-4 label-profile">Body Type:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.bodytype }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-4 col-lg-4 label-profile">Heigth:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.height }}</div>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-4 backg-dark">
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-5 col-lg-5 label-profile">Weight:</div>
+                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.weight }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-5 col-lg-5 label-profile">Eyes Color:</div>
+                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.coloreyes }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-5 col-lg-5 label-profile">Hair Color:</div>
+                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.hairlength }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-5 col-lg-5 label-profile">Hair Lenght:</div>
+                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.hairlength }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-5 col-lg-5 label-profile">Race/Ethnic:</div>
+                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.race }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-5 col-lg-5 label-profile">Tattos:</div>
+                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.tatoos }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-5 col-lg-5 label-profile">Tattos:</div>
+                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.tatoos }}</div>
+                </div>
+
+                <div class="row content-label-profile">
+                    <div class="col-xs-5 col-lg-5 label-profile">Located in:</div>
+                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.country }}, {{ user.state }}</div>
+                </div>
+
+            </div>
         </div>
+
+        <div class="profile-buttons">
+
+            <button type="button" class="btn btn-primary btn-lg">Change ProfilePicture</button>
+            <button type="button" class="btn btn-primary btn-lg">Edit My Profile</button>
+            <button type="button" class="btn btn-primary btn-lg">Travel Notice</button>
+            <button type="button" class="btn btn-primary btn-lg">Control Center</button>
+
+        </div>
+
+        <div class="">
+            <h6 class="htop col-md-12 d-flex align-items-center">DESCRIBE YOURSELF(VES) "GREETING"</h6>
+
+            <div class="col-md-12 label-profile">
+                <p>I keep my self in good shape, don't smoke, only socially. After a few trips overseas i realized how
+                    much i was missing out in this boring life; so i decided to explore local and overseas communities
+                    and see if i can find the same kind of feelings, emotions, activities, and pleasures.</p>
+            </div>
+        </div>
+
+        <div>
+            <h6 class="htop col-md-12 d-flex align-items-center">WHAT ARE YOU LOOKING FOR?</h6>
+
+            <div class="col-md-12 label-profile">
+                <p>Hoping to meet a like-minded easy-going person that i can go out with and explore our erotic
+                    fantasies together.</p>
+            </div>
+        </div>
+
+        <div>
+            <h6 class="htop col-md-12 d-flex align-items-center">MY TRAVEL PLANS</h6>
+
+            <div class="col-md-12 label-profile">
+                <p>Odesa, Odesa Oblast, Ukraine <br> December 27, 2018 - December 29, 2018 <br><br> Sun, beach and
+                    exciting memories. Please let me know if you want to join.</p>
+            </div>
+        </div>
+
+
+        <hr>
+        {#ORIGINAL#}
+        {# <div class="avatar">
+             #}{# AVATAR #}{#
+             {% if user.image == null %}
+                 #}{# USER DEFAULT AVATAR #}{#
+                 {% if user.gender =='male' %}
+                     <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
+                 {% else %}
+                     <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
+
+                 {% endif %}
+             {% else %}
+                 <img src="{{ asset('uploads/user/'~user.image) }}" alt="" class="img-rounded h-100 w-100">
+             {% endif %}
+         </div>
+
+
+         <div class="name-surname">
+
+             #}{# BUTTON FOLLOW UNFOLLO#}{#
+
+             {% if app.user.id != user.id %}
+                 <div class="buttons-following">
+
+                     {% if  user|following(app.user)== true %}
+                         <button class="" btn btn-sm btn-disable disable>
+                             Follow you
+                         </button>
+                     {% else %}
+                         <button class="" btn btn-sm btn-disable disable>
+                             Not follow you
+                         </button>
+                     {% endif %}
+
+                     <button class="btn btn-sm btn-success btn-follow
+                                         {% if app.user | following(user) ==true %}
+                                             hidden
+                                         {% endif %} "
+                             data-followed="{{ user.id }}">
+                                     <span class="glyphicon glyphicon-ok-circle" aria-hidden="true">
+                                         follow
+                                     </span>
+                     </button>
+
+                     <button class="btn btn-sm btn-default btn-unfollow
+                                         {% if app.user | following(user) ==false %}
+                                             hidden
+                                         {% endif %}"
+
+                             data-followed="{{ user.id }}">
+                                     <span class="glyphicon glyphicon-remove-circle" aria-hidden="true">
+                                         unfollow
+                                     </span>
+                     </button>
+                 </div>
+             {% endif %}
+
+
+             <h2>{{ user.name }} {{ user.surname }}</h2>
+             <div class="clearfix"></div>
+             <span class="nickname">
+                 {{ user.nick }}
+             </span>
+             <div class="bio">
+                 {{ user.bio }}
+             </div>
+             <div id="user_stats">
+
+                 <!-- 1 -->
+                 {% set user_stats = user|user_stats %}
+                 <div class="following-data">
+                     <a href="{{ path('following_users',{'nickname':user.nick}) }}">
+                     <span class="label-stat">
+                         Following
+                     </span>
+                         <span class="number-stat">
+                         {{ user_stats.following }}
+                     </span>
+                     </a>
+                 </div>
+                 <!-- 2 -->
+                 <div class="following-data">
+                     <a href="{{ path('followed_users',{'nickname':user.nick}) }}">
+                     <span class="label-stat">
+                         Followed
+                     </span>
+                         <span class="number-stat">
+                          {{ user_stats.followers }}
+                     </span>
+                     </a>
+                 </div>
+                 <!-- 3 -->
+                 <div class="following-data">
+                     <a href="{{ path('user_profile',{'nickname':user.nick}) }}">
+                     <span class="label-stat">
+                         Publications
+                     </span>
+                         <span class="number-stat">
+                          {{ user_stats.publications }}
+                     </span>
+                     </a>
+                 </div>
+                 <!-- 4 -->
+                 <div class="following-data">
+                     <a href="{{ path('user_likes',{'nickname':user.nick}) }}">
+                     <span class="label-stat">
+                         Likes
+                     </span>
+                         <span class="number-stat">
+                          {{ user_stats.likes }}
+                     </span>
+                     </a>
+                 </div>
+                 <div class="clearfix"></div>
+             </div>
+         </div>
+
+
+         <div id="user-publication">
+             {% for publication in pagination %}
+                 <div class="col-lg-12 publication-item">
+                     <div class="avatar">
+                         {% if publication.user.image == null %}
+                             #}{# AVATAR #}{#
+
+                             #}{# USER DEFAULT AVATAR #}{#
+                             {% if publication.user.gender =='male' %}
+                                 <img src="{{ asset('assets/images/default.png') }}" alt=""
+                                      class="img-rounded h-100 w-100">
+                             {% else %}
+                                 <img src="{{ asset('assets/images/defaultF.png') }}" alt=""
+                                      class="img-rounded h-100 w-100">
+
+                             {% endif %}
+                         {% else %}
+                             <img src="{{ asset('uploads/user/'~publication.user.image) }}" alt=""
+                                  class="img-rounded h-100 w-100">
+                         {% endif %}
+                     </div>
+                     <div class="publication-item-content">
+                         <p>
+                             <a class="pub-name-link"
+                                href="{{ path('user_profile',{'nickname': publication.user.nick}) }}">
+                                 {{ publication.user.name }} {{ publication.user.surname }}
+                             </a>
+                             -
+                             {{ publication.user.nick }}
+                             <span class="pub-date">
+                                    - {{ publication.createdAt | long_time }}
+                                 </span>
+                         </p>
+                         <p>
+                             {{ publication.text }}
+                         </p>
+
+                         {% if(publication.user.id is defined ) and (publication.user.id == app.user.id) %}
+                             <span class="btn-delete-pub glyphicon glyphicon-trash" aria-hidden="true"
+                                   data-id="{{ publication.id }}"></span>
+                         {% endif %}
+
+                         {% if (publication.document is defined) and (publication.document != null) %}
+                             <a href="{{ asset('uploads/documents/images/'~publication.document) }}"
+                                class="btn-doc glyphicon glyphicon-save"
+                                aria-hidden="true" target="_blank"></a>
+                         {% endif %}
+
+                         {% if (publication.image is defined) and (publication.image != null) %}
+                             <span class="btn-img glyphicon glyphicon-picture" aria-hidden="true"></span>
+                             <div class="clearfix"></div>
+                             <div class="pub-image">
+                                 <img src="{{ asset('uploads/publications/images/'~publication.image) }}"/>
+                             </div>
+                         {% endif %}
+
+                         <div class="pull-right like">
+                                 <span data-id="{{ publication.id }}"
+                                       class="
+                                       {% if app.user|liked(publication) == true %}
+                                       hidden
+                                       {% endif %} btn-like glyphicon glyphicon-heart-empty"
+                                       aria-hidden="true"
+                                       data-toggle="tooltip"
+                                       data-placement="bottom"
+                                       title="like"></span>
+
+                             <span data-id="{{ publication.id }}"
+                                   class="
+                                       {% if app.user|liked(publication) == false %}
+                                       hidden
+                                       {% endif %}btn-unlike hidden active glyphicon glyphicon-heart-empty"
+                                   aria-hidden="true"
+                                   data-toggle="tooltip"
+                                   data-placement="bottom"
+                                   title="unlike"></span>
+                         </div>
+                     </div>
+                     <div class="clearfix"></div>
+                     <hr>
+                 </div>
+             {% endfor %}
+
+             <div class="navigation">
+                 {{ knp_pagination_render(pagination) }}
+             </div>
+             <div class="clearfix"></div>
+         </div>#}
     </div>
 {% endblock %}
