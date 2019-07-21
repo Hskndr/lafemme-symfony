@@ -1,0 +1,379 @@
+/* Fonts */
+@font-face {
+    font-family: Futura Md BT;
+    font-style: normal;
+    src: local('Futura Md BT'), url('../font/futura_lt_bt_light-webfont.woff') format('woff');
+}
+
+/*GENERAL*/
+
+.border {
+    border: 1px solid black;
+}
+
+.borderw {
+    border: 1px solid white;
+}
+
+
+.bgcr {
+    background-color: red;
+}
+
+.bgcw {
+    background-color: white;
+}
+
+.bgcg {
+    background-color: green;
+}
+
+.bgcy {
+    background-color: yellow;
+}
+
+.mb-auto {
+    margin-bottom: auto;
+}
+
+body {
+    background-color: gray;
+}
+
+/*HEADER*/
+header {
+    background-color: black;
+    height: 100vh;
+    color: white;
+}
+
+.header-back {
+    background-image: url("../image/LF02.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-attachment: fixed;
+    overflow: scroll;
+    padding: 20px;
+    height: 100vh;
+    position: relative;
+}
+
+.contentabsolute h1 {
+    font-family: "Futura Md BT Bold", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    letter-spacing: 20px !important;
+}
+
+.contentabsolute-subtitle {
+    padding-left: 40px !important;
+}
+
+.contentabsolute-subtitle h4 {
+    font-style: italic;
+    font-size: 25px;
+}
+
+.header-center-left {
+    text-align: center;
+}
+
+.header-center-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-center-right span {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 300px!important;
+    font-style: italic;
+}
+
+.header-center-right .ramdon {
+    height: 200px;
+}
+
+#imgh2 {
+    height: 150px;
+    width: 200px;
+}
+
+/*BUTTONS*/
+.btn-login {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: white;
+    border-radius: 0.75em;
+}
+
+.btn-login:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: gray;
+    color: gray;
+}
+
+.btn-register {
+    background-color: #dc127b;
+    border-color: #dc127b;
+    color: white;
+    border-radius: 0.75em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-register:hover {
+    background-color: hotpink;
+    border-color: gray;
+    color: gray;
+}
+
+/*HEADER FOOTER*/
+header footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-left a {
+    color: white;
+}
+
+.social-button {
+    width: 30%;
+    height: 10%;
+}
+
+/* MAIN  */
+main {
+    background-color: whitesmoke;
+}
+
+main section {
+    background-color: purple;
+    margin: 20px;
+}
+
+img {
+    height: 10px;
+    width: 10px;
+}
+
+/*
+
+.home-back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    margin-bottom: auto;
+
+}
+
+
+.home-back-responsive, .home-back-responsive-medium, .section-3-responsive {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.contentabsolute {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.mainImageNormal {
+    z-index: -1;
+    height: 100%;
+    float: right;
+}
+
+!* header *!
+header {
+    height: 100%;
+    color: white;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+header h1 {
+    font-family: 'Futura Md BT', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3em;
+    letter-spacing: 30px;
+    margin-bottom: 0.1em;
+    margin-left: 90px;
+}
+
+#tulm, .tulm {
+    margin-left: 140px;
+    margin-bottom: 1rem;
+}
+
+.middle-header {
+    min-height: 20rem;
+}
+
+header p {
+    margin: 0.4rem
+}
+
+#btn-login {
+    margin-top: 1em;
+
+    border-radius: 0.75em;
+    width: 9em;
+    height: 35px;
+}
+
+#imgh2 {
+    width: 210px;
+
+}
+
+#btn-signup {
+    font-size: 16px;
+    margin: 0.5em 0em 0.5em 0em;
+    border-radius: 0.75em;
+    background-color: #dc127b;
+    border-color: #dc127b;
+    width: 310px;
+}
+
+.btn-language {
+    height: 2em;
+}
+
+.btn img {
+    height: 1em;
+}
+
+a img {
+    height: 2em;
+}
+
+footer {
+    height: 5rem;
+    bottom: 7%;
+    width: 100%;
+
+    margin: auto;
+
+}
+
+footer .btn {
+    height: 2em;
+}
+
+footer .btn img {
+    height: 1em;
+}
+
+footer a, .section-3 p {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+}
+
+!*End Header*!
+.button1 {
+    margin: 1.5em 0em 1.5em 0em;
+    border-radius: 0.75em;
+    background-color: #dc127b;
+    border-color: #dc127b;
+    color: white;
+    height: 3em;
+    min-width: 30em;
+}
+
+main p, a, h2, .blue a {
+    color: darkblue;
+}
+
+.section-1 {
+    background-color: white;
+}
+
+#secImageSmall {
+    background-image: url('../../../assets/image/LF15.jpg');
+    background-size: cover;
+}
+
+.section-2 {
+    background-color: rgb(246, 244, 244);
+}
+
+.section-3 {
+    background-image: url('../../../assets/image/LF61.jpg');
+    background-position: left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: rgb(27, 34, 84);
+    font-size: 0.8rem;
+    margin-top: 2em;
+    height: 29rem;
+    display: flex;
+    justify-items: center;
+    align-content: initial;
+    padding: 0;
+}
+
+.section-3 p {
+    font-size: 1.2rem;
+    color: rgb(27, 34, 84);
+    margin: 0;
+
+}
+
+.section-3 li {
+    list-style: none;
+}
+
+.section-3 img {
+    height: 97%;
+    width: 15rem;
+}
+
+.bttn-img {
+    width: 145px;
+    height: 40px;
+}
+
+.big-pic {
+    height: 25rem;
+}
+
+.small-pic {
+    height: 10rem;
+}
+
+.small-pic2 {
+    height: 10rem;
+    width: 13rem;
+}
+
+.medium-pic {
+    height: 11rem;
+}
+
+
+
+
+*/

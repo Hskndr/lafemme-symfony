@@ -10,7 +10,7 @@
         {#      styles      #}
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mainpage.css') }}">
     {% endblock %}
 
     {% block javascripts %}
@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<header>
+{#<header>
     <h1>LA FEMME</h1>
     <h1>HOME PAGE</h1>
     <ul>
@@ -40,21 +40,316 @@
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                 &nbsp;Sign In</a></li>
     </ul>
-</header>
-<section id="content">
+</header>#}
 
-    {% block content %}
-        {#      content default      #}
-    {% endblock %}
 
-</section>
-<footer class="col-lg-12">
-    <hr>
-    <div class="container">
-        <p class="text-muted">Developer Hskndr</p>
+<header class="container-fluid ">
+
+    <div class="header-back">
+
+
+        <div class="contentabsolute ">
+            <div class="row ">
+                <h1 class="col-lg-8">LA FEMME</h1>
+                <div class="col-lg-4  ">
+                    <div class="">
+                        <p class="text-center">MEMBERS<br>ONLY</p>
+                    </div>
+                    <div class="text-center ">
+
+                        <a href="{{ path("login") }}" class="btn btn-primary btn-login" type="button">
+                            Login
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" row contentabsolute-subtitle">
+                <div class="">
+                    <h4 class="h3">Fantasies... Everybody has one</h4>
+                </div>
+                <p class="h4">Become a member, select the type of relationship <br> you're looking
+                    for.
+                </p>
+                <p class="h4">Let's get started </p>
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-3 header-center-left ">
+                    <a href="{{ path("register") }}" class="btn btn-primary btn-lg btn-register" type="button">
+                        SELECT YOUR MATCH
+                    </a>
+
+                    <p class="h3">Sign Up - Is FREE</p>
+
+                    <img src="{{ asset('assets/image/LF05.png') }}" id="imgh2" alt="..." class="m-0">
+
+                    <p class="h5">Private Affairs Club</p>
+                </div>
+
+                <div class="col-lg-9 header-center-right ">
+                    <span class="ramdon row  "></span>
+                    <span class="h1 row  "> Shhhh...</span>
+                    <span class="h5 row  ">It's a Secret</span>
+                    <span class="h5 row  "> Don't Tell</span>
+                </div>
+            </div>
+
+            <div class="row ">
+                <p class="text-left col-9 " style="padding-left: 40px">Desire, Passion and Excitement is like
+                    TIME... Time is like a RIVER. You cannot touch the same water TWICE, <br> because the flow that
+                    has passed will never pass again... Enjoy every moment of your life.</p>
+                <div class="col-3">
+                </div>
+            </div>
+
+
+            <footer class="row ">
+                <div class="col-lg-5 footer-left ">
+                    <a class="ml-3" routerLink="/datingLafemme">Dating at La femme</a>
+                    <a routerLink="/affiliateProgram"> Affiliate</a>
+                    <a routerLink="/aboutUs"> About Us</a>
+                </div>
+
+                <div class="col-lg-4 ">
+
+                    <a><img class="social-button" src="https://lafemme1.com/uploads/googleplay.png"
+                            alt="image"></a>
+                    <a><img class="social-button" src="https://lafemme1.com/uploads/applestore.png"
+                            alt="image"></a>
+                    <a><img class="social-button" src="{{ asset('assets/image/PRIVACY.png') }}"
+                            alt="image"></a>
+
+                </div>
+
+                <div class="col-lg-3 footer-right ">
+                    <div class="row text-center">
+                        <a href="{{ path("login") }}" class="btn btn-primary btn-login" type="button">
+                            <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                            &nbsp;Language
+                        </a>
+                        <a href="{{ path("login") }}" class="btn btn-primary btn-login" type="button">
+                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                            &nbsp;Country
+                        </a>
+                    </div>
+                    <div class="row text-center">
+                        <span>2019 La femme1 - Official website</span>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+
     </div>
 
-</footer>
+</header>
+
+
+<main class="container-fluid">
+    <section class=" section-one">
+        <div class="container text-center">
+            <button type="button" class="button1">PRIVATE AFFAIR CLUB</button>
+            <p class="blue text-center"><a href="https://lafemme1.com"> Www.LaFemme1.com</a></p>
+            <p class="blue text-center">Adults Only Please, You Must Be 18 Years or Older. This Site
+                is For Adults ONLY</p>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <img src="{{ asset('assets/image/LF03.jpg') }}" alt="" class="medium-pic deleteTablet">
+            <img src="{{ asset('assets/image/LF04.jpg') }}" alt="" class="medium-pic">
+            <img src="{{ asset('assets/image/LF05.jpg') }}" alt="" class="medium-pic">
+            <img src="{{ asset('assets/image/LF06.jpg') }}" alt="" class="medium-pic deleteTablet">
+        </div>
+        <h2 class="text-center h1 pt-3 pb-5">Welcome to La Femme</h2>
+    </section>
+
+    <section class="section-two">
+        <div class="text-center">
+            <button type="button" class="button1">MEN &amp; WOMEN FROM AROUND THE WORLD</button>
+        </div>
+
+        <div class="row container-fluid ml-0 d-flex justify-content-around p-0 big-pic">
+
+            <div class=" ">
+                <img src="{{ asset('assets/image/LF63.png') }}" alt="" class="big-pic m-0 p-0 ">
+            </div>
+            <div class=" ">
+                <div class="d-flex justify-content-between ">
+                    <img src="{{ asset('assets/image/LF08.jpg') }}" alt="" class="small-pic ml-3 mr-3 deleteTablet">
+                    <img src="{{ asset('assets/image/LF09.jpg') }}" alt="" class="small-pic ml-3 mr-3">
+                    <img src="{{ asset('assets/image/LF10.jpg') }}" alt="" class="small-pic ml-3 mr-3 deleteTablet">
+                </div>
+
+
+                <div class="d-flex justify-content-between mt-5 ">
+                    <img src="{{ asset('assets/image/LF12.jpg') }}" alt=""
+                         class="small-pic2 ml-3 mr-3 mt-3 deleteTablet">
+                    <img src="{{ asset('assets/image/LF13.jpg') }}" alt="" class="small-pic2 ml-3 mr-3 mt-3">
+                    <img src="{{ asset('assets/image/LF64.jpg') }}" alt=""
+                         class="small-pic2 ml-3 mr-3 mt-3 deleteTablet">
+                </div>
+            </div>
+            <div class="">
+                <img src="{{ asset('assets/image/LF62.png') }}" alt="" class="big-pic ">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class=" section-three">
+        <div class="text-center">
+            <button type="button" class="button1">DISCOVER YOUR FANTASIES</button>
+        </div>
+        <div class="">
+            <div class="row d-flex justify-content-start">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="secImageSmall">
+                </div>
+
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    <p>La Femme is the place to meet men and women who are seeking for the Ideal Partner who
+                        knows the value of Discretion of an intelligent individual who wants to share his or
+                        her time with you. </p>
+
+                    <p> Soon you will be having fun at La Femme! To help you, we are giving you 200 Coins
+                        credits to get you started. These are credits for you to use to start communicating
+                        with others. </p>
+
+                    <p>At La Femme you will find thousands of people like yourself looking for discreet
+                        relationships of all kinds. Most relationship options you can find them here.
+                        Choose the one you desire most!
+
+                    </p>
+                    <p>Secret desires ignite the circuits of our highest potential to enjoy our lives.
+                        Life is too short, you should enjoy every moment of it. </p>
+                    <p>Through La Femme you’ll be connected to the type of relationship you looking for, meet and
+                        live your FANTASY; with DESIRE, PASSION and EXCITEMENT!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" section-four ">
+
+        <div class=" m-0 p-0">
+            <img src="{{ asset('assets/image/LF65.png') }}" class="rounded mt-2 deleteTablet" alt="Responsive image">
+        </div>
+        <div class="col-6 ">
+            <p class="h6 p-2 ">La Femme
+                membership is GREAT for your INTIMATE FANTASIES</p>
+            <p class="text-center">This is how is GREAT for you.</p>
+            <div class="row ">
+
+                <div class="col-6">
+                    <ul>
+                        <li> 1. Helps Keep Your Immune System Humming
+                        </li>
+                        "Sexually active people take fewer sick days"
+                        <li>2. Boosts Your Libido</li>
+                        Longing for a more lively sex life? "Having sex will make sex better and will improve your
+                        libido"
+                        <li>3. Improves Women's Bladder Control</li>
+                        <li>4. Lowers Your Blood Pressure</li>
+                        <li>5.Counts as Exercise</li>
+                        "Sex is a great form of exercise"
+                        <li>6.Lowers Heart Attack Risk</li>
+                        A good sex life is good for your heart. Beside being a great way to raise your heart rate, sex
+                        helps keep
+                        your estrogen and testosterone levels in balance.
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>7. Lessens Pain</li>
+                        Before you reach for an aspirin, try for an orgasm.
+                        <li>8. May Make Prostate Cancer Less Likely</li>
+                        Going for the gusto may help ward off prostate cancer.
+                        <li>9. Improve Sleep</li>
+                        You may nod off more quickly after sex and for good. reason
+                        <li>10. Eases Stress</li>
+                        Being close to your partner can soothe stress and anxiety.
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" section-five ">
+
+        <div class="col-12  ">
+            <p class="h6 p-2 pt-3">La Femme
+                membership is GREAT for your INTIMATE FANTASIES</p>
+            <p class="text-center">This is how is GREAT for you.</p>
+            <div class="row ">
+
+                <div class="col-6 ">
+                    <ul class="m-0 p-0">
+                        <li> 1. Helps Keep Your Immune System Humming
+                        </li>
+                        "Sexually active people take fewer sick days"
+                        <li>2. Boosts Your Libido</li>
+                        Longing for a more lively sex life? "Having sex will make sex better and will improve your
+                        libido"
+                        <li>3. Improves Women's Bladder Control</li>
+                        <li>4. Lowers Your Blood Pressure</li>
+                        <li>5.Counts as Exercise</li>
+                        "Sex is a great form of exercise"
+                        <li>6.Lowers Heart Attack Risk</li>
+                        A good sex life is good for your heart. Beside being a great way to raise your heart rate, sex
+                        helps keep
+                        your estrogen and testosterone levels in balance.
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="m-0 p-0">
+                        <li>7. Lessens Pain</li>
+                        Before you reach for an aspirin, try for an orgasm.
+                        <li>8. May Make Prostate Cancer Less Likely</li>
+                        Going for the gusto may help ward off prostate cancer.
+                        <li>9. Improve Sleep</li>
+                        You may nod off more quickly after sex and for good. reason
+                        <li>10. Eases Stress</li>
+                        Being close to your partner can soothe stress and anxiety.
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center">
+        <button type="button" class="button1">SAME-SEX RELATIONSHIPS</button>
+    </div>
+
+    <section class="section-six">
+        <div class="row">
+            <p>Looking for same-sex relationships; Females seeking Females or Males seeking Males? You will find
+                them all here at La Femme. Discreet partners who want to spend their time with you. You will not
+                find any place more open-minded than at La Femme. </p>
+        </div>
+
+        <div class="row d-flex justify-content-between">
+            <img src="{{ asset('assets/image/LF18.jpg') }}" alt="" class="medium-pic medium-pic-2">
+            <img src="{{ asset('assets/image/LF19.jpg') }}" alt="" class="medium-pic deleteTablet">
+            <img src="{{ asset('assets/image/LF20.jpg') }}" alt="" class="medium-pic deleteTablet">
+            <img src="{{ asset('assets/image/LF21.jpg') }}" alt="" class="medium-pic medium-pic-2">
+        </div>
+
+        <div class="row d-flex justify-content-end">
+            <button routerLink="/memberSignIn" type="button" class="button1">CLICK HERE NOW TO FIND YOUR RELATIONSHIP AT
+                LA
+                FEMME
+            </button>
+        </div>
+    </section>
+
+
+</main>
+
+
 </body>
 
 </html>
