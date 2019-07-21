@@ -99,11 +99,13 @@
             </div>
         </div>
 
-        <div id="user-card" class="col-lg-4 pull-left box-default">
+{#   COMMENT TEMPORALY     #}
+
+     {#   <div id="user-card" class="col-lg-4 pull-left box-default">
             <div class="avatar">
-                {# AVATAR #}
+                #}{# AVATAR #}{#
                 {% if app.user.image == null %}
-                    {# USER DEFAULT AVATAR #}
+                    #}{# USER DEFAULT AVATAR #}{#
                     {% if app.user.gender == 'male' %}
                         <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
                     {% else %}
@@ -178,6 +180,6 @@
             <hr>
             {{ form_start(form,{action:'', 'method':'POST'}) }}
             {{ form_end(form) }}
-        </div>
+        </div>#}
     </div>
 {% endblock %}

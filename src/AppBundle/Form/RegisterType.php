@@ -98,6 +98,18 @@ class RegisterType extends AbstractType
                     'class' => 'form-age form-control'
                 )
             ))
+            ->add('gender', ChoiceType::class, array(
+                'label' => 'Gender',
+                'choices' => [
+                    'Please Select' => 'select',
+                    'Male' => 'male',
+                    'Female' => 'female',
+                ],
+                'required' => 'required',
+                'attr' => array(
+                    'class' => 'form-gender form-control'
+                )
+            ))
             ->add('zodiacsing', ChoiceType::class, array(
                 'label' => 'Zodiac Sign',
                 'choices' => [
