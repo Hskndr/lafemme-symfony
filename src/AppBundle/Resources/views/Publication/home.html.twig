@@ -6,8 +6,99 @@
 {% endblock %}
 {% block content %}
 
-    <div class="container">
-        <div id="timeline" class="col-lg-7 box-default pull-left">
+    <div class="container-fluid">
+        {#   COMMENT TEMPORALY     #}
+        <div>
+            {#
+                        <div id="user-card" class="col-lg-4 pull-left box-default">
+                            <div class="avatar">
+                                #}
+            {# AVATAR #}{#
+
+                                {% if app.user.image == null %}
+                                    #}
+            {# USER DEFAULT AVATAR #}{#
+
+                                    {% if app.user.gender == 'male' %}
+                                        <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
+                                    {% else %}
+                                        <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
+
+                                    {% endif %}
+                                {% else %}
+                                    <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="" class="img-rounded h-100 w-100">
+                                {% endif %}
+                            </div>
+
+                            <div class="name-surname">
+                                <a href="{{ path('user_profile',{'nickname':app.user.nick}) }}">
+                                    {{ app.user.name }} {{ app.user.surname }}
+                                </a>
+                                <div class="clearfix"></div>
+                                <span class="nickname">
+                                {{ app.user.nick }}
+                            </span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <!-- 1 -->
+                            {% set user_stats = app.user|user_stats %}
+                            <div class="following-data">
+                                <a href="{{ path('following_users',{'nickname':app.user.nick}) }}">
+                                <span class="label-stat">
+                                    Following
+                                </span>
+                                    <span class="number-stat">
+                                    {{ user_stats.following }}
+                                </span>
+                                </a>
+                            </div>
+                            <!-- 2 -->
+                            <div class="following-data">
+                                <a href="{{ path('followed_users',{'nickname':app.user.nick}) }}">
+                                <span class="label-stat">
+                                    Followed
+                                </span>
+                                    <span class="number-stat">
+                                     {{ user_stats.followers }}
+                                </span>
+                                </a>
+                            </div>
+                            <!-- 3 -->
+                            <div class="following-data">
+                                <a href="{{ path('user_profile',{'nickname':app.user.nick}) }}">
+                                <span class="label-stat">
+                                    Publications
+                                </span>
+                                    <span class="number-stat">
+                                     {{ user_stats.publications }}
+                                </span>
+                                </a>
+                            </div>
+                            <!-- 4 -->
+                            <div class="following-data">
+                                <a href="{{ path('user_likes',{'nickname':app.user.nick}) }}">
+                                <span class="label-stat">
+                                    Likes
+                                </span>
+                                    <span class="number-stat">
+                                     {{ user_stats.likes }}
+                                </span>
+                                </a>
+                            </div>
+
+                        </div>
+            #}
+
+            <div id="new-publication" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left box-default">
+                {#<h1 class="box-header">create Publication</h1>#}
+
+                {{ form_start(form,{action:'', 'method':'POST'}) }}
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+        {#    TIMELINE     #}
+        <div id="timeline" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-default pull-left">
             <h1 class="box-header">Timeline</h1>
             <hr>
             <div class="box-content">
@@ -37,8 +128,7 @@
                                    href="{{ path('user_profile',{'nickname':publication.user.nick}) }}">
                                     {{ publication.user.name }} {{ publication.user.surname }}
                                 </a>
-                                -
-                                {{ publication.user.nick }}
+                                - {{ publication.user.nick }}
                                 <span class="pub-date">
                                    - {{ publication.createdAt | long_time }}
                                 </span>
@@ -99,87 +189,6 @@
             </div>
         </div>
 
-{#   COMMENT TEMPORALY     #}
 
-     {#   <div id="user-card" class="col-lg-4 pull-left box-default">
-            <div class="avatar">
-                #}{# AVATAR #}{#
-                {% if app.user.image == null %}
-                    #}{# USER DEFAULT AVATAR #}{#
-                    {% if app.user.gender == 'male' %}
-                        <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
-                    {% else %}
-                        <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
-
-                    {% endif %}
-                {% else %}
-                    <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="" class="img-rounded h-100 w-100">
-                {% endif %}
-            </div>
-
-            <div class="name-surname">
-                <a href="{{ path('user_profile',{'nickname':app.user.nick}) }}">
-                    {{ app.user.name }} {{ app.user.surname }}
-                </a>
-                <div class="clearfix"></div>
-                <span class="nickname">
-                    {{ app.user.nick }}
-                </span>
-            </div>
-            <div class="clearfix"></div>
-            <!-- 1 -->
-            {% set user_stats = app.user|user_stats %}
-            <div class="following-data">
-                <a href="{{ path('following_users',{'nickname':app.user.nick}) }}">
-                    <span class="label-stat">
-                        Following
-                    </span>
-                    <span class="number-stat">
-                        {{ user_stats.following }}
-                    </span>
-                </a>
-            </div>
-            <!-- 2 -->
-            <div class="following-data">
-                <a href="{{ path('followed_users',{'nickname':app.user.nick}) }}">
-                    <span class="label-stat">
-                        Followed
-                    </span>
-                    <span class="number-stat">
-                         {{ user_stats.followers }}
-                    </span>
-                </a>
-            </div>
-            <!-- 3 -->
-            <div class="following-data">
-                <a href="{{ path('user_profile',{'nickname':app.user.nick}) }}">
-                    <span class="label-stat">
-                        Publications
-                    </span>
-                    <span class="number-stat">
-                         {{ user_stats.publications }}
-                    </span>
-                </a>
-            </div>
-            <!-- 4 -->
-            <div class="following-data">
-                <a href="{{ path('user_likes',{'nickname':app.user.nick}) }}">
-                    <span class="label-stat">
-                        Likes
-                    </span>
-                    <span class="number-stat">
-                         {{ user_stats.likes }}
-                    </span>
-                </a>
-            </div>
-
-        </div>
-
-        <div id="new-publication" class="col-lg-4 pull-left box-default">
-            <h1 class="box-header">create Publication</h1>
-            <hr>
-            {{ form_start(form,{action:'', 'method':'POST'}) }}
-            {{ form_end(form) }}
-        </div>#}
     </div>
 {% endblock %}

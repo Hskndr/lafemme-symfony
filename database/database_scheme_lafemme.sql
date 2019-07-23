@@ -1,5 +1,3 @@
-CREATE DATABASE IF NOT EXISTS lafemme_social_network;
-USE lafemme_social_network;
 
 CREATE TABLE users
 (

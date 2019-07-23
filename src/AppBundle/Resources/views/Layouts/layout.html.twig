@@ -16,7 +16,9 @@
     {% block javascripts %}
         {#       VARIABLE PROJECT      #}
         <script type="text/javascript">
+            {# LOCAL HOST #}
             var URL = "{{ app.request.getSchemeAndHttpHost() }}/la-femme/web/app_dev.php"
+            
         </script>
 
         {#      javascripts      #}
@@ -105,7 +107,6 @@
                 </ul>
 
 
-
                 {# MESSAGES AND NOTIFICATIONS BUTTONS  #}
 
                 {% if app.user != null %}
@@ -137,17 +138,20 @@
                                 <div class="avatar">
                                     {# AVATAR #}
 
-                                        {% if app.user.image == null %}
-                                            {# USER DEFAULT AVATAR #}
-                                            {% if app.user.gender =='male' %}
-                                                <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
-                                            {% else %}
-                                                <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
-
-                                            {% endif %}
+                                    {% if app.user.image == null %}
+                                        {# USER DEFAULT AVATAR #}
+                                        {% if app.user.gender =='male' %}
+                                            <img src="{{ asset('assets/images/default.png') }}" alt=""
+                                                 class="img-rounded h-100 w-100">
                                         {% else %}
-                                            <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="" class="img-rounded h-100 w-100">
+                                            <img src="{{ asset('assets/images/defaultF.png') }}" alt=""
+                                                 class="img-rounded h-100 w-100">
+
                                         {% endif %}
+                                    {% else %}
+                                        <img src="{{ asset('uploads/user/'~app.user.image) }}" alt=""
+                                             class="img-rounded h-100 w-100">
+                                    {% endif %}
                                 </div>
                                 {{ app.user.name }} {{ app.user.surname }}
                                 <span class="caret"></span>

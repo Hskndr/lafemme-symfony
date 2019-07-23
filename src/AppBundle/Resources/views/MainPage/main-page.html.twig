@@ -14,11 +14,6 @@
     {% endblock %}
 
     {% block javascripts %}
-        {#       VARIABLE PROJECT      #}
-        <script type="text/javascript">
-            var URL = "{{ app.request.getSchemeAndHttpHost() }}/la-femme/web/app_dev.php"
-        </script>
-
         {#      javascripts      #}
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
@@ -40,7 +35,7 @@
                         <p class="text-center">MEMBERS<br>ONLY</p>
                     </div>
                     <div class="text-center ">
-                        <a href="{{ path("login") }}" class="btn btn-primary btn-login" type="button">
+                        <a href="{{ path("login") }}" class="btn btn-secondary btn-login" type="button">
                             Login
                         </a>
                     </div>
@@ -59,7 +54,7 @@
 
             <div class="row ">
                 <div class="col-lg-3 header-center-left ">
-                    <a href="{{ path("register") }}" class="btn btn-primary btn-lg btn-register" type="button">
+                    <a href="{{ path("register") }}" class="btn btn-secondary btn-lg btn-register" type="button">
                         SELECT YOUR MATCH
                     </a>
 
@@ -107,11 +102,11 @@
 
                 <div class="col-lg-3 footer-right ">
                     <div class="row text-center">
-                        <a href="{{ path("login") }}" class="btn btn-primary btn-login" type="button">
+                        <a href="{{ path("login") }}" class="btn btn-secondary btn-login" type="button">
                             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                             &nbsp;Language
                         </a>
-                        <a href="{{ path("login") }}" class="btn btn-primary btn-login" type="button">
+                        <a href="{{ path("login") }}" class="btn btn-secondary btn-login" type="button">
                             <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
                             &nbsp;Country
                         </a>
@@ -270,7 +265,6 @@
     </section>
 
 
-
     <div class="text-center">
         <button type="button" class="button1">SAME-SEX RELATIONSHIPS</button>
     </div>
@@ -290,10 +284,9 @@
         </div>
 
         <div class="row text-right">
-            <button routerLink="/memberSignIn" type="button" class="button1">CLICK HERE NOW TO FIND YOUR RELATIONSHIP AT
-                LA
-                FEMME
-            </button>
+            <a href="{{ path("register") }}" class=" btn btn-secondary button1" type="button">
+                CLICK HERE NOW TO FIND YOUR RELATIONSHIP AT LA FEMME
+            </a>
         </div>
     </section>
 
