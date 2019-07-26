@@ -84,9 +84,10 @@
 
             <footer class="row ">
                 <div class="col-lg-5 footer-left ">
-                    <a class="ml-3" routerLink="/datingLafemme">Dating at La femme</a>
-                    <a routerLink="/affiliateProgram"> Affiliate</a>
-                    <a routerLink="/aboutUs"> About Us</a>
+                    <a href="{{ path("dating-la-femme") }}">Dating at La femme</a>
+                    <a href="{{ path("affilite-program") }}"> Affiliate</a>
+                    <a href="{{ path("about-us") }}"> About Us</a>
+
                 </div>
 
                 <div class="col-lg-4 ">
@@ -102,14 +103,81 @@
 
                 <div class="col-lg-3 footer-right ">
                     <div class="row text-center">
-                        <a href="{{ path("login") }}" class="btn btn-secondary btn-login" type="button">
+                        <a class="btn btn-secondary btn-login" type="button" data-toggle="modal"
+                           data-target="#languageModal" data-whatever="@mdo">
                             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                             &nbsp;Language
                         </a>
-                        <a href="{{ path("login") }}" class="btn btn-secondary btn-login" type="button">
+                        <a class="btn btn-secondary btn-login" type="button" data-toggle="modal"
+                           data-target="#countryModal" data-whatever="@fat">
                             <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
                             &nbsp;Country
                         </a>
+
+                        {#  MODAL  START  #}
+
+                        <div class="modal fade" id="languageModal" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="control-label">Recipient:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="control-label">Message:</label>
+                                                <textarea class="form-control" id="message-text"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="button" class="btn btn-primary">Send message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="countryModal" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="exampleModalLabel">New message2</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="control-label">Recipient2:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="control-label">Message2:</label>
+                                                <textarea class="form-control" id="message-text"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close2
+                                        </button>
+                                        <button type="button" class="btn btn-primary">Send message2</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {#  MODAL  END  #}
+
+
                     </div>
                     <div class="row text-center">
                         <span>2019 La femme1 - Official website</span>

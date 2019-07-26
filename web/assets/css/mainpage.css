@@ -241,3 +241,8 @@ main section {
 .box-five-content img {
     height: 200px;
 }
+
+/*MODAL STYLE*/
+.modal .modal-content .modal-dialog {
+    color: black!important;
+}

@@ -26,6 +26,26 @@ app_private_message:
   #resource: "@AppBundle/Resources/config/routing/mainpage.yml"
   #prefix: /
 
+app_dating:
+  resource: "@AppBundle/Resources/config/routing/dating.yml"
+  prefix: /
+
+app_affiliate:
+  resource: "@AppBundle/Resources/config/routing/affiliate.yml"
+  prefix: /
+
+app_about:
+  resource: "@AppBundle/Resources/config/routing/about.yml"
+  prefix: /
+
+app_buy_credit:
+  resource: "@AppBundle/Resources/config/routing/buy_credit.yml"
+  prefix: /
+
+app_traveling:
+  resource: "@AppBundle/Resources/config/routing/traveling.yml"
+  prefix: /
+
 app_homepage:
   path: /
   defaults: { _controller: AppBundle:MainPage:mainPage }

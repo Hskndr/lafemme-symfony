@@ -14,4 +14,22 @@ class MainPageController extends Controller
         // echo "main page";
         // die();
     }
+
+    public function datingLaFemmeAction(Request $request){
+        return $this->render('AppBundle:MainPage:dating.html.twig');
+        // echo "Dating";
+        // die();
+    }
+
+    public function affiliateProgramAction(Request $request){
+        return $this->render('AppBundle:MainPage:affiliate.html.twig');
+        // echo "Affiliate";
+        // die();
+    }
+
+    public function aboutUsAction(Request $request){
+        return $this->render('AppBundle:MainPage:about.html.twig');
+        // echo "About";
+        // die();
+    }
 }
