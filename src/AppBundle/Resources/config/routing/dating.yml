@@ -1,0 +1,3 @@
+dating-la-femme:
+  path: /dating
+  defaults: { _controller: AppBundle:MainPage:datingLaFemme }

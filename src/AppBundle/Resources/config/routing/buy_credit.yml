@@ -1,0 +1,3 @@
+buy-credit:
+  path: /buy-credit
+  defaults: { _controller: AppBundle:BuyCredit:buyCredit }

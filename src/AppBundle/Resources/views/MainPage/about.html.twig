@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %} La Femme {% endblock %}
+    </title>
+
+    {% block stylesheets %}
+        {#      styles      #}
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mainpage.css') }}">
+    {% endblock %}
+
+    {% block javascripts %}
+        {#      javascripts      #}
+        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    {% endblock %}
+
+</head>
+
+<body>
+
+<header class="container-fluid ">
+
+    <h1>ABOUT</h1>
+
+</header>
+
+<main class="container-fluid">
+
+
+
+</main>
+
+
+</body>
+
+</html>

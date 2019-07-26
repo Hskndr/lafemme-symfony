@@ -1,0 +1,3 @@
+about-us:
+  path: /about
+  defaults: { _controller: AppBundle:MainPage:aboutUs }

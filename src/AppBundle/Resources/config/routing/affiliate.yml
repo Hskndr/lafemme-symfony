@@ -1,0 +1,3 @@
+affilite-program:
+  path: /affiliate
+  defaults: { _controller: AppBundle:MainPage:affiliateProgram }
