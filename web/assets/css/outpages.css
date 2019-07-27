@@ -1,0 +1,85 @@
+/* Fonts */
+@font-face {
+    font-family: Futura Md BT;
+    font-style: normal;
+    src: local('Futura Md BT'), url('../font/futura_lt_bt_light-webfont.woff') format('woff');
+}
+
+/* GENERAL */
+
+/*TOOLS*/
+.border {
+    border: 1px solid black;
+}
+
+.borderw {
+    border: 1px solid white;
+}
+
+.bgcr {
+    background-color: red;
+}
+
+.bgcw {
+    background-color: white;
+}
+
+.bgcg {
+    background-color: green;
+}
+
+.bgcy {
+    background-color: yellow;
+}
+
+.bgcb {
+    background-color: blue;
+}
+
+/*END TOOLS*/
+
+body {
+    background-color: rgba(32, 21, 61, 0.728) !important;
+}
+
+/* SECTION */
+#content-out-pages, .content-out-pages {
+    background-color: whitesmoke !important;
+    color: rgba(32, 21, 61, 0.728);
+    max-width: 95rem;
+    margin-top: 0px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid blue;
+    min-height: 100vh;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+/* ABOUT US */
+.image-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 15px 0px;
+}
+
+.image-content img {
+    height: 180px;
+}
+
+.content-text {
+    text-align: justify;
+}
+
+/*  DATING */
+.image-content-subtitle img {
+    height: 100px;
+}
+
+/*  AFFILIATE */
+.section-b, .section-b img {
+    height: 120px;
+}

@@ -10,7 +10,7 @@
         {#      styles      #}
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mainpage.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/outpages.css') }}">
     {% endblock %}
 
     {% block javascripts %}
@@ -23,18 +23,109 @@
 
 <body>
 
-<header class="container-fluid ">
+<h1>AFFILIATE</h1>
+
+<main class="container-fluid content-out-pages">
+
+    <div class="section-a">
+        <img src="{{ asset('assets/image/LF40.jpg') }}" class="img-responsive" alt="Responsive image">
+        <div class="">
+            <h3>AFFILIATE PROGRAM</h3>
+            <p class="">MAKING <br> MONEY
+                <br>With <br>La Femme</p>
+            <span>La Femme is the home of economic<br> opportunity</span>
+
+        </div>
+    </div>
+
+    <div class="text-center ">
+        <h5> Best Affiliate Program</h5>
+    </div>
+
+    <div class=" row section-b ">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <img src="{{ asset('assets/image/LF41.jpg') }}" class="img-responsive" alt="Responsive image">
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <p class=" m-0">MAKE MONEY</p>
+            <p class=" m-0">AS AN AFFILIATE</p>
+            <p class=" m-0">AT LA FEMME</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <p>As a La Femme marketing affiliate, you will be completing
+                with others in the program
+                as we operate in over 40 countries supporting several languages.</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <img src="{{ asset('assets/image/LF42.jpg') }}" class="img-responsive" alt="Responsive image">
+        </div>
+    </div>
 
 
-       <h1>AFFILIATE</h1>
+    <div class="text-justify">
+        <p>La Femme’s affiliate program lets you strategically promote La Femme. As an affiliate you officially
+            become a member of La Femme dating services. You can independently promote La Femme dating services
+            under the guidelines set forth in the memorandum of understanding. As our promoter, the Company
+            will share its earnings with you on every new member you bring in at a 40/60 split for as long as that
+            member stays at La Femme. It is that simple!</p>
+    </div>
+    <br>
+    <div class=" col-12 font-weight-bold text-center ">
+        <p>Once you compile a group of members this can be an excellent monthly income for you.</p>
+    </div>
+
+    <div class="section-c ">
+        <p>What would be my market place? The World.</p>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <ul>
+                    <li>Active in over 40 countries</li>
+                    <li>In-house Marketing Professional to help you create stunning advertising layouts and content.
+                    </li>
+                    <li>Access to your account in our virtual office</li>
+                    <li>Automatic monthly payout directly to your Bank Account</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <img src="{{ asset('assets/image/LF43.jpg') }}" class="img-responsive" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+
+    <div class=" section-d  ">
+        <p>Once you have membership with La Femme, you can also become an independent affiliate to promote
+            La Femme dating under the La Femme set guidelines in the memorandum of understanding. As an affiliate you
+            are officially attached as a Marketing Affiliate to La femme dating.
+        </p>
 
 
-</header>
+        <div class="row ">
 
-<main class="container-fluid">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <img src="{{ asset('assets/image/LF44.jpg') }}" class="img-responsive" alt="Responsive image">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <img src="{{ asset('assets/image/LF45.jpg') }}" class="img-responsive" alt="Responsive image">
+            </div>
 
-
-
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+                <p class="m-0"> Please sign up the Affiliate Application.</p>
+                <div class="row d-flex justify-content-end align-items-center ">
+                    <p> Already a Member</p>
+                    <a routerLink="/affiliateSignIn" class="badge badge-secondary text-wrap">
+                        Click here and Signed up now to become as Affiliate
+                    </a>
+                </div>
+                <p> Not a Member yet? </p>
+                <div class="row d-flex justify-content-end align-items-center ">
+                    <p> want to become a member</p>
+                    <a href="{{ path('register') }}" class="badge badge-secondary text-wrap">
+                        Click Here and become a member first
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 

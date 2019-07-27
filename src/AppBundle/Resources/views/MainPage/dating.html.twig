@@ -10,7 +10,7 @@
         {#      styles      #}
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mainpage.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/outpages.css') }}">
     {% endblock %}
 
     {% block javascripts %}
@@ -23,14 +23,70 @@
 
 <body>
 
-<header class="container-fluid ">
 
-  <h1>DATING AT LA FEMME</h1>
+<h1>DATING AT LA FEMME</h1>
 
-</header>
 
-<main class="container-fluid">
+<main class="container-fluid content-out-pages">
 
+
+    <div class="row image-content-subtitle ">
+        <div class="col-lg-2 text-center">
+            <img class="img-responsive" src="{{ asset('assets/image/LF31.jpg') }}" alt="Responsive image">
+        </div>
+        <div class="col-lg-8 text-center">
+            <h4>DATING AT LA FEMME</h4>
+            <h5>Secret desires ignite the circuits to our highest potential to
+                enjoy our lives as we
+                see it. Life is too short, enjoy every moment of it.</h5>
+        </div>
+        <div class="col-lg-2 text-center">
+            <img class="img-responsive" src="{{ asset('assets/image/LF32.jpg') }}" alt="Responsive image">
+        </div>
+    </div>
+
+    <div class=" row image-content ">
+        <img class="img-responsive" src="{{ asset('assets/image/LF35.jpg') }}" alt="Responsive image">
+        <img class="img-responsive" src="{{ asset('assets/image/LF05.jpg') }}" alt="Responsive image">
+        <img class="img-responsive" src="{{ asset('assets/image/LF36.jpg') }}" alt="Responsive image">
+
+    </div>
+
+    <div class="content-text">
+        <p>Le Femme provides you with a place to meet fun, sexy, interesting men and women who are seeking the ideal
+            partner. They understand the value of discretion and want to explore each other’s wildest fantasies. If you
+            are attracted to someone, we make it easy to connect and explore each other’s desires. </p>
+
+        <p>With the majority of users looking for interaction that is sexual in nature, La Femme caters to over eight
+            relationship types. Browse through our options and choose the relationship you desire most. Here you can
+            expect to find someone that satisfies all of your needs and desires. Secret passions ignite the circuits of
+            our highest potential to enjoy our lives as we see it. Life is too short, you should enjoy every moment of
+            it!
+        </p>
+
+        <p>Le Femme uses an unique algorithm called the Compatibility Matching System (CMS). It takes into account
+            exactly what you want through your selected preferences made when you sign up. It will monitor your on-site
+            habits and present potential partners based on this information. </p>
+
+        <p>This site includes a neat travel feature that will announce your travel plans to the local members of your
+            destination. Update your travel calendar and Le Femme will notify members of your indicated destination of
+            your arrival. </p>
+
+    </div>
+
+    <div class=" row image-content ">
+        <img class="img-responsive" src="{{ asset('assets/image/LF48.jpg') }}" alt="Responsive image">
+        <img class="img-responsive" src="{{ asset('assets/image/LF49.jpg') }}" alt="Responsive image">
+        <img class="img-responsive" src="{{ asset('assets/image/LF50.jpg') }}" alt="Responsive image">
+    </div>
+
+    <div class="row  ">
+        <p class="col-lg-6"> Sign Up.. Is FREE plus you get 200 free credits as a welcome bonus </p>
+        <div class="col-lg-6 text-left">
+            <button routerLink="/affiliateSignUp" type="button" class="btn btn-secondary ml-3">Click Here</button>
+        </div>
+
+    </div>
 
 
 </main>
