@@ -9,36 +9,74 @@
         <h1 class="box-header">
             Mail Box
         </h1>
-        <div class="col-lg-6 box-private-message">
-            <h4> Send new message</h4>
-            {{ form_start(form,{'action':'','method':'POST'}) }}
-            {{ form_end(form) }}
+        {#  BUTTON SENT BOX #}
+        <div class="text-right">
+            <a href="{{ path('private_message_sended') }}" type="button" class="btn btn-default">Sent Messages</a>
 
-            <br>
-            <a href="{{ path('private_message_sended') }}" class="btn btn-warning">Sent Messages</a>
+        </div>
+        <br>
+
+        {#BUTTON NEW MESSAGES#}
+        <div >
+            <div class="dropdown new-publication-button">
+                <button class="btn btn-default dropdown-toggle
+                                {# HSKNDR: DISABLE BUTTON IF USER DOES NOT HAVE CREDITS IMPROVE#}
+                                {% if app.user.credits == '0' %}disabled {% endif %}"
+                        type="button" id="dropdownMenu1"
+                        data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                <ul class="dropdown-menu col-lg-12" aria-labelledby="dropdownMenu1">
+                    <li>
+                        <div class="new-publication-light ">
+                            {{ form_start(form,{action:'', 'method':'POST'}) }}
+                            {{ form_end(form) }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
+
+        {# ORIGINAL #}
+        {# <div class="col-lg-6 box-private-message">
+             <h4> Send new message</h4>
+             {{ form_start(form,{'action':'','method':'POST'}) }}
+             #}{# read here http://gitnacho.github.io/symfony-docs-es/reference/forms/twig_reference.html about chance style
+             {{ form_label(form.message, 'Your Name', {'label_attr': {'class': 'form-control'}}) }}
+             #}{#
+             {{ form_end(form) }}
+
+             <br>
+             <a href="{{ path('private_message_sended') }}" class="btn btn-warning">Sent Messages</a>
+         </div>#}
+
         {#        HSKNDR: QUICK WAY, REMOVE AND DEVELOP A NEW PAGE#}
-        <div class="col-lg-6">
+        <div class="">
             <h4>Inbox</h4>
             <hr>
             <div class="box-content box-message">
 
                 {% for message in pagination %}
-                    <div class="col-lg-12 publication-item">
+                    <div class="col-lg-12 publication-item ">
                         <div class="avatar">
                             {# AVATAR #}
-                                {% if message.emitter.image == null %}
-                                    {# USER DEFAULT AVATAR #}
-                                    {% if message.emitter.gender =='male' %}
-                                        <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
-                                    {% else %}
-                                        <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
-
-                                    {% endif %}
+                            {% if message.emitter.image == null %}
+                                {# USER DEFAULT AVATAR #}
+                                {% if message.emitter.gender =='male' %}
+                                    <img src="{{ asset('assets/images/default.png') }}" alt=""
+                                         class="img-rounded h-100 w-100">
                                 {% else %}
-                                    <img src="{{ asset('uploads/user/'~message.emitter.image) }}" alt="" class="img-rounded h-100 w-100">
+                                    <img src="{{ asset('assets/images/defaultF.png') }}" alt=""
+                                         class="img-rounded h-100 w-100">
+
                                 {% endif %}
+                            {% else %}
+                                <img src="{{ asset('uploads/user/'~message.emitter.image) }}" alt=""
+                                     class="img-rounded h-100 w-100">
+                            {% endif %}
                         </div>
                         <div class="publication-item-content">
                             <p>

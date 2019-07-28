@@ -5,11 +5,13 @@
     color: rgb(32, 21, 61);
     padding: 20px;
 }
-.box-content-white p{
+
+.box-content-white p {
     margin-top: 20px;
     text-align: justify;
 }
-    /*IMAGE CONTENT*/
+
+/*IMAGE CONTENT*/
 
 .box-image img {
     height: 150px;
@@ -21,13 +23,10 @@
 }
 
 .box-form .box-default-register {
-
     padding: 20px;
     padding-top: 0px;
     margin: 0px auto;
     float: none;
-
-
 }
 
 /*BUTTON*/

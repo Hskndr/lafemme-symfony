@@ -59,3 +59,4 @@ security:
         - { path: ^/unfollow, roles: [ROLE_USER, ROLE_ADMIN] }
         - { path: ^/following, roles: [ROLE_USER, ROLE_ADMIN] }
         - { path: ^/followed, roles: [ROLE_USER, ROLE_ADMIN] }
+        - { path: ^/affiliate-signin, roles: [ROLE_USER, ROLE_ADMIN] } #news router

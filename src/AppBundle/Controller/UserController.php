@@ -28,10 +28,11 @@ class UserController extends Controller
         if (is_object($this->getUser())) {
             return $this->redirect('home');
         }
-
+        //AUTHENTICATION SERVICE
         $authenticationUtils = $this->get('security.authentication_utils');
+        // LOGIN ERROR
         $error = $authenticationUtils->getLastAuthenticationError();
-
+        // LAST USER TRY TO AUNTHENTICATE
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('AppBundle:User:login.html.twig', array(
@@ -242,7 +243,7 @@ class UserController extends Controller
             $user_repo = $em->getRepository('BackendBundle:User');
             $user = $user_repo->findOneBy(array("nick" => $nickname));
         } else {
-             $user = $this->getUser();
+            $user = $this->getUser();
             // review $user = $this->getDoctrine();
         }
         if (empty($user) || !is_object($user)) {

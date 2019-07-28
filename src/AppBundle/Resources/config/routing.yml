@@ -46,6 +46,10 @@ app_traveling:
   resource: "@AppBundle/Resources/config/routing/traveling.yml"
   prefix: /
 
+app_affiliate_signin:
+  resource: "@AppBundle/Resources/config/routing/affiliate-signin.yml"
+  prefix: /
+
 app_homepage:
   path: /
   defaults: { _controller: AppBundle:MainPage:mainPage }

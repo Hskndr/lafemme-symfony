@@ -1,0 +1,3 @@
+affilite-signin:
+  path: /affiliate-signin
+  defaults: { _controller: AppBundle:Affiliate:signIn }

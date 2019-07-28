@@ -77,7 +77,7 @@
 .profile-buttons button {
     width: 200px;
     margin: 1em 0em 1em 0em;
-    background-color: rgb(32, 18, 74);
+    background-color: rgb(32, 18, 74)!important;
     border-color: white;
     font-size: 1.3rem;
 }

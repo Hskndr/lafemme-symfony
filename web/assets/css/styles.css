@@ -17,35 +17,9 @@ body {
     width: 95rem;
     margin-top: 0px;
     margin: auto;
-
-    border: 1px solid blue;
-
     min-height: 100vh;
-
 }
 
-/* HEADER */
-
-/*LA FEMME STYLES*/
-/*nav, .navbar {
-    background-color: deeppink !important;
-    border-color: pink !important;
-    color: #FFFFFF !important;
-}
-
-.btn {
-    background-color: deeppink !important;
-    border-color: pink !important;
-    color: #FFFFFF !important;
-}
-
-a:hover {
-    background-color: hotpink !important;
-    border-color: hotpink !important;
-
-}*/
-
-/*LA FEMME STYLES*/
 .navbar {
     margin-bottom: 0px;
 }
@@ -74,11 +48,7 @@ a:hover {
 
 /* REGISTER AND LOGIN*/
 .box-form {
-    /*
-    border: 1px solid red;
-    */
     width: 100%;
-
 }
 
 .box-form .box-default {
@@ -87,10 +57,6 @@ a:hover {
     padding-top: 0px;
     margin: 0px auto;
     float: none;
-    /*
-    border: 2px solid pink;
-    */
-
 }
 
 .box-form input {
@@ -116,6 +82,7 @@ a:hover {
 .publication-item .avatar img {
     height: 100%;
     text-align: center;
+    width: 100%;
 }
 
 .user-item .user-item-content,
@@ -124,10 +91,24 @@ a:hover {
     margin-left: 85px;
 }
 
+/*New publication light*/
+.new-publication-light {
+    padding: 10px;
+    color: rgba(32, 21, 61, 0.728);
+}
+
+.new-publication-light button {
+    margin: 5px;
+}
+
+.new-publication-button {
+    margin: 5px;
+}
+
+
 /*HOME PUBLICATIONS*/
 #timeline {
     margin-right: 20px;
-    background-color: white;
     min-height: 750px;
     padding-bottom: 20px;
 }
@@ -318,8 +299,9 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* FUNCTIONALITY */
-.border {
-    border: 1px solid gray;
-    margin: 5px;
+.content-mailbox-inbox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
+

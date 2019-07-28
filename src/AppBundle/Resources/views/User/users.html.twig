@@ -5,8 +5,8 @@
     <script src="{{ asset('assets/js/custom/users.js') }}"></script>
 {% endblock %}
 {% block content %}
-    <div class="container">
-        <div class="col-lg-8 box-default">
+    <div class="container-fluid">
+        <div class="col-lg-12 box-default">
 
 
             <h1>People</h1>
@@ -18,7 +18,8 @@
             <hr>
             <div class="box-content box-users">
                 {% for user in pagination %}
-                    <div class="col-lg-12 user-item">
+                    <div class=" user-item">
+                        {# AVATAR #}
                         <div class="avatar">
                             {% if user.image == null %}
                                 {% if user.gender == 'male' %}
@@ -31,6 +32,7 @@
                                 <img src="{{ asset('uploads/user/'~user.image) }}" alt="">
                             {% endif %}
                         </div>
+                        {# USERS DATA #}
                         <div class="user-item-content">
                             <p>
                                 <a class="user_link" href="{{ path('user_profile',{'nickname': user.nick}) }}">
@@ -39,14 +41,15 @@
                             </p>
                             <p>{{ user.bio }}</p>
                         </div>
+                        {# FOLLOWING BUTTONS #}
                         {% if app.user.id != user.id %}
                             <div class="pull-right buttons-following">
-                                <button class="btn btn-sm btn-success btn-follow
+                                <button class="btn btn-sm btn-info btn-follow
                                         {% if app.user | following(user) ==true %}
                                             hidden
                                         {% endif %} "
                                         data-followed="{{ user.id }}">
-                                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true">
                                         follow
                                     </span>
                                 </button>
@@ -57,7 +60,7 @@
                                         {% endif %}"
 
                                         data-followed="{{ user.id }}">
-                                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true">
                                         unfollow
                                     </span>
                                 </button>

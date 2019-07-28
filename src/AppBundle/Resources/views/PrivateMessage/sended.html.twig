@@ -9,14 +9,14 @@
         <h1 class="box-header">
             Mail Box (Sent box)
         </h1>
-        <div class="col-lg-7">
+        <div class="">
 
-            <a href="{{ path('private_message_index') }}" class="btn btn-primary">
+            <a href="{{ path('private_message_index') }}" class="btn btn-default">
                 Send a Message
             </a>
         </div>
 
-        <div class="col-lg-7">
+        <div class="">
             <h4>Sent box</h4>
             <hr>
             {# HSKNDR: REVIEW TO DEVELOP AN INCLUDE #}
@@ -84,7 +84,7 @@
                     </div>
                 {% endfor %}
 
-                <div class="navigation">
+                <div class="navigation text-center">
                     {{ knp_pagination_render(pagination) }}
                 </div>
                 <div class="clearfix"></div>

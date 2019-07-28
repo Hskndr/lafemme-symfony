@@ -11,6 +11,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.css') }}">
+        {# TOOLS TO DEVELOP #}
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/tools.css') }}">
     {% endblock %}
 
     {% block javascripts %}
@@ -122,6 +124,8 @@
                             <a href="{{ path("buy-credit") }}">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
                                 Buy Credits
+                                {# IMPROVE CREDITS SYSTEMS #}
+                                <span class="label label-info">{{ app.user.credits }}</span>
                             </a>
                         </li>
 
@@ -146,7 +150,7 @@
                             <a href="{{ path("private_message_index") }}">
                                 <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                                 Mail Box
-                                <span class="label label-success label-notifications-msg">
+                                <span class="label label-info label-notifications-msg">
                                 </span>
                             </a>
                         </li>
@@ -155,7 +159,7 @@
                             <a href="{{ path("notifications_page") }}">
                                 <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
                                 Notifications
-                                <span class="label label-success label-notifications">
+                                <span class="label label-info label-notifications">
                                 </span>
                             </a>
                         </li>
@@ -222,6 +226,19 @@
                                         Virtual Office
                                     </a>
                                 </li>
+
+                                <li>
+                                    <a href="{{ path('affilite-signin') }}">
+                                        {% if app.user.gender == 'male' %}
+                                            <span class="glyphicon glyphicon-king"
+                                                  aria-hidden="true"></span>
+                                        {% else %}
+                                            <span class="glyphicon glyphicon-queen"
+                                                  aria-hidden="true"></span>
+                                        {% endif %}
+                                        Affiliate Bussiness Partner
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -241,7 +258,7 @@
 
     <div class="container">
 
-        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+        <div class="container-fluid">
             {% for message in app.session.flashbag().get('status') %}
                 <div class="alert alert-success">{{ message }}</div>
             {% endfor %}

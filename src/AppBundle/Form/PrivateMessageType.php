@@ -55,7 +55,7 @@ class PrivateMessageType extends AbstractType
             ))
             ->add('Send', SubmitType::class, array(
                 "attr" => array(
-                    "class" => "btn btn-success"
+                    "class" => "btn btn-info"
                 )
             ));
     }

@@ -6,9 +6,9 @@
             <h2> Login </h2>
             <hr>
 
-          {#  {% if is_granted('ROLE_USER') %}
-                {{ dump(app.user) }}
-            {% endif %}#}
+            {% if is_granted('ROLE_USER') or is_granted('ROLE_ADMIN')%}
+                {{ app.user.name }} {{ app.user.surname }} {{ app.user.email }} {{ app.user.role }}
+            {% endif %}
 
             <form action="{{ path('login_check') }}" method="POST">
                 <label for="username">Email</label>

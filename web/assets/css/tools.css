@@ -1,0 +1,46 @@
+/*TOOLS*/
+.border {
+    border: 1px solid black;
+}
+
+.border-heavy {
+    border: 3px solid black;
+}
+
+.border-white {
+    border: 1px solid white;
+}
+
+.border-red {
+    border: 1px solid red;
+}
+
+.border-green {
+    border: 1px solid green;
+}
+
+.border-blue {
+    border: 1px solid blue;
+}
+
+.bgcr {
+    background-color: red;
+}
+
+.bgcw {
+    background-color: white;
+}
+
+.bgcg {
+    background-color: green;
+}
+
+.bgcy {
+    background-color: yellow;
+}
+
+.bgcb {
+    background-color: blue;
+}
+
+/*END TOOLS*/

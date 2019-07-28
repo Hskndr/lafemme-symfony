@@ -5,106 +5,129 @@
     <script type="text/javascript" src="{{ asset('assets/js/custom/home.js') }}"></script>
 {% endblock %}
 {% block content %}
+    {#BUTTON NEW PUBLICATION#}
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="dropdown new-publication-button">
+                <button class="btn btn-default dropdown-toggle
+                        {# HSKNDR: DISABLE BUTTON IF USER DOES NOT HAVE CREDITS IMPROVE#}
+                        {% if app.user.credits == '0' %}disabled {% endif %}"
+                        type="button" id="dropdownMenu1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                <ul class="dropdown-menu col-lg-12" aria-labelledby="dropdownMenu1">
+                    <li>
+                        <div class="new-publication-light ">
+                            {{ form_start(form,{action:'', 'method':'POST'}) }}
 
-    <div class="container-fluid">
-        {#   COMMENT TEMPORALY     #}
-        <div>
-            {#
-                        <div id="user-card" class="col-lg-4 pull-left box-default">
-                            <div class="avatar">
-                                #}
-            {# AVATAR #}{#
-
-                                {% if app.user.image == null %}
-                                    #}
-            {# USER DEFAULT AVATAR #}{#
-
-                                    {% if app.user.gender == 'male' %}
-                                        <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
-                                    {% else %}
-                                        <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
-
-                                    {% endif %}
-                                {% else %}
-                                    <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="" class="img-rounded h-100 w-100">
-                                {% endif %}
-                            </div>
-
-                            <div class="name-surname">
-                                <a href="{{ path('user_profile',{'nickname':app.user.nick}) }}">
-                                    {{ app.user.name }} {{ app.user.surname }}
-                                </a>
-                                <div class="clearfix"></div>
-                                <span class="nickname">
-                                {{ app.user.nick }}
-                            </span>
-                            </div>
-                            <div class="clearfix"></div>
-                            <!-- 1 -->
-                            {% set user_stats = app.user|user_stats %}
-                            <div class="following-data">
-                                <a href="{{ path('following_users',{'nickname':app.user.nick}) }}">
-                                <span class="label-stat">
-                                    Following
-                                </span>
-                                    <span class="number-stat">
-                                    {{ user_stats.following }}
-                                </span>
-                                </a>
-                            </div>
-                            <!-- 2 -->
-                            <div class="following-data">
-                                <a href="{{ path('followed_users',{'nickname':app.user.nick}) }}">
-                                <span class="label-stat">
-                                    Followed
-                                </span>
-                                    <span class="number-stat">
-                                     {{ user_stats.followers }}
-                                </span>
-                                </a>
-                            </div>
-                            <!-- 3 -->
-                            <div class="following-data">
-                                <a href="{{ path('user_profile',{'nickname':app.user.nick}) }}">
-                                <span class="label-stat">
-                                    Publications
-                                </span>
-                                    <span class="number-stat">
-                                     {{ user_stats.publications }}
-                                </span>
-                                </a>
-                            </div>
-                            <!-- 4 -->
-                            <div class="following-data">
-                                <a href="{{ path('user_likes',{'nickname':app.user.nick}) }}">
-                                <span class="label-stat">
-                                    Likes
-                                </span>
-                                    <span class="number-stat">
-                                     {{ user_stats.likes }}
-                                </span>
-                                </a>
-                            </div>
-
+                            {{ form_end(form) }}
                         </div>
-            #}
-
-            <div id="new-publication" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left box-default">
-                {#<h1 class="box-header">create Publication</h1>#}
-
-                {{ form_start(form,{action:'', 'method':'POST'}) }}
-
-                {{ form_end(form) }}
+                    </li>
+                </ul>
             </div>
         </div>
+
+        {#   COMMENT TEMPORALY     #}
+        {# <div class=" row border-blue float-left">
+
+             <div id="user-card" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-left box-default">
+                 <div class="avatar">
+
+                     #}{# AVATAR #}{#
+
+                     {% if app.user.image == null %}
+
+                         #}{# USER DEFAULT AVATAR #}{#
+
+                         {% if app.user.gender == 'male' %}
+                             <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded h-100 w-100">
+                         {% else %}
+                             <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded h-100 w-100">
+
+                         {% endif %}
+                     {% else %}
+                         <img src="{{ asset('uploads/user/'~app.user.image) }}" alt="" class="img-rounded h-100 w-100">
+                     {% endif %}
+                 </div>
+
+                 <div class="name-surname">
+                     <a href="{{ path('user_profile',{'nickname':app.user.nick}) }}">
+                         {{ app.user.name }} {{ app.user.surname }}
+                     </a>
+                     <div class="clearfix"></div>
+                     <span class="nickname">
+                                 {{ app.user.nick }}
+                             </span>
+                 </div>
+                 <div class="clearfix"></div>
+                 <!-- 1 -->
+                 {% set user_stats = app.user|user_stats %}
+                 <div class="following-data">
+                     <a href="{{ path('following_users',{'nickname':app.user.nick}) }}">
+                                 <span class="label-stat">
+                                     Following
+                                 </span>
+                         <span class="number-stat">
+                                     {{ user_stats.following }}
+                                 </span>
+                     </a>
+                 </div>
+                 <!-- 2 -->
+                 <div class="following-data">
+                     <a href="{{ path('followed_users',{'nickname':app.user.nick}) }}">
+                                 <span class="label-stat">
+                                     Followed
+                                 </span>
+                         <span class="number-stat">
+                                      {{ user_stats.followers }}
+                                 </span>
+                     </a>
+                 </div>
+                 <!-- 3 -->
+                 <div class="following-data">
+                     <a href="{{ path('user_profile',{'nickname':app.user.nick}) }}">
+                                 <span class="label-stat">
+                                     Publications
+                                 </span>
+                         <span class="number-stat">
+                                      {{ user_stats.publications }}
+                                 </span>
+                     </a>
+                 </div>
+                 <!-- 4 -->
+                 <div class="following-data">
+                     <a href="{{ path('user_likes',{'nickname':app.user.nick}) }}">
+                                 <span class="label-stat">
+                                     Likes
+                                 </span>
+                         <span class="number-stat">
+                                      {{ user_stats.likes }}
+                                 </span>
+                     </a>
+                 </div>
+
+             </div>
+
+             <div id="new-publication" class="col-lg-8 col-md-8 col-sm-8 col-xs-8 pull-left box-default">
+                 #}{#<h1 class="box-header">create Publication</h1>#}{#
+
+                 {{ form_start(form,{action:'', 'method':'POST'}) }}
+
+                 {{ form_end(form) }}
+             </div>
+             <div class="clearfix"></div>
+         </div>#}
+
+
         {#    TIMELINE     #}
         <div id="timeline" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-default pull-left">
             <h1 class="box-header">Timeline</h1>
             <hr>
             <div class="box-content">
-
                 {% for publication in pagination %}
                     <div class="col-lg-12 publication-item">
+                        {# AVATAR #}
                         <div class="avatar">
                             {# AVATAR #}
                             {% if publication.user.image == null %}
@@ -122,8 +145,9 @@
                                      class="img-rounded h-100 w-100">
                             {% endif %}
                         </div>
+                        {# PUBLICATION #}
                         <div class="publication-item-content">
-                            <p>
+                            <p >
                                 <a class="pub-name-link"
                                    href="{{ path('user_profile',{'nickname':publication.user.nick}) }}">
                                     {{ publication.user.name }} {{ publication.user.surname }}

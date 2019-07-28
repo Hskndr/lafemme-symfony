@@ -6,32 +6,6 @@
 }
 
 /*GENERAL*/
-
-.border {
-    border: 1px solid black;
-}
-
-.borderw {
-    border: 1px solid white;
-}
-
-
-.bgcr {
-    background-color: red;
-}
-
-.bgcw {
-    background-color: white;
-}
-
-.bgcg {
-    background-color: green;
-}
-
-.bgcy {
-    background-color: yellow;
-}
-
 .mb-auto {
     margin-bottom: auto;
 }

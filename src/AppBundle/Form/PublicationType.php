@@ -25,11 +25,11 @@ class PublicationType extends AbstractType
                 )
             ))
             ->add('image', FileType::class, array(
-                'label' => 'Pic',
+                'label' => 'Picture',
                 'required' => false,
                 'data_class' => null,
                 'attr' => array(
-                    'class' => 'form-control'
+                    'class' => 'form-control-image'
                 )
             ))
             ->add('document', FileType::class, array(
@@ -37,12 +37,12 @@ class PublicationType extends AbstractType
                 'required' => false,
                 'data_class' => null,
                 'attr' => array(
-                    'class' => 'form-control'
+                    'class' => 'form-control-document'
                 )
             ))
             ->add('Send', SubmitType::class, array(
                 "attr" => array(
-                    "class" => "btn btn-success"
+                    "class" => "btn btn-info"
                 )
             ));
     }
