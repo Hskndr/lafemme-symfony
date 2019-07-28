@@ -61,9 +61,9 @@
     color: rgb(32, 18, 74);
 }
 
-.label-profile-info {
+.label-profile-info, .user_stats_profile {
     background-color: #ffffff;
-    color: #444444;
+    color: rgb(32, 18, 74);
 }
 
 /* profile-buttons */

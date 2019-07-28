@@ -8,16 +8,18 @@
 /* GENERAL */
 body {
     background-color: rgba(32, 21, 61, 0.728) !important;
+    color: whitesmoke;
 }
 
 /* SECTION */
 #content {
     background-color: rgba(32, 21, 61, 0.728) !important;
-    color: gray; /*CHANGE*/
+    color: whitesmoke; /*CHANGE*/
     width: 95rem;
     margin-top: 0px;
     margin: auto;
     min-height: 100vh;
+    padding: 5px;
 }
 
 .navbar {
@@ -37,6 +39,7 @@ body {
 
 .navbar-collapse .avatar img {
     height: 100%;
+    width: 100%;
     text-align: center;
 }
 
@@ -44,6 +47,7 @@ body {
 #footer {
     background-color: rgba(0, 0, 0, 0.728) !important;
     border-color: black;
+    color: whitesmoke;
 }
 
 /* REGISTER AND LOGIN*/
@@ -57,6 +61,7 @@ body {
     padding-top: 0px;
     margin: 0px auto;
     float: none;
+    color: rgba(0, 0, 0, 0.728)
 }
 
 .box-form input {
@@ -65,7 +70,9 @@ body {
 
 /* PEOPLE AND TIMELINE*/
 .user_link {
-    color: #444444;
+    color: wheat;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .user-item .avatar,
@@ -165,7 +172,7 @@ body {
 }
 
 #user-card .following-data a {
-    color: #444444;
+    color: whitesmoke;
     text-decoration: none;
 }
 
@@ -186,11 +193,12 @@ body {
 /*  PUBLICATIONS */
 .pub-name-link {
     font-weight: bold;
-    color: black;
+    color: wheat;
+    font-style: italic;
 }
 
 .pub-date {
-    color: gray;
+    color: whitesmoke;
 }
 
 .pub-image {
@@ -208,7 +216,7 @@ body {
 .publication-item .glyphicon {
     margin-right: 7px;
     cursor: pointer;
-    color: #444 !important;
+    color: white !important;
 }
 
 /*BUTTON LIKE*/
@@ -273,7 +281,7 @@ body {
 }
 
 .profile-box #user_stats a {
-    color: #444;
+    color: whitesmoke;
 }
 
 .profile-box #user_stats .label-stat {

@@ -41,6 +41,9 @@ security:
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/about, roles: IS_AUTHENTICATED_ANONYMOUSLY } #news router
+        - { path: ^/affiliate, roles: IS_AUTHENTICATED_ANONYMOUSLY } #news router
+        - { path: ^/dating, roles: IS_AUTHENTICATED_ANONYMOUSLY } #news router
         - { path: ^/home, roles: [ROLE_USER, ROLE_ADMIN] }
         - { path: ^/publication/remove, roles: [ROLE_USER, ROLE_ADMIN] }
         - { path: ^/my-data, roles: [ROLE_USER, ROLE_ADMIN] }
@@ -60,3 +63,5 @@ security:
         - { path: ^/following, roles: [ROLE_USER, ROLE_ADMIN] }
         - { path: ^/followed, roles: [ROLE_USER, ROLE_ADMIN] }
         - { path: ^/affiliate-signin, roles: [ROLE_USER, ROLE_ADMIN] } #news router
+        - { path: ^/traveling, roles: [ROLE_USER, ROLE_ADMIN] } #news router
+        - { path: ^/buy-credit, roles: [ROLE_USER, ROLE_ADMIN] } #news router

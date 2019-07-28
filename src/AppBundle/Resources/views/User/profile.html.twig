@@ -15,7 +15,7 @@
 
 {% block content %}
     <div class="col-lg-10 box-default profile-box">
-
+        <h1 class="box-header">Profile</h1>
         <div class="row profile-content">
 
             <div class="col-xs-12 col-md-3 content-avatar">
@@ -28,41 +28,39 @@
                             <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded">
                         {% else %}
                             <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded">
-
                         {% endif %}
                     {% else %}
                         <img src="{{ asset('uploads/user/'~user.image) }}" alt="" class="img-rounded">
                     {% endif %}
 
-
                 </div>
                 {# LIKES #}
-                <div id="user_stats">
+                <div id="user_stats" class="user_stats_profile bgcb">
 
                     <!-- 1 -->
                     {% set user_stats = user|user_stats %}
-                    <div class="">
+                    <div class="user_stats_profile">
                         <a href="{{ path('following_users',{'nickname':user.nick}) }}">
                             <span class="">Following</span>
                             <span class="number-stat">{{ user_stats.following }}</span>
                         </a>
                     </div>
                     <!-- 2 -->
-                    <div class="">
+                    <div class="user_stats_profile">
                         <a href="{{ path('followed_users',{'nickname':user.nick}) }}">
                             <span class="">Followed</span>
                             <span class="number-stat">{{ user_stats.followers }}</span>
                         </a>
                     </div>
                     <!-- 3 -->
-                    <div class="">
+                    <div class="user_stats_profile">
                         <a href="{{ path('user_profile',{'nickname':user.nick}) }}">
                             <span class="">Publications</span>
                             <span class="number-stat">{{ user_stats.publications }}</span>
                         </a>
                     </div>
                     <!-- 4 -->
-                    <div class="">
+                    <div class="user_stats_profile " >
                         <a href="{{ path('user_likes',{'nickname':user.nick}) }}">
                             <span class="">Likes</span>
                             <span class="number-stat">{{ user_stats.likes }}</span>
