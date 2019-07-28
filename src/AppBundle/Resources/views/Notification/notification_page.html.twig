@@ -12,14 +12,14 @@
                             {% set notu = notification.typeId|get_user %}
                             {% if notification.type == "follow" %}
                                 <a href="{{ path("user_profile",{'nickname':notu.nick}) }}">
-                                    {{ notu.name }} {{ notu.surname }}
+                                    {{ notu.name }} {{ notu.surname }} - {{ notu.nick }}
                                 </a>
                                 is following you!
                             {% endif %}
 
                             {% if notification.type == "like" %}
                                 <a href="{{ path("user_profile",{'nickname':notu.nick}) }}">
-                                    {{ notu.name }} {{ notu.surname }}
+                                    {{ notu.name }} {{ notu.surname }} - <span class="label label-info">{{ notu.nick }}</span>
                                 </a>
                                 likes your publication!
                             {% endif %}
