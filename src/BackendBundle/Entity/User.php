@@ -167,7 +167,14 @@ class User implements UserInterface, \Serializable
 
     public function getRoles()
     {
-        return array('ROLE_USER', 'ROLE_ADMIN');
+        return array(
+            'ROLE_USER',
+            'ROLE_ADMIN',
+            // ...
+            // view https://diego.com.es/roles-en-symfony
+            // new UserDependentRole($this) // DIMANIC ROLE
+
+        );
     }
 
     public function eraseCredentials()

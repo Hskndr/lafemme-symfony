@@ -65,3 +65,8 @@ security:
         - { path: ^/affiliate-signin, roles: [ROLE_USER, ROLE_ADMIN] } #news router
         - { path: ^/traveling, roles: [ROLE_USER, ROLE_ADMIN] } #news router
         - { path: ^/buy-credit, roles: [ROLE_USER, ROLE_ADMIN] } #news router
+        - { path: ^/admin, roles: [ROLE_ADMIN] } #router admin
+
+    #role_hierarchy:
+        #ROLE_ADMIN: ROLE:USER
+        #ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]

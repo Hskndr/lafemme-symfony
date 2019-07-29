@@ -1,0 +1,19 @@
+{# HEREDA DE LAYOUT #}
+{% extends "AppBundle:Layouts:layout.html.twig" %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('assets/js/custom/home.js') }}"></script>
+{% endblock %}
+{% block content %}
+
+    <div class="container-fluid">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left box-default">
+            {% if is_granted('ROLE_ADMIN') %}
+            <h1>HELLO ADMIN</h1>
+            {% else %}
+            <h1>SORRY YOU ARE NOT ADMIN.</h1>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

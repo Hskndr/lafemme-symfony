@@ -1,0 +1,3 @@
+admin:
+  path: /admin
+  defaults: { _controller: AppBundle:Admin:admin }

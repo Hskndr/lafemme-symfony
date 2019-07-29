@@ -256,11 +256,12 @@
 
     {#  STATUS  NOTIFICATION #}
 
-    <div class="container">
+    <div class="container-fluid">
 
-        <div class="container-fluid center-block">
+        <div class="container-fluid">
+
             {% for message in app.session.flashbag().get('status') %}
-                <div class="alert alert-success">{{ message }}</div>
+                <div class="alert alert-info">{{ message }}</div>
             {% endfor %}
         </div>
         <div class="clearfix"></div>

@@ -50,6 +50,10 @@ app_affiliate_signin:
   resource: "@AppBundle/Resources/config/routing/affiliate-signin.yml"
   prefix: /
 
+app_admin:
+  resource: "@AppBundle/Resources/config/routing/admin.yml"
+  prefix: /
+
 app_homepage:
   path: /
   defaults: { _controller: AppBundle:MainPage:mainPage }
