@@ -160,7 +160,7 @@ class RegisterType extends AbstractType
             ))
             ->add('Signin', SubmitType::class, array(
                 "attr" => array(
-                    "class" => "form-submit-register btn btn-secondary"
+                    "class" => "form-submit-register btn btn-info"
                 )
             ));
     }
