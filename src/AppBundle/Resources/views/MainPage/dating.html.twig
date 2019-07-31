@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/outpages.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/tools.css') }}">
     {% endblock %}
 
     {% block javascripts %}
@@ -27,7 +28,7 @@
 
 
     <div class="row image-content-subtitle ">
-        <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 text-left">
+        <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 text-left responsive-custom">
             <img class="img-responsive" src="{{ asset('assets/image/LF31.jpg') }}" alt="Responsive image">
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-center">
@@ -37,15 +38,15 @@
                 enjoy our lives as we see it. Life is too short, enjoy every moment of it.
             </h5>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 text-right">
+        <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 text-right responsive-custom">
             <img class="img-responsive" src="{{ asset('assets/image/LF32.jpg') }}" alt="Responsive image">
         </div>
     </div>
 
     <div class=" row image-content ">
-        <img class="img-responsive" src="{{ asset('assets/image/LF35.jpg') }}" alt="Responsive image">
+        <img class="img-responsive responsive-custom" src="{{ asset('assets/image/LF35.jpg') }}" alt="Responsive image">
         <img class="img-responsive" src="{{ asset('assets/image/LF05.jpg') }}" alt="Responsive image">
-        <img class="img-responsive" src="{{ asset('assets/image/LF36.jpg') }}" alt="Responsive image">
+        <img class="img-responsive responsive-custom" src="{{ asset('assets/image/LF36.jpg') }}" alt="Responsive image">
 
     </div>
 
@@ -72,14 +73,14 @@
     </div>
 
     <div class=" row image-content ">
-        <img class="img-responsive" src="{{ asset('assets/image/LF48.jpg') }}" alt="Responsive image">
+        <img class="img-responsive responsive-custom" src="{{ asset('assets/image/LF48.jpg') }}" alt="Responsive image">
         <img class="img-responsive" src="{{ asset('assets/image/LF49.jpg') }}" alt="Responsive image">
-        <img class="img-responsive" src="{{ asset('assets/image/LF50.jpg') }}" alt="Responsive image">
+        <img class="img-responsive responsive-custom" src="{{ asset('assets/image/LF50.jpg') }}" alt="Responsive image">
     </div>
 
-    <div class="row ">
-        <p class="col-lg-6"> Sign Up.. Is FREE plus you get 200 free credits as a welcome bonus </p>
-        <div class="col-lg-6 text-left">
+    <div class="row dating-content-button">
+        <p class="col-lg-6 col-md-6 col-sm-12 col-xs-12"> Sign Up.. Is FREE plus you get 200 free credits as a welcome bonus </p>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left">
             <a href="{{ path('register') }}" type="button" class="btn btn-info">Click Here</a>
         </div>
 

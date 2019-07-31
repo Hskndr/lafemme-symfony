@@ -1,9 +1,9 @@
 {# HEREDA DE LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
-{#{% block javascripts %}
+{% block javascripts %}
     {{ parent() }}
     <script type="text/javascript" src="{{ asset('assets/js/custom/home.js') }}"></script>
-{% endblock %}#}
+{% endblock %}
 {% block content %}
     <div class="col-lg-12 box-default">
         <h1 class="box-header">

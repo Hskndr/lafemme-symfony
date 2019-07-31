@@ -74,6 +74,20 @@ body {
     font-style: italic;
     font-weight: bold;
 }
+.user-item {
+    padding: 15px;
+    background-color: rgba(32, 21, 61, 0.728) !important;
+    margin-bottom: 3px;
+}
+
+.publication-item {
+    background-color: rgba(32, 21, 61, 0.728) !important;
+    margin-bottom: 3px;
+    padding-top: 3px;
+}
+.publication-item hr{
+    border-color: rgba(32, 21, 61, 0.728);
+}
 
 .user-item .avatar,
 .publication-item .avatar {
@@ -110,6 +124,12 @@ body {
 
 .new-publication-button {
     margin: 5px;
+}
+
+/* Scroll in publication*/
+.publication-message {
+    overflow: scroll;
+    max-height: 75px;;
 }
 
 
@@ -316,26 +336,163 @@ body {
 /* RESPONSIVE */
 /*// Extra small devices (portrait phones, less than 576px)*/
 @media (min-width: 280px) and (max-width: 575.98px) {
+    /* Fonts */
+    /* GENERAL */
+    /* SECTION */
+    /* FOOTER */
+    /* REGISTER AND LOGIN*/
+    /* PEOPLE AND TIMELINE*/
+    .user-item {
+        padding: 10px;
+        background-color: rgba(32, 21, 61, 0.728) !important;
+        margin-bottom: 3px;
+        max-height: 150px;
+    }
+
+    .publication-item {
+        background-color: rgba(32, 21, 61, 0.728) !important;
+        margin-bottom: 3px;
+        padding-top: 10px;
+        max-height: 150px;
+    }
+
+    .user-item .avatar,
+    .publication-item .avatar {
+        background-color: #cccccc;
+        border-radius: 550px;
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .user-item .avatar img,
+    .publication-item .avatar img {
+        height: 100%;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Scroll in publication*/
+    .publication-message {
+        overflow: scroll;
+        max-height: 75px;;
+    }
+
+    /*New publication light*/
+    /*HOME PUBLICATIONS*/
+    /* USERS STADISTIC*/
+    /*  PUBLICATIONS */
+    /*BUTTON LIKE*/
+    /* PROFILES STYLES */
+    /* PRIVATE MESSAGES */
 
 }
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
+    /* Fonts */
+    /* GENERAL */
+    /* SECTION */
+    /* FOOTER */
+    /* REGISTER AND LOGIN*/
+    /* PEOPLE AND TIMELINE*/
+    .user-item {
+        padding: 10px;
+        background-color: rgba(32, 21, 61, 0.728) !important;
+        margin-bottom: 3px;
+    }
 
+    .publication-item {
+        background-color: rgba(32, 21, 61, 0.728) !important;
+        margin-bottom: 3px;
+        padding-top: 10px;
+        max-height: 150px;
+
+    }
+
+    .user-item .avatar,
+    .publication-item .avatar {
+        background-color: #cccccc;
+        border-radius: 550px;
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .user-item .avatar img,
+    .publication-item .avatar img {
+        height: 100%;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Scroll in publication*/
+    .publication-message {
+        overflow: scroll;
+        max-height: 75px;;
+    }
+
+    /*New publication light*/
+    /*HOME PUBLICATIONS*/
+    /* USERS STADISTIC*/
+    /*  PUBLICATIONS */
+    /*BUTTON LIKE*/
+    /* PROFILES STYLES */
+    /* PRIVATE MESSAGES */
 }
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
-
+    /* Fonts */
+    /* GENERAL */
+    /* SECTION */
+    /* FOOTER */
+    /* REGISTER AND LOGIN*/
+    /* PEOPLE AND TIMELINE*/
+    /*New publication light*/
+    /*HOME PUBLICATIONS*/
+    /* USERS STADISTIC*/
+    /*  PUBLICATIONS */
+    /*BUTTON LIKE*/
+    /* PROFILES STYLES */
+    /* PRIVATE MESSAGES */
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
+    /* Fonts */
+    /* GENERAL */
+    /* SECTION */
+    /* FOOTER */
+    /* REGISTER AND LOGIN*/
+    /* PEOPLE AND TIMELINE*/
+    /*New publication light*/
+    /*HOME PUBLICATIONS*/
+    /* USERS STADISTIC*/
+    /*  PUBLICATIONS */
+    /*BUTTON LIKE*/
+    /* PROFILES STYLES */
+    /* PRIVATE MESSAGES */
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-
+    /* Fonts */
+    /* GENERAL */
+    /* SECTION */
+    /* FOOTER */
+    /* REGISTER AND LOGIN*/
+    /* PEOPLE AND TIMELINE*/
+    /*New publication light*/
+    /*HOME PUBLICATIONS*/
+    /* USERS STADISTIC*/
+    /*  PUBLICATIONS */
+    /*BUTTON LIKE*/
+    /* PROFILES STYLES */
+    /* PRIVATE MESSAGES */
 
 }
