@@ -108,14 +108,14 @@
         </div>
     </div>
 
-    <div class=" section-d  ">
+    <div class="section-d">
         <p>Once you have membership with La Femme, you can also become an independent affiliate to promote
             La Femme dating under the La Femme set guidelines in the memorandum of understanding. As an affiliate you
             are officially attached as a Marketing Affiliate to La femme dating.
         </p>
 
 
-        <div class="row ">
+        <div>
 
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 responsive-custom">
                 <img src="{{ asset('assets/image/LF44.jpg') }}" class="img-responsive" alt="Responsive image">
@@ -124,20 +124,28 @@
                 <img src="{{ asset('assets/image/LF45.jpg') }}" class="img-responsive" alt="Responsive image">
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-                <p class="m-0"> Please sign up the Affiliate Application.</p>
-                <div class="row d-flex justify-content-end align-items-center ">
-                    <p> Already a Member</p>
-                    <a href="{{ path('affilite-signin') }}" class="badge badge-secondary text-wrap">
-                        Click here and Signed up now to become as Affiliate
-                    </a>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 section-d-content-buttons">
+                <div class="row">
+                    <p class=""> Please sign up the Affiliate Application.</p>
+
                 </div>
-                <p> Not a Member yet? </p>
+                <div class="row">
+                    <p class=""> Already a Member</p>
+                    <div class="content-button-wrap">
+                        <a href="{{ path('affilite-signin') }}" class="button-wrap">
+                            Click here and Signed up now to become as Affiliate
+                        </a>
+                    </div>
+                </div>
+                <p class="row "> Not a Member yet? </p>
                 <div class="row d-flex justify-content-end align-items-center ">
-                    <p> want to become a member</p>
-                    <a href="{{ path('register') }}" class="badge badge-info text-wrap">
-                        Click Here and become a member first
-                    </a>
+                    <p class=""> want to become a member</p>
+                    <div class="content-button-wrap">
+                        <a href="{{ path('register') }}" class="button-wrap">
+                            Click Here and become a member first
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>

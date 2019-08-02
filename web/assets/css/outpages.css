@@ -13,7 +13,7 @@ body {
 
 /* SECTION */
 #content-out-pages, .content-out-pages, .content_outside, #content_outside {
-    background-color: whitesmoke !important;
+    background-color: white !important;
     color: rgba(32, 21, 61, 0.728);
     max-width: 95rem;
     margin-top: 0px;
@@ -79,10 +79,41 @@ h4 {
     margin-bottom: 10px;
 }
 
-.section-d{
+.section-d {
     margin: 15px 0px;
     text-align: justify;
 }
+
+.section-d img {
+    height: 220px;
+}
+
+.section-d-content-buttons {
+    text-align: right;
+}
+
+.content-button-wrap {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: normal;
+    flex-direction: column;
+    width: 200px;
+    background-color: rgb(133,58,173);
+    margin: 4px;
+}
+
+.content-button-wrap a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
 /* RESPONSIVE */
 /*// Extra small devices (portrait phones, less than 576px)*/
 @media (min-width: 280px) and (max-width: 575.98px) {
@@ -97,6 +128,11 @@ h4 {
 
     /*  AFFILIATE */
     .position-absolute {
+        text-align: center;
+    }
+
+    .section-d {
+        margin: 15px 0px;
         text-align: center;
     }
 }

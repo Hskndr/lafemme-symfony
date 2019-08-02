@@ -11,6 +11,7 @@
     {{ parent() }}
     {#      styles      #}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/profile.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/tools.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -35,7 +36,8 @@
 
                 </div>
                 {# LIKES #}
-                <div id="user_stats" class="user_stats_profile bgcb">
+
+                <div id="user_stats" class="user_stats_profile">
 
                     <!-- 1 -->
                     {% set user_stats = user|user_stats %}

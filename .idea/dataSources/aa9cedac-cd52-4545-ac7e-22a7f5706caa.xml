@@ -21,11 +21,12 @@
     </schema>
     <schema id="6" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
+      <Substituted>1</Substituted>
     </schema>
     <schema id="7" parent="1" name="lafemme1new">
       <Current>1</Current>
-      <Visible>1</Visible>
       <Collation>utf8_general_ci</Collation>
+      <Visible>1</Visible>
     </schema>
     <schema id="8" parent="1" name="lafemmeLocal">
       <Collation>utf8_general_ci</Collation>
