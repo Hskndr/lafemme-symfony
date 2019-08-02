@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c0ac252-1782-4d10-9e1a-51b7ca0962d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aa9cedac-cd52-4545-ac7e-22a7f5706caa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/aa9cedac-cd52-4545-ac7e-22a7f5706caa.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Affiliate/affiliate_signin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Affiliate/affiliate_signin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Layouts/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/affiliate.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/affiliate.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/outpages.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/outpages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database_scheme_lafemme.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/database_scheme_lafemme.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +205,8 @@
       <workItem from="1564643249943" duration="533000" />
       <workItem from="1564644136831" duration="1810000" />
       <workItem from="1564699826267" duration="2455000" />
-      <workItem from="1564702537809" duration="1694000" />
+      <workItem from="1564702537809" duration="2060000" />
+      <workItem from="1564733260760" duration="1397000" />
     </task>
     <task id="LOCAL-00001" summary="Add extras templates">
       <created>1564099251477</created>
