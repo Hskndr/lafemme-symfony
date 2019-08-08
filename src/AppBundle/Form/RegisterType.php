@@ -3,6 +3,7 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -29,11 +30,11 @@ class RegisterType extends AbstractType
                         'Sugar Daddies Seeking Females' => 'Sugar Daddies Seeking Females',
                         'Male Seeking Sugar Mommies' => 'Male Seeking Sugar Mommies',
                     ],
-                    'female' => [
+                    'Female' => [
                         'Attached Female Seeking Male' => 'Attached Female Seeking Male',
                         'Female seeking Females' => 'Female seeking Females',
                         'Sugar Mommies Seeking Males' => 'Sugar Mommies Seeking Males',
-                        'Female Seeking Sugar Daddies' =>  'Female Seeking Sugar Daddies',
+                        'Female Seeking Sugar Daddies' => 'Female Seeking Sugar Daddies',
                     ],
                 ],
                 'required' => 'required',
@@ -84,9 +85,12 @@ class RegisterType extends AbstractType
                     'class' => 'form-postal form-control'
                 )
             ))
-            ->add('datebirth', TextType::class, array(
+            ->add('datebirth', BirthdayType::class, array(
                 'label' => 'Date of Birth',
                 'required' => 'required',
+                'placeholder' => [
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                ],
                 'attr' => array(
                     'class' => 'form-date form-control'
                 )

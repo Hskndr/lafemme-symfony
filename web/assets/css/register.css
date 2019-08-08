@@ -15,11 +15,12 @@
 
 .box-image img {
     height: 150px;
+    margin: auto;
 }
 
 /*FORM REGISTER*/
 .form-control {
-
+    margin: 10px 0px;
 }
 
 .box-form .box-default-register {
@@ -29,17 +30,30 @@
     float: none;
 }
 
+/* FORM FIELDS */
+/*Birthdate*/
+#backendbundle_user_datebirth_month,
+#backendbundle_user_datebirth_day,
+#backendbundle_user_datebirth_year {
+    height: 100%;
+    width: 100px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.form-date{
+    padding: 0;
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
+
 /*BUTTON*/
 .form-submit-register {
     /* background-color: pink;*/
     height: 50px;
     width: 100px;
     text-align: center;
-}
-
-.form-submit-register:hover {
-    background-color: gray;
-    color: #FFFFFF;
+    margin: 20px;
 }
 
 /* RESPONSIVE */
