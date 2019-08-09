@@ -4,8 +4,9 @@
 {# USE STYLESHEET #}
 {% block stylesheets %}
     {{ parent() }}
-    {#<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">#}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.cosmo.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/register.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/tools.css') }}">
 {% endblock %}
 
 {# USE JAVASCRIPT #}
@@ -18,32 +19,26 @@
 {% block content %}
     <div class="box-form container-fluid">
         {# LA FEMME CONTENT#}
-        <section class="box-content-white responsive-custom">
-            <div class="">
+        <section class="box-content-white responsive-custom ">
+            <div class="box-image">
                 <h2 class="text-center">
                     How to Anonymously Safeguard Your Privacy
                 </h2>
 
                 <div class="row ">
-                    <div class="col-xs-6 col-md-4">
-                        <a href="#" class="thumbnail">
-                            <img src="{{ asset('assets/image/LF35.jpg') }}" class="img-responsive"
-                                 alt="Responsive image">
-                        </a>
+                    <div class="col-xs-6 col-sm-12 col-md-4 col-lg-4 text-center">
+                        <img src="{{ asset('assets/image/LF35.jpg') }}" class="img-responsive"
+                             alt="Responsive image">
                     </div>
 
-                    <div class="col-xs-6 col-md-4">
-                        <a href="#" class="thumbnail">
-                            <img src="{{ asset('assets/image/LF05.jpg') }}" class="img-responsive"
-                                 alt="Responsive image">
-                        </a>
+                    <div class="col-xs-6 col-sm-12 col-md-4 col-lg-4 text-center">
+                        <img src="{{ asset('assets/image/LF05.jpg') }}" class="img-responsive"
+                             alt="Responsive image">
                     </div>
 
-                    <div class="col-xs-12 col-md-4">
-                        <a href="#" class="thumbnail">
-                            <img src="{{ asset('assets/image/LF36.jpg') }}" class="img-responsive"
-                                 alt="Responsive image">
-                        </a>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                        <img src="{{ asset('assets/image/LF36.jpg') }}" class="img-responsive"
+                             alt="Responsive image">
                     </div>
                 </div>
 
@@ -71,16 +66,51 @@
                 </div>
             </div>
         </section>
+
         <div class="text-center">
-            <h2 class="h4 pb-3"> CREATE YOUR PROFILE </h2>
-            <p class="h5 pb-3"> Someone will acknowledge you with Desire, Passion and Excitement. </p>
+            <h2> CREATE YOUR PROFILE </h2>
+            <h5> Someone will acknowledge you with Desire, Passion and Excitement. </h5>
         </div>
 
-        <div class="box-default-register col-lg-8 col-md-8">
-
-
+        <div class="box-default-register col-lg-8 col-md-8 col-sm-8">
             <hr>
             {{ form_start(form, {'action':'', 'method':'POST'}) }}
+
+            {{ form_row(form.relationmatch) }}
+            <h3>Explore</h3>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    {{ form_row(form.invitationcode) }}
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <h3>If you dont have put 100</h3>
+                </div>
+            </div>
+            {{ form_row(form.nick) }}
+            {{ form_row(form.password) }}
+
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    {{ form_row(form.country) }}
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    {{ form_row(form.state) }}
+                </div>
+            </div>
+            {{ form_row(form.postalcode) }}
+            {{ form_row(form.datebirth) }}
+            {{ form_row(form.age) }}
+            {{ form_row(form.zodiacsing) }}
+            {{ form_row(form.race) }}
+            {{ form_row(form.email) }}
+
+
+
+
+
+
             {{ form_errors(form) }}
             {{ form_end(form) }}
         </div>

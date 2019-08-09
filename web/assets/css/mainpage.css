@@ -129,7 +129,7 @@ header footer {
 
 /* MAIN  */
 main {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 main section {
@@ -150,6 +150,7 @@ main section {
 /* SECTION ONE */
 .section-one a, .section-one {
     color: darkblue;
+
 }
 
 .section-one .image-content {
@@ -162,9 +163,14 @@ main section {
     height: 200px;
 }
 
+.section-one h2 {
+    margin-bottom: 10px !important;
+}
+
 /* SECTION TWO */
 /* BIG PICTURES */
 .section-two {
+    margin-bottom: 10px;
 
 }
 
@@ -173,7 +179,12 @@ main section {
 }
 
 .box-big-pic {
+    height: 450px;
+}
 
+.big-pic {
+    height: 420px !important;
+    width: 250px;
 }
 
 .box-big-pic img {
@@ -189,18 +200,40 @@ main section {
 
 .box-small-pic img {
     height: 200px;
+    margin: 5px 0px;
 }
 
 /* SECTION THREE  */
+.section-three {
+    margin-bottom: 30px;
+}
+
 .section-three p {
     padding: 5px;
+
 }
 
 /* SECTION FOUR  */
 .section-right {
-    background-image: url("../image/LF61.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /*    background-image: url("../image/LF61.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;*/
+    margin: 5px;
+    position: relative;
+}
+
+.background-section {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.image-section-left {
+    height: 430px;
 }
 
 /* SECTION FIVE  */
