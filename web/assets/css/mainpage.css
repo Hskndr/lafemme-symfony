@@ -5,6 +5,11 @@
     src: local('Futura Md BT'), url('../font/futura_lt_bt_light-webfont.woff') format('woff');
 }
 
+/* MODALS  */
+.modal-body {
+    color: black!important;
+}
+
 /*GENERAL*/
 .mb-auto {
     margin-bottom: auto;

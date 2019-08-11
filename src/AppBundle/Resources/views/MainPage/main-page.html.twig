@@ -20,6 +20,7 @@
         {#      javascripts      #}
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/custom/modals.js') }}"></script>
     {% endblock %}
 
 </head>
@@ -143,12 +144,12 @@
                              aria-labelledby="exampleModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
-                                    <div class="modal-header">
+                                    <div class="modal-header ">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span></button>
                                         <h4 class="modal-title" id="exampleModalLabel">New message</h4>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body border-green">
                                         <form>
                                             <div class="form-group">
                                                 <label for="recipient-name" class="control-label">Recipient:</label>
@@ -158,6 +159,25 @@
                                                 <label for="message-text" class="control-label">Message:</label>
                                                 <textarea class="form-control" id="message-text"></textarea>
                                             </div>
+
+                                            {# TEST LANGUAGE REST COUNTRIES #}
+                                            <div id="main-container">
+                                                <div id="flag-container">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div id="info-container">
+                                                    <select id="countries">
+
+                                                    </select>
+                                                    <p>Capital: <span id="capital"></span></p>
+                                                    <p>Dialing code: <span id="dialing-code"></span></p>
+                                                    <p>Population: <span id="population"></span></p>
+                                                    <p>Currency: <span id="currencies"></span></p>
+                                                    <p>Region: <span id="region"></span></p>
+                                                    <p>Sub region: <span id="sub-region"></span></p>
+                                                </div>
+                                            </div>
+
                                         </form>
                                     </div>
                                     <div class="modal-footer">
