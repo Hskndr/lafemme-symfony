@@ -10,6 +10,11 @@
     color: black!important;
 }
 
+#flag-container img{
+    height: 20px;
+    width: 25px;
+}
+
 /*GENERAL*/
 .mb-auto {
     margin-bottom: auto;

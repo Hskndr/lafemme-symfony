@@ -57,6 +57,7 @@ function displayCountryInfo(countryByAlpha3Code) {
     const  countryData = countries.find(country => country.alpha3Code === countryByAlpha3Code );
     console.log(countryData);
     document.getElementById("capital").innerHTML = countryData.capital;
+    document.getElementById("countryName").innerHTML = countryData.name.toLocaleString("name");
     document.getElementById("dialing-code").innerHTML = `+${countryData.callingCodes[0]}`;
     document.getElementById("population").innerHTML = countryData.population.toLocaleString("en-US");
     document.getElementById("currencies").innerHTML = countryData.currencies.filter(c=>c.name).map(c => `${c.name} (${c.code})`).join(", ");

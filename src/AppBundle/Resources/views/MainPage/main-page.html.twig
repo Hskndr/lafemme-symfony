@@ -79,7 +79,8 @@
             </div>
 
             <div class="container-fluid responsive-custom">
-                <p class="text-left col-lg-9 col-md-9 col-sm-9 " style="padding-left: 40px">Desire, Passion and Excitement is like
+                <p class="text-left col-lg-9 col-md-9 col-sm-9 " style="padding-left: 40px">Desire, Passion and
+                    Excitement is like
                     TIME... Time is like a RIVER. You cannot touch the same water TWICE, <br> because the flow that
                     has passed will never pass again... Enjoy every moment of your life.</p>
                 <div class="col-3">
@@ -130,12 +131,15 @@
                         <a class="btn btn-secondary btn-login" type="button" data-toggle="modal"
                            data-target="#languageModal" data-whatever="@mdo">
                             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+
                             &nbsp;Language
                         </a>
                         <a class="btn btn-secondary btn-login" type="button" data-toggle="modal"
                            data-target="#countryModal" data-whatever="@fat">
-                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-                            &nbsp;Country
+                            <span id="flag-container" aria-hidden="true">
+                                <img src="" alt="">
+                            </span>
+                            <span id="countryName"></span>
                         </a>
 
                         {#  MODAL  START  #}
@@ -151,13 +155,10 @@
                                     </div>
                                     <div class="modal-body border-green">
                                         <form>
+                                            <label class="control-label">Select your Language:</label>
+
                                             <div class="form-group">
-                                                <label for="recipient-name" class="control-label">Recipient:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="message-text" class="control-label">Message:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
+
                                             </div>
 
                                             {# TEST LANGUAGE REST COUNTRIES #}
@@ -183,12 +184,12 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close
                                         </button>
-                                        <button type="button" class="btn btn-primary">Send message</button>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        {#  MODAL  COUNTRY  #}
                         <div class="modal fade" id="countryModal" tabindex="-1" role="dialog"
                              aria-labelledby="exampleModalLabel">
                             <div class="modal-dialog" role="document">
@@ -196,24 +197,29 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="exampleModalLabel">New message2</h4>
+                                        <h4 class="modal-title" id="exampleModalLabel"></h4>
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="control-label">Recipient2:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="message-text" class="control-label">Message2:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
-                                            </div>
+                                            <label for="recipient-name" class="control-label">Select your
+                                                Country:</label>
+                                            <ul id="list-countries-container">
+                                                <li id="list-countries">
+                                                    <div id="flag-container">
+                                                        <img src="" alt="">
+                                                    </div>
+                                                    <span id="capital"></span>
+                                                    <div>
+
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close2
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
                                         </button>
-                                        <button type="button" class="btn btn-primary">Send message2</button>
+
                                     </div>
                                 </div>
                             </div>
