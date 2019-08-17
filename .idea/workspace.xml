@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assets/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/mainpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/js/custom/modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/js/custom/modals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/image/LafemmeImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/image/LafemmeImage.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,6 +151,16 @@
       </list>
     </option>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -210,7 +220,9 @@
       <workItem from="1564702537809" duration="1694000" />
       <workItem from="1565312772345" duration="3006000" />
       <workItem from="1565338653542" duration="426000" />
-      <workItem from="1565527096104" duration="16523000" />
+      <workItem from="1565527096104" duration="16900000" />
+      <workItem from="1565681093074" duration="314000" />
+      <workItem from="1566037343496" duration="1928000" />
     </task>
     <task id="LOCAL-00001" summary="Add extras templates">
       <created>1564099251477</created>

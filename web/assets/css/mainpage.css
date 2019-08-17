@@ -243,7 +243,8 @@ main section {
 }
 
 .image-section-left {
-    height: 430px;
+    height: 470px;
+    margin-left: -17px;
 }
 
 /* SECTION FIVE  */
