@@ -17,10 +17,17 @@
     {% endblock %}
 
     {% block javascripts %}
+        {# TRANSLATE #}
+        <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}</script>
         {#      javascripts      #}
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/js/custom/modals.js') }}"></script>
+
     {% endblock %}
 
 </head>
@@ -58,7 +65,7 @@
             </div>
 
             <div class="container-fluid responsive-custom">
-                <div class="col-lg-3 col-md-3 col-sm-3 header-center-left ">
+                <div class="col-lg-4 col-md-4 col-sm-4 header-center-left ">
                     <a href="{{ path("register") }}" class="btn btn-secondary btn-lg btn-register" type="button">
                         SELECT YOUR MATCH
                     </a>
@@ -70,7 +77,7 @@
                     <p class="h5">Private Affairs Club</p>
                 </div>
 
-                <div class="col-lg-9 col-md-9 col-sm-9 header-center-right ">
+                <div class="col-lg-8 col-md-8 col-sm-8 header-center-right ">
                     <span class="ramdon row  "></span>
                     <span class="h1 row  "> Shhhh...</span>
                     <span class="h5 row  ">It's a Secret</span>
@@ -109,7 +116,6 @@
 
                 <div class="col-lg-3 col-md-3 col-sm-3 footer-right ">
                     <div class="non-responsive-custom">
-
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
                             <a href="{{ path("register") }}"
                                class="btn btn-secondary btn-lg btn-register col-xs-12 col-sm-12"
@@ -131,11 +137,12 @@
                         <a class="btn btn-secondary btn-login" type="button" data-toggle="modal"
                            data-target="#languageModal" data-whatever="@mdo">
                             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-
                             &nbsp;Language
                         </a>
+
                         <a class="btn btn-secondary btn-login" type="button" data-toggle="modal"
                            data-target="#countryModal" data-whatever="@fat">
+                            {# HSKNDR: SHOW COUNTRY'S FLAG#}
                             <span id="flag-container" aria-hidden="true">
                                 <img src="" alt="">
                             </span>
@@ -153,42 +160,20 @@
                                             <span aria-hidden="true">&times;</span></button>
                                         <h4 class="modal-title" id="exampleModalLabel">New message</h4>
                                     </div>
-                                    <div class="modal-body border-green">
+                                    <div class="modal-body">
                                         <form>
                                             <label class="control-label">Select your Language:</label>
-
-                                            <div class="form-group">
-
-                                            </div>
-
-                                            {# TEST LANGUAGE REST COUNTRIES #}
-                                            <div id="main-container">
-                                                <div id="flag-container">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div id="info-container">
-                                                    <select id="countries">
-
-                                                    </select>
-                                                    <p>Capital: <span id="capital"></span></p>
-                                                    <p>Dialing code: <span id="dialing-code"></span></p>
-                                                    <p>Population: <span id="population"></span></p>
-                                                    <p>Currency: <span id="currencies"></span></p>
-                                                    <p>Region: <span id="region"></span></p>
-                                                    <p>Sub region: <span id="sub-region"></span></p>
-                                                </div>
-                                            </div>
-
+                                            <div id="google_translate_element"></div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
-                                        </button>
-
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
                         {#  MODAL  COUNTRY  #}
                         <div class="modal fade" id="countryModal" tabindex="-1" role="dialog"
                              aria-labelledby="exampleModalLabel">
@@ -203,23 +188,36 @@
                                         <form>
                                             <label for="recipient-name" class="control-label">Select your
                                                 Country:</label>
-                                            <ul id="list-countries-container">
-                                                <li id="list-countries">
-                                                    <div id="flag-container">
-                                                        <img src="" alt="">
-                                                    </div>
-                                                    <span id="capital"></span>
-                                                    <div>
+                                            <select id="countries">
+                                            </select>
+                                            {# <ul id="list-countries-container">
 
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                                 <li id="list-countries">
+
+                                                 </li>
+                                             </ul>#}
+
+                                            {# TEST LANGUAGE REST COUNTRIES #}
+                                            <div id="main-container">
+                                                <div id="flag-container">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div id="info-container">
+                                                    {# <select id="countries">
+
+                                                     </select>#}
+                                                    <p class="no_show">Capital: <span id="capital"></span></p>
+                                                    <p class="no_show">Dialing code: <span id="dialing-code"></span></p>
+                                                    <p class="no_show">Population: <span id="population"></span></p>
+                                                    <p class="no_show">Currency: <span id="currencies"></span></p>
+                                                    <p class="no_show">Region: <span id="region"></span></p>
+                                                    <p class="no_show">Sub region: <span id="sub-region"></span></p>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
-                                        </button>
-
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +227,7 @@
 
                     </div>
                     <div class="row text-center">
-                        <span>2019 La femme1 - Official website</span>
+                        <span>2019 <a href="https://lafemme1.com">www.lafemme1.com </a>- Official website</span>
 
                     </div>
                 </div>

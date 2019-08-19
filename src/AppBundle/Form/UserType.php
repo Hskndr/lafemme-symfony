@@ -147,6 +147,28 @@ class UserType extends AbstractType
                     'class' => 'form-bodytype-edit form-control'
                 )
             ))
+            ->add('zodiacsing', ChoiceType::class, array(
+                'label' => 'Zodiac Sign',
+                'choices' => [
+                    'Please Select' => 'select',
+                    'Aries' => 'aries',
+                    'Taurus' => 'taurus',
+                    'Gemini' => 'gemini',
+                    'Cancer' => 'cancer',
+                    'Leo' => 'leo',
+                    'Virgo' => 'virgo',
+                    'Libra' => 'libra',
+                    'Scorpio' => 'scorpio',
+                    'Sagittarius' => 'sagittarius',
+                    'Capricorn' => 'capricorn',
+                    'Aquarius' => 'aquarius',
+                    'Pisces' => 'pisces',
+                ],
+                'required' => 'required',
+                'attr' => array(
+                    'class' => 'form-zodiac form-control'
+                )
+            ))
             ->add('height', ChoiceType::class, array(
                 'label' => 'Height',
                 'choices' => [
@@ -175,8 +197,8 @@ class UserType extends AbstractType
                     'class' => 'form-height-edit form-control'
                 )
             ))
-            ->add('height', ChoiceType::class, array(
-                'label' => 'Height',
+            ->add('weight', ChoiceType::class, array(
+                'label' => 'weight',
                 'choices' => [
                     'Ask me' => 'ask-me',
                     '80 lbs (36 kg)' => '80 lbs (36 kg)',

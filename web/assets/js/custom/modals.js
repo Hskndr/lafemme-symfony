@@ -33,40 +33,59 @@ function initialize(countriesData) {
     const countriesList = document.getElementById("countries");
     countriesList.innerHTML = options;
 
+    //HSKNDR: TRY TO SHOW THE COUNTRIES IN A LIST
+    //* let list = "";
+    //* countries.forEach(country => list += `<li value="${country.alpha3Code}" class="row badge"><button class="btn btn-primary btn-sm" type="button">${country.name}</button></li>`)
+    //* const listCountriesList = document.getElementById("list-countries-container")
+    //* listCountriesList.innerHTML = list;
+
+
     //HSKNDR: HERE I CAN SELECT THE COUNTRY
     // countriesList. addEventListener("change", event=> displayCountryInfo(event.target.value));
-    countriesList. addEventListener("change", newCountrySelection);
+    countriesList.addEventListener("change", newCountrySelection);
+    //* listCountriesList.addEventListener("onClick", newCountrySelection);
+
     function newCountrySelection(event) {
         displayCountryInfo(event.target.value)
     }
-   /* console.log(countriesList);
-    console.log(countriesList.value);
-    console.log(countriesList.length);
-    console.log(countriesList.selectedIndex);
-    console.log(countriesList[10]);*/
-    countriesList.selectedIndex = Math.floor(Math.random()*countriesList.length)
+
+    /* console.log(countriesList);
+     console.log(countriesList.value);
+     console.log(countriesList.length);
+     console.log(countriesList.selectedIndex);
+     console.log(countriesList[10]);*/
+
+    // HSKNDR: KEEP SELECTED USA IS 239 ARRAY POSITION
+    countriesList.selectedIndex = Math.floor(239)
     displayCountryInfo(countriesList[countriesList.selectedIndex].value);
-  /* //HSKNDR: SELECTED RANDON
-   countriesList.selectedIndex = Math.floor(Math.random()*countriesList.length)
-    displayCountryInfo(countriesList[countriesList.selectedIndex].value);*/
+
+    /* //HSKNDR: SELECTED RAMDON
+     countriesList.selectedIndex = Math.floor(Math.random()*countriesList.length)
+      displayCountryInfo(countriesList[countriesList.selectedIndex].value);*/
 
     /*console.log("Capital of " + countries[0].name + " is " + countries[0].capital);
     console.log(`Capital of ${countries[0].name} is ${countries[0].capital}`);*/
 }
+
+
 function displayCountryInfo(countryByAlpha3Code) {
-    const  countryData = countries.find(country => country.alpha3Code === countryByAlpha3Code );
+    const countryData = countries.find(country => country.alpha3Code === countryByAlpha3Code);
     console.log(countryData);
     document.getElementById("capital").innerHTML = countryData.capital;
     document.getElementById("countryName").innerHTML = countryData.name.toLocaleString("name");
     document.getElementById("dialing-code").innerHTML = `+${countryData.callingCodes[0]}`;
     document.getElementById("population").innerHTML = countryData.population.toLocaleString("en-US");
-    document.getElementById("currencies").innerHTML = countryData.currencies.filter(c=>c.name).map(c => `${c.name} (${c.code})`).join(", ");
+    document.getElementById("currencies").innerHTML = countryData.currencies.filter(c => c.name).map(c => `${c.name} (${c.code})`).join(", ");
     document.getElementById("region").innerHTML = countryData.region;
     document.getElementById("sub-region").innerHTML = countryData.subregion;
     document.querySelector("#flag-container img").src = countryData.flag;
     document.querySelector("#flag-container img").alt = `flag of ${countryData.name}`;
 
+    document.querySelector("#flag-container-a img").src = countryData.flag;
+    document.querySelector("#flag-container-a img").alt = `flag of ${countryData.name}`;
+
 }
+
 /*setTimeout(() => {
     console.log(countries);
 }, 200);*/

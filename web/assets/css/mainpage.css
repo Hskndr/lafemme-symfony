@@ -15,6 +15,14 @@
     width: 25px;
 }
 
+#flag-container-a img{
+    height: 10px;
+    width: 15px;
+}
+
+.no_show{
+    display: none;
+}
 /*GENERAL*/
 .mb-auto {
     margin-bottom: auto;

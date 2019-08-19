@@ -1,13 +1,24 @@
+/* GENERAL */
+.h-33 {
+    min-height: 30% !important;
+}
+
 /*PROFILE STYLE*/
 .profile-box {
     width: 100%;
     padding: 1px;
+    min-height: 100vh;
 }
 
 .profile-content {
     margin: 0;
     background-color: #FFFFFF;
     padding: 5px;
+}
+
+.content-data-user {
+    min-height: 250px !important; /* CHANGE */
+    padding: 0px !important;
 }
 
 .content-avatar {
@@ -25,12 +36,45 @@
     background-color: #FFFFFF;
 }
 
-.user-title {
-    font-size: 20px;
-    margin-bottom: 35px;
+.avatar-profile-edit{
+    color: rgb(32, 18, 74);
+}
+
+@media (min-width: 280px) and (max-width: 991.98px) {
+    .avatar-profile img {
+        margin: auto;
+        height: 30%;
+        width: 30%;
+        margin-bottom: 10px;
+        background-color: #FFFFFF;
+    }
+}
+
+.user_stats_profile {
+    display: flex;
+    flex-direction: row;
+    width: 100% !important;
+    align-content: space-around;
     text-align: center;
-    padding: 10px;
+}
+
+.user_stats_profile-item {
+    width: 100px;
+    margin: auto;
+}
+.content-follow-button{
+    margin-bottom: 10px;
+}
+.user-title {
+    text-align: center;
+    padding: 5px;
     color: #FFFFFF;
+    margin-top: 2px;
+}
+
+.user-name {
+    height: 18px;
+    text-align: center;
 }
 
 /* GENDER  */
@@ -54,16 +98,19 @@
     background-color: #FFFFFF;
     margin: 5px;
     height: 33px;
+    padding: 0;
 }
 
 .label-profile {
     background-color: #f6f6f6;
     color: rgb(32, 18, 74);
+    height: 100%;
 }
 
 .label-profile-info, .user_stats_profile {
     background-color: #ffffff;
     color: rgb(32, 18, 74);
+    height: 100%;
 }
 
 /* profile-buttons */
@@ -77,7 +124,7 @@
 .profile-buttons button {
     width: 200px;
     margin: 1em 0em 1em 0em;
-    background-color: rgb(32, 18, 74)!important;
+    background-color: rgb(32, 18, 74) !important;
     border-color: white;
     font-size: 1.3rem;
 }
@@ -87,8 +134,12 @@
     color: white;
     margin-bottom: 0.5em;
     border: 2px solid white;
-    padding: 0.5em, 0.5em, 0.5em, 0.5em;
-    height: 3em;
+    padding: 0.5em;
 }
 
+.label-profile-2 {
+    background-color: #f6f6f6;
+    color: rgb(32, 18, 74);
+    padding: 1rem;
+}
 

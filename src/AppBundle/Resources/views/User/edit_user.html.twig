@@ -1,12 +1,78 @@
 {# HEREDA DE LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('assets/js/custom/buttons-following.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/custom/profile.js') }}"></script>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {#      styles      #}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/profile.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/tools.css') }}">
+{% endblock %}
 {% block content %}
     <div class="col-lg-8 box-form box-form" id="edit-profile">
-        <h1 class="box-header">My Profile</h1>
-        <hr>
+        <h1 class="box-header">Edit Profile</h1>
+
 
         {{ form_start (form, {'enctype':'multipart/form-data'}) }}
+        <div class="row profile-content">
 
+            <div class="col-xs-12 col-sm-12 col-lg-3 col-md-3 content-data-user content-avatar">
+
+                {# AVATAR #}
+                <div class="avatar-profile h-33">
+                    {% if app.user.image == null %}
+                        {# USER DEFAULT AVATAR #}
+                        {% if app.user.gender =='male' %}
+                            <img src="{{ asset('assets/images/default.png') }}" alt="" class="img-rounded">
+                        {% else %}
+                            <img src="{{ asset('assets/images/defaultF.png') }}" alt="" class="img-rounded">
+                        {% endif %}
+                    {% else %}
+                        <img src="{{ asset('uploads/user/'~user.image) }}" alt="" class="img-rounded">
+                    {% endif %}
+
+                    <div class="col-lg-12">{{ form_row(form.image) }}</div>
+                    <div class="col-lg-12">{{ form_row(form.bio) }}</div>
+                    <div class="col-lg-12">{{ form_row(form.datebirth) }}</div>
+                </div>
+
+
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-lg-4 col-md-4 content-data-user backg-dark">
+
+                <div class="col-lg-12 {% if app.user.gender == 'male' %} user-male {% elseif app.user.gender == 'female' %} user-female {% endif %}">
+                    {{ form_row(form.relationmatch) }}
+                </div>
+
+                <div class="col-lg-12">{{ form_row(form.name) }}</div>
+                <div class="col-lg-12">{{ form_row(form.surname) }}</div>
+                <div class="col-lg-12">{{ form_row(form.nick) }}</div>
+                <div class="col-lg-12">{{ form_row(form.email) }}</div>
+                <div class="col-lg-12">{{ form_row(form.lookingfor) }}</div>
+                <div class="col-lg-12">{{ form_row(form.bodytype) }}</div>
+                <div class="col-lg-12">{{ form_row(form.height) }}</div>
+                <div class="col-lg-12">{{ form_row(form.weight) }}</div>
+
+
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-lg-5 col-md-5 content-data-user backg-dark">
+                <div class="col-lg-12">{{ form_row(form.coloreyes) }}</div>
+                <div class="col-lg-12">{{ form_row(form.colorhair) }}</div>
+                <div class="col-lg-12">{{ form_row(form.hairlength) }}</div>
+                <div class="col-lg-12">{{ form_row(form.race) }}</div>
+                <div class="col-lg-12">{{ form_row(form.zodiacsing) }}</div>
+                <div class="col-lg-12">{{ form_row(form.tatoos) }}</div>
+                <div class="col-lg-12">{{ form_row(form.country) }}</div>
+                <div class="col-lg-12"> {{ form_row(form.state) }}</div>
+                <div class="col-lg-12"> {{ form_row(form.postalcode) }}</div>
+            </div>
+        </div>
         {{ form_end(form) }}
     </div>
 {% endblock %}

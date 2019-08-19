@@ -19,10 +19,10 @@
         <h1 class="box-header">Profile</h1>
         <div class="row profile-content">
 
-            <div class="col-xs-12 col-md-3 content-avatar">
+            <div class="col-xs-12 col-sm-12 col-lg-3 col-md-3 content-data-user content-avatar">
 
                 {# AVATAR #}
-                <div class="avatar-profile">
+                <div class="avatar-profile h-33">
                     {% if user.image == null %}
                         {# USER DEFAULT AVATAR #}
                         {% if user.gender =='male' %}
@@ -33,38 +33,37 @@
                     {% else %}
                         <img src="{{ asset('uploads/user/'~user.image) }}" alt="" class="img-rounded">
                     {% endif %}
-
                 </div>
                 {# LIKES #}
 
-                <div id="user_stats" class="user_stats_profile">
+                <div id="user_stats" class="user_stats_profile h-33">
 
                     <!-- 1 -->
                     {% set user_stats = user|user_stats %}
-                    <div class="user_stats_profile">
+                    <div class="user_stats_profile-item">
                         <a href="{{ path('following_users',{'nickname':user.nick}) }}">
-                            <span class="">Following</span>
+                            <span class="h6">Following</span><br>
                             <span class="number-stat">{{ user_stats.following }}</span>
                         </a>
                     </div>
                     <!-- 2 -->
-                    <div class="user_stats_profile">
+                    <div class="user_stats_profile-item">
                         <a href="{{ path('followed_users',{'nickname':user.nick}) }}">
-                            <span class="">Followed</span>
+                            <span class="h6">Followed</span><br>
                             <span class="number-stat">{{ user_stats.followers }}</span>
                         </a>
                     </div>
                     <!-- 3 -->
-                    <div class="user_stats_profile">
+                    <div class="user_stats_profile-item">
                         <a href="{{ path('user_profile',{'nickname':user.nick}) }}">
-                            <span class="">Publications</span>
+                            <span class="h6">Publications</span><br>
                             <span class="number-stat">{{ user_stats.publications }}</span>
                         </a>
                     </div>
                     <!-- 4 -->
-                    <div class="user_stats_profile " >
+                    <div class="user_stats_profile-item ">
                         <a href="{{ path('user_likes',{'nickname':user.nick}) }}">
-                            <span class="">Likes</span>
+                            <span class="h6">Likes</span><br>
                             <span class="number-stat">{{ user_stats.likes }}</span>
                         </a>
                     </div>
@@ -72,7 +71,7 @@
 
                 </div>
                 {# FOLLOW BUTTONS #}
-                <div class="">
+                <div class="content-follow-button">
                     {% if app.user.id != user.id %}
                         <div class="buttons-following">
 
@@ -111,85 +110,80 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-md-5 backg-dark">
+            <div class="col-xs-12 col-sm-12 col-lg-4 col-md-4 content-data-user backg-dark">
 
                 <div class="col-12 user-title {% if user.gender == 'male' %} user-male {% elseif user.gender == 'female' %} user-female {% endif %}">
                     {{ user.relationmatch }}
                 </div>
 
-                <div class="h4 ml-2">{{ user.name }} {{ user.surname }}</div>
+                <div class="h4 user-name">{{ user.name }} {{ user.surname }}</div>
 
                 <div class="row ">
-                    <div class="col-xs-4 col-lg-4">Member Since:</div>
-                    <div class="col-xs-8 col-lg-8 ">'register'</div>
+                    <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">Member Since:</div>
+                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 ">'register'</div>
                 </div>
                 <div class="row ">
-                    <div class="col-xs-4 col-lg-4">Looking for:</div>
-                    <div class="col-xs-8 col-lg-8 ">{{ user.lookingfor }}</div>
+                    <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">Looking for:</div>
+                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7">{{ user.lookingfor }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-4 col-lg-4 label-profile">Age:</div>
-                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.age }}</div>
+                    <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5 label-profile">Age:</div>
+                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 label-profile-info">{{ user.age }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-4 col-lg-4 label-profile">Zodiac Sign:</div>
-                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.zodiacsing }}</div>
+                    <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5 label-profile">Zodiac Sign:</div>
+                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 label-profile-info">{{ user.zodiacsing }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-4 col-lg-4 label-profile">Body Type:</div>
-                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.bodytype }}</div>
+                    <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5 label-profile">Body Type:</div>
+                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 label-profile-info">{{ user.bodytype }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-4 col-lg-4 label-profile">Heigth:</div>
-                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.height }}</div>
+                    <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5 label-profile">Heigth:</div>
+                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 label-profile-info">{{ user.height }}</div>
                 </div>
 
             </div>
 
-            <div class="col-xs-12 col-md-4 backg-dark">
+            <div class="col-xs-12 col-sm-12 col-lg-5 col-md-5 content-data-user backg-dark">
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-5 col-lg-5 label-profile">Weight:</div>
+                    <div class="col-xs-4 col-lg-4 label-profile">Weight:</div>
                     <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.weight }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-5 col-lg-5 label-profile">Eyes Color:</div>
+                    <div class="col-xs-4 col-lg-4 label-profile">Eyes Color:</div>
                     <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.coloreyes }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-5 col-lg-5 label-profile">Hair Color:</div>
-                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.hairlength }}</div>
+                    <div class="col-xs-4 col-lg-4 label-profile">Hair Color:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.hairlength }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-5 col-lg-5 label-profile">Hair Lenght:</div>
-                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.hairlength }}</div>
+                    <div class="col-xs-4 col-lg-4 label-profile">Hair Lenght:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.hairlength }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-5 col-lg-5 label-profile">Race/Ethnic:</div>
-                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.race }}</div>
+                    <div class="col-xs-4 col-lg-4 label-profile">Race/Ethnic:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.race }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-5 col-lg-5 label-profile">Tattos:</div>
-                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.tatoos }}</div>
+                    <div class="col-xs-4 col-lg-4 label-profile">Tattos:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.tatoos }}</div>
                 </div>
 
                 <div class="row content-label-profile">
-                    <div class="col-xs-5 col-lg-5 label-profile">Tattos:</div>
-                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.tatoos }}</div>
-                </div>
-
-                <div class="row content-label-profile">
-                    <div class="col-xs-5 col-lg-5 label-profile">Located in:</div>
-                    <div class="col-xs-7 col-lg-7 label-profile-info">{{ user.country }}, {{ user.state }}</div>
+                    <div class="col-xs-4 col-lg-4 label-profile">Located in:</div>
+                    <div class="col-xs-8 col-lg-8 label-profile-info">{{ user.country }}, {{ user.state }}</div>
                 </div>
 
             </div>
@@ -209,35 +203,42 @@
                 <button type="button" class="btn btn-info btn-lg">Control Center</button>
             </a>
         </div>
-
         <div class="">
-            <h6 class="htop col-md-12 d-flex align-items-center">DESCRIBE YOURSELF(VES) "GREETING"</h6>
 
-            <div class="col-md-12 label-profile">
-                <p>I keep my self in good shape, don't smoke, only socially. After a few trips overseas i realized how
-                    much i was missing out in this boring life; so i decided to explore local and overseas communities
-                    and see if i can find the same kind of feelings, emotions, activities, and pleasures.</p>
+            <div class="">
+                <h5 class="htop">DESCRIBE YOURSELF(VES) "GREETING"</h5>
+
+                <div class="label-profile-2">
+                    <p>I keep my self in good shape, don't smoke, only socially. After a few trips overseas i realized
+                        how
+                        much i was missing out in this boring life; so i decided to explore local and overseas
+                        communities
+                        and see if i can find the same kind of feelings, emotions, activities, and pleasures.</p>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="htop">WHAT ARE YOU LOOKING FOR?</h5>
+
+                <div class="label-profile-2">
+                    <p>Hoping to meet a like-minded easy-going person that i can go out with and explore our erotic
+                        fantasies together.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos eius est quo! A ab aperiam architecto beatae commodi cupiditate dolores, doloribus eum incidunt inventore iusto obcaecati optio reiciendis sed.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos eius est quo! A ab aperiam architecto beatae commodi cupiditate dolores, doloribus eum incidunt inventore iusto obcaecati optio reiciendis sed.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos eius est quo! A ab aperiam architecto beatae commodi cupiditate dolores, doloribus eum incidunt inventore iusto obcaecati optio reiciendis sed.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos eius est quo! A ab aperiam architecto beatae commodi cupiditate dolores, doloribus eum incidunt inventore iusto obcaecati optio reiciendis sed.</p>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="htop">MY TRAVEL PLANS</h5>
+
+                <div class="label-profile-2">
+                    <p>Odesa, Odesa Oblast, Ukraine <br> December 27, 2018 - December 29, 2018 <br><br> Sun, beach and
+                        exciting memories. Please let me know if you want to join.</p>
+                </div>
             </div>
         </div>
-
-        <div>
-            <h6 class="htop col-md-12 d-flex align-items-center">WHAT ARE YOU LOOKING FOR?</h6>
-
-            <div class="col-md-12 label-profile">
-                <p>Hoping to meet a like-minded easy-going person that i can go out with and explore our erotic
-                    fantasies together.</p>
-            </div>
-        </div>
-
-        <div>
-            <h6 class="htop col-md-12 d-flex align-items-center">MY TRAVEL PLANS</h6>
-
-            <div class="col-md-12 label-profile">
-                <p>Odesa, Odesa Oblast, Ukraine <br> December 27, 2018 - December 29, 2018 <br><br> Sun, beach and
-                    exciting memories. Please let me know if you want to join.</p>
-            </div>
-        </div>
-
 
         <hr>
         {#ORIGINAL#}

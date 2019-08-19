@@ -34,7 +34,6 @@ CREATE TABLE users
     CONSTRAINT pk_users PRIMARY KEY (id)
 ) ENGINE = InnoDb;
 
-
 CREATE TABLE publications
 (
     id         int(255) auto_increment not null,
