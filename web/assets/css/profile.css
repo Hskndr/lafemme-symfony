@@ -30,14 +30,14 @@
 
 .avatar-profile img {
     margin: auto;
-    height: 55%;
+    height: 65%;
     width: 55%;
     margin-bottom: 10px;
     background-color: #FFFFFF;
 }
 
-.avatar-profile-edit{
-    color: rgb(32, 18, 74);
+.input-edit-profile{
+    height: 75px;
 }
 
 @media (min-width: 280px) and (max-width: 991.98px) {

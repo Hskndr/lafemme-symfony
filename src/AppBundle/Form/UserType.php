@@ -332,6 +332,13 @@ class UserType extends AbstractType
                     'class' => 'form-relation-edit form-control'
                 )
             ])
+            ->add('age', TextType::class, array(
+                'label' => 'Age',
+                'required' => 'required',
+                'attr' => array(
+                    'class' => 'form-age form-control'
+                )
+            ))
             ->add('Save', SubmitType::class, array(
                 "attr" => array(
                     "class" => "form-submit btn btn-info"
