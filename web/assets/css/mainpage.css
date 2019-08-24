@@ -7,22 +7,23 @@
 
 /* MODALS  */
 .modal-body {
-    color: black!important;
+    color: black !important;
 }
 
-#flag-container img{
+#flag-container img {
     height: 20px;
     width: 25px;
 }
 
-#flag-container-a img{
+#flag-container-a img {
     height: 10px;
     width: 15px;
 }
 
-.no_show{
+.no_show {
     display: none;
 }
+
 /*GENERAL*/
 .mb-auto {
     margin-bottom: auto;
@@ -70,6 +71,7 @@ header {
 
 .header-center-left {
     text-align: center;
+    margin-left: -18px;
 }
 
 .header-center-right {
@@ -253,6 +255,30 @@ main section {
 .image-section-left {
     height: 470px;
     margin-left: -17px;
+}
+
+/*PROPOSE*/
+.section-four-v1 {
+    color: black;
+    font-weight: revert;
+}
+
+.section-four-v1 p, .section-four-v1 ul {
+    background-color: rgba(108, 248, 202, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ddd;
+}
+
+.section-four-v2 img {
+    width: 100%;
+}
+.carousel-caption{
+    color: #0f0f0f;
+    margin-left: -600px;
+}
+.section-four-v2 h5 {
+    margin-bottom: 15px;
+
 }
 
 /* SECTION FIVE  */

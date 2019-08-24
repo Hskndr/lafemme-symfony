@@ -70,7 +70,7 @@ BackendBundle\Entity\User:
         gender:
             type: string
             nullable: true
-            length: 50
+            length: 20
             options:
                 fixed: false
         country:
@@ -93,18 +93,12 @@ BackendBundle\Entity\User:
                 fixed: false
             column: postalCode
         datebirth:
-            type: string
+            type: date
             nullable: true
-            length: 50
-            options:
-                fixed: false
             column: dateBirth
         age:
-            type: string
+            type: boolean
             nullable: true
-            length: 50
-            options:
-                fixed: false
         zodiacsing:
             type: string
             nullable: true
@@ -145,11 +139,10 @@ BackendBundle\Entity\User:
             options:
                 fixed: false
         credits:
-            type: string
+            type: smallint
             nullable: true
-            length: 50
             options:
-                fixed: false
+                unsigned: false
         coloreyes:
             type: string
             nullable: true
@@ -171,7 +164,7 @@ BackendBundle\Entity\User:
         tatoos:
             type: string
             nullable: true
-            length: 50
+            length: 15
             options:
                 fixed: false
         bio:
@@ -192,4 +185,8 @@ BackendBundle\Entity\User:
             length: 255
             options:
                 fixed: false
+        createdAt:
+            type: datetime
+            nullable: true
+            column: created_at
     lifecycleCallbacks: {  }

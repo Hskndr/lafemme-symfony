@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 class RegisterType extends AbstractType
 {
@@ -29,7 +30,7 @@ class RegisterType extends AbstractType
                         'Sugar Daddies Seeking Females' => 'Sugar Daddies Seeking Females',
                         'Male Seeking Sugar Mommies' => 'Male Seeking Sugar Mommies',
                     ],
-                    'female' => [
+                    'Female' => [
                         'Attached Female Seeking Male' => 'Attached Female Seeking Male',
                         'Female seeking Females' => 'Female seeking Females',
                         'Sugar Mommies Seeking Males' => 'Sugar Mommies Seeking Males',
@@ -84,9 +85,12 @@ class RegisterType extends AbstractType
                     'class' => 'form-postal form-control'
                 )
             ))
-            ->add('datebirth', TextType::class, array(
+            ->add('datebirth', BirthdayType::class, array(
                 'label' => 'Date of Birth',
                 'required' => 'required',
+                'placeholder' => [
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                ],
                 'attr' => array(
                     'class' => 'form-date form-control'
                 )

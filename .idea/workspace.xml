@@ -3,10 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="6c0ac252-1782-4d10-9e1a-51b7ca0962d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database_scheme_lafemme.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/database_scheme_lafemme.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htaccess.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/RegisterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/RegisterType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/edit_user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/edit_user.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Following.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Following.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Like.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Notification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/PrivateMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/PrivateMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Publication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Publication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Resources/config/doctrine/User.orm.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/mainpage.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +236,12 @@
       <workItem from="1566135016563" duration="4971000" />
       <workItem from="1566214874591" duration="9115000" />
       <workItem from="1566239613160" duration="7937000" />
-      <workItem from="1566257965325" duration="2100000" />
+      <workItem from="1566257965325" duration="2231000" />
+      <workItem from="1566289841846" duration="618000" />
+      <workItem from="1566523327875" duration="68000" />
+      <workItem from="1566545551593" duration="5793000" />
+      <workItem from="1566607835377" duration="210000" />
+      <workItem from="1566643134918" duration="5134000" />
     </task>
     <task id="LOCAL-00001" summary="Add extras templates">
       <created>1564099251477</created>

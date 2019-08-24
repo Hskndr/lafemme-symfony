@@ -1,4 +1,3 @@
-
 CREATE TABLE users
 (
     id             int(255) auto_increment not null,
@@ -10,26 +9,27 @@ CREATE TABLE users
     password       varchar(255),
     relationMatch  varchar(50),
     invitationCode varchar(50),
-    gender         varchar(50),
+    gender         varchar(20),
     country        varchar(50),
     state          varchar(50),
     postalCode     varchar(50),
-    dateBirth      varchar(50),
-    age            varchar(50),
+    dateBirth      date,
+    age            tinyint(4),
     zodiacSing     varchar(50),
     race           varchar(50),
     lookingFor     varchar(50),
     bodyType       varchar(50),
     height         varchar(50),
     weight         varchar(50),
-    credits        varchar(50),
+    credits        smallint(6),
     coloreyes      varchar(50),
     colorhair      varchar(50),
     hairlength     varchar(50),
-    tatoos         varchar(50),
+    tatoos         varchar(15),
     bio            varchar(255),
     active         varchar(2),
     image          varchar(255),
+    created_at     datetime,
     CONSTRAINT users_uniques_fields UNIQUE (email, nick),
     CONSTRAINT pk_users PRIMARY KEY (id)
 ) ENGINE = InnoDb;

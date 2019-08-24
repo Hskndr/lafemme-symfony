@@ -2,10 +2,12 @@
 
 namespace BackendBundle\Entity;
 
+use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * User
  */
-class User
+class User implements UserInterface, \Serializable
 {
     /**
      * @var integer
@@ -35,12 +37,27 @@ class User
     /**
      * @var string
      */
+    private $nick;
+
+    /**
+     * @var string
+     */
     private $password;
 
     /**
      * @var string
      */
-    private $nick;
+    private $relationmatch;
+
+    /**
+     * @var string
+     */
+    private $invitationcode;
+
+    /**
+     * @var string
+     */
+    private $gender;
 
     /**
      * @var string
@@ -100,6 +117,11 @@ class User
     /**
      * @var string
      */
+    private $credits;
+
+    /**
+     * @var string
+     */
     private $coloreyes;
 
     /**
@@ -132,6 +154,60 @@ class User
      */
     private $image;
 
+
+    public function getUsername()
+    {
+        return $this->email;
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function getRoles()
+    {
+        return array(
+            'ROLE_USER',
+            'ROLE_ADMIN',
+            // ...
+            // view https://diego.com.es/roles-en-symfony
+            // new UserDependentRole($this) // DIMANIC ROLE
+
+        );
+    }
+
+    public function eraseCredentials()
+    {
+
+    }
+
+    public function __toString()
+    {
+        // USED LIKE A STRING
+        return $this->name;
+
+    }
+
+    // METHOD SERIALIZABLE
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->email,
+            $this->password,
+        ));
+    }
+
+    public function unserialize($serialized)
+    {
+        list(
+            $this->id,
+            $this->email,
+            $this->password,
+            ) = unserialize($serialized);
+    }
 
     /**
      * Get id
@@ -240,6 +316,30 @@ class User
     }
 
     /**
+     * Set nick
+     *
+     * @param string $nick
+     *
+     * @return User
+     */
+    public function setNick($nick)
+    {
+        $this->nick = $nick;
+
+        return $this;
+    }
+
+    /**
+     * Get nick
+     *
+     * @return string
+     */
+    public function getNick()
+    {
+        return $this->nick;
+    }
+
+    /**
      * Set password
      *
      * @param string $password
@@ -264,27 +364,75 @@ class User
     }
 
     /**
-     * Set nick
+     * Set relationmatch
      *
-     * @param string $nick
+     * @param string $relationmatch
      *
      * @return User
      */
-    public function setNick($nick)
+    public function setRelationmatch($relationmatch)
     {
-        $this->nick = $nick;
+        $this->relationmatch = $relationmatch;
 
         return $this;
     }
 
     /**
-     * Get nick
+     * Get relationmatch
      *
      * @return string
      */
-    public function getNick()
+    public function getRelationmatch()
     {
-        return $this->nick;
+        return $this->relationmatch;
+    }
+
+    /**
+     * Set invitationcode
+     *
+     * @param string $invitationcode
+     *
+     * @return User
+     */
+    public function setInvitationcode($invitationcode)
+    {
+        $this->invitationcode = $invitationcode;
+
+        return $this;
+    }
+
+    /**
+     * Get invitationcode
+     *
+     * @return string
+     */
+    public function getInvitationcode()
+    {
+        return $this->invitationcode;
+    }
+
+    /**
+     * Set gender
+     *
+     * @param string $gender
+     *
+     * @return User
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Get gender
+     *
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->gender;
     }
 
     /**
@@ -552,6 +700,30 @@ class User
     }
 
     /**
+     * Set credits
+     *
+     * @param string $credits
+     *
+     * @return User
+     */
+    public function setCredits($credits)
+    {
+        $this->credits = $credits;
+
+        return $this;
+    }
+
+    /**
+     * Get credits
+     *
+     * @return string
+     */
+    public function getCredits()
+    {
+        return $this->credits;
+    }
+
+    /**
      * Set coloreyes
      *
      * @param string $coloreyes
@@ -718,5 +890,36 @@ class User
     {
         return $this->image;
     }
+
+    /**
+     * @var \DateTime
+     */
+    private $createdAt;
+
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return User
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
 }
 

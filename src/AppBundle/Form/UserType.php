@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 class UserType extends AbstractType
 {
@@ -64,9 +65,12 @@ class UserType extends AbstractType
                     'class' => 'form-postal-edit form-control'
                 )
             ))
-            ->add('datebirth', TextType::class, array(
+            ->add('datebirth', BirthdayType::class, array(
                 'label' => 'Date of Birth',
                 'required' => 'required',
+                'placeholder' => [
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                ],
                 'attr' => array(
                     'class' => 'form-date-edit form-control'
                 )
