@@ -11,7 +11,7 @@
             <div class="dropdown new-publication-button">
                 <button class="btn btn-default dropdown-toggle
                         {# HSKNDR: DISABLE BUTTON IF USER DOES NOT HAVE CREDITS IMPROVE#}
-                        {% if app.user.credits == '0' %}disabled {% endif %}"
+                        {% if app.user.credits == 0 %}disabled {% endif %}"
                         type="button" id="dropdownMenu1" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="true">
                     <span class="glyphicon glyphicon-plus"></span>

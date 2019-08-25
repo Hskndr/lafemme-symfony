@@ -1,0 +1,64 @@
+/* RESPONSIVE */
+
+@media (min-width: 280px) and (max-width: 575.98px) {
+    /*GENERAL*/
+    .buy-credit-back {
+        background-color: black;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /*GENERAL*/
+    .buy-credit-back {
+        background-color: black;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*GENERAL*/
+    .buy-credit-back {
+        background-color: black;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /*GENERAL*/
+    .buy-credit-back {
+        background-color: black;
+    }
+
+    /*SECTION RIGHT CONTENT*/
+    .buy-credit-image-content img {
+        width: 100%;
+        margin-top: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    /*GENERAL*/
+    .buy-credit-back {
+        background-color: black;
+    }
+
+    /*SECTION RIGHT CONTENT*/
+    .buy-credit-image-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buy-credit-image-content img {
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+    /*PLAN CONTENTS*/
+    .plans-content {
+
+    }
+
+    /*GENERAL*/
+    .blackbgc {
+        background-color: black !important;
+    }
+}

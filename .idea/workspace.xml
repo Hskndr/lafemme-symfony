@@ -3,19 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6c0ac252-1782-4d10-9e1a-51b7ca0962d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database_scheme_lafemme.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/database_scheme_lafemme.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htaccess.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/RegisterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/RegisterType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/BuyCreditController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/BuyCreditController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/BuyCredit/buy_credit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/BuyCredit/buy_credit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Following.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Following.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Notification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/PrivateMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/PrivateMessage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Publication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Publication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Resources/config/doctrine/User.orm.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/mainpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +116,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/BackendBundle/Entity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AppBundle/Controller" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -137,11 +130,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/AppBundle/Controller" />
+      <recent name="$PROJECT_DIR$/src/AppBundle/Form" />
+      <recent name="$PROJECT_DIR$/web/assets/css" />
       <recent name="$PROJECT_DIR$/src/BackendBundle/Entity" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Resources/config/routing" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/views/Admin" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Controller" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/views/Affiliate" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/BackendBundle" />
@@ -241,7 +234,12 @@
       <workItem from="1566523327875" duration="68000" />
       <workItem from="1566545551593" duration="5793000" />
       <workItem from="1566607835377" duration="210000" />
-      <workItem from="1566643134918" duration="5134000" />
+      <workItem from="1566643134918" duration="7927000" />
+      <workItem from="1566692169344" duration="57000" />
+      <workItem from="1566692230283" duration="1987000" />
+      <workItem from="1566737696475" duration="3657000" />
+      <workItem from="1566746247953" duration="3540000" />
+      <workItem from="1566769375256" duration="4923000" />
     </task>
     <task id="LOCAL-00001" summary="Add extras templates">
       <created>1564099251477</created>

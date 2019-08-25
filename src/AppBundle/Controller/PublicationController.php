@@ -10,7 +10,7 @@ use AppBundle\Form\PublicationType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 
-class PublicationController extends Controller
+class  PublicationController extends Controller
 {
     private $session;
 

@@ -72,6 +72,11 @@ class UserController extends Controller
                     $user->setPassword($password);
                     $user->setRole("ROLE_USER");
                     $user->setImage(null);
+
+                    //HSKNDR: PUT THE CREATE AT TEST WORKS
+                    $user->setCreatedAt(new \DateTime("now"));
+                    $user->setCredits(50);
+
                     // PERSIST THE USER
                     $em->persist($user);
                     // SAVE IN DATABASE THE USER PERSIST
