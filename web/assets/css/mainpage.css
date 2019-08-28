@@ -230,7 +230,10 @@ main section {
 
 .section-three p {
     padding: 5px;
+}
 
+.section-three img {
+    height: 300px;
 }
 
 /* SECTION FOUR  */
@@ -272,13 +275,48 @@ main section {
 .section-four-v2 img {
     width: 100%;
 }
-.carousel-caption{
+
+.carousel-caption {
     color: #0f0f0f;
     margin-left: -600px;
 }
+
 .section-four-v2 h5 {
     margin-bottom: 15px;
 
+}
+
+.section-four-v4 {
+    background-color: black;
+}
+
+.image-section-left-v4 {
+    height: 535px;
+
+}
+
+.image-section-left-v4 img {
+    height: 100%;
+    width: 100%;
+}
+
+.section-up {
+    height: 165px;
+}
+
+.section-down {
+    height: 370px !important;
+    background-image: url("../image/LF61.jpg");
+    background-size: cover;
+}
+
+.section-down p {
+    margin-left: 15px;
+}
+
+.section-up img {
+    height: 100%;
+    width: 200%;
 }
 
 /* SECTION FIVE  */

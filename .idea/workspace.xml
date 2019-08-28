@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6c0ac252-1782-4d10-9e1a-51b7ca0962d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/BuyCreditController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/BuyCreditController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/BuyCredit/buy_credit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/BuyCredit/buy_credit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Publication/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/mainpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/image/LF61.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/image/LF61.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +236,10 @@
       <workItem from="1566692230283" duration="1987000" />
       <workItem from="1566737696475" duration="3657000" />
       <workItem from="1566746247953" duration="3540000" />
-      <workItem from="1566769375256" duration="4923000" />
+      <workItem from="1566769375256" duration="5399000" />
+      <workItem from="1566904688416" duration="3269000" />
+      <workItem from="1566950129952" duration="365000" />
+      <workItem from="1566988141716" duration="4284000" />
     </task>
     <task id="LOCAL-00001" summary="Add extras templates">
       <created>1564099251477</created>
