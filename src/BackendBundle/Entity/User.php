@@ -154,6 +154,11 @@ class User implements UserInterface, \Serializable
      */
     private $image;
 
+    /**
+     * @var string
+     */
+    private $penisSize;
+
 
     public function getUsername()
     {
