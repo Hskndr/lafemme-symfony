@@ -14,14 +14,14 @@ CREATE TABLE users
     state          varchar(50),
     postalCode     varchar(50),
     dateBirth      date,
-    age            tinyint,
+    age            tinyint(4),
     zodiacSing     varchar(50),
     race           varchar(50),
     lookingFor     varchar(50),
     bodyType       varchar(50),
     height         varchar(50),
     weight         varchar(50),
-    credits        smallint,
+    credits        smallint(6),
     coloreyes      varchar(50),
     colorhair      varchar(50),
     hairlength     varchar(50),
@@ -33,7 +33,6 @@ CREATE TABLE users
     CONSTRAINT users_uniques_fields UNIQUE (email, nick),
     CONSTRAINT pk_users PRIMARY KEY (id)
 ) ENGINE = InnoDb;
-
 
 CREATE TABLE publications
 (

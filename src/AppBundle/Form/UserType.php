@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 class UserType extends AbstractType
 {
@@ -64,9 +65,12 @@ class UserType extends AbstractType
                     'class' => 'form-postal-edit form-control'
                 )
             ))
-            ->add('datebirth', TextType::class, array(
+            ->add('datebirth', BirthdayType::class, array(
                 'label' => 'Date of Birth',
                 'required' => 'required',
+                'placeholder' => [
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                ],
                 'attr' => array(
                     'class' => 'form-date-edit form-control'
                 )
@@ -147,6 +151,28 @@ class UserType extends AbstractType
                     'class' => 'form-bodytype-edit form-control'
                 )
             ))
+            ->add('zodiacsing', ChoiceType::class, array(
+                'label' => 'Zodiac Sign',
+                'choices' => [
+                    'Please Select' => 'select',
+                    'Aries' => 'aries',
+                    'Taurus' => 'taurus',
+                    'Gemini' => 'gemini',
+                    'Cancer' => 'cancer',
+                    'Leo' => 'leo',
+                    'Virgo' => 'virgo',
+                    'Libra' => 'libra',
+                    'Scorpio' => 'scorpio',
+                    'Sagittarius' => 'sagittarius',
+                    'Capricorn' => 'capricorn',
+                    'Aquarius' => 'aquarius',
+                    'Pisces' => 'pisces',
+                ],
+                'required' => 'required',
+                'attr' => array(
+                    'class' => 'form-zodiac form-control'
+                )
+            ))
             ->add('height', ChoiceType::class, array(
                 'label' => 'Height',
                 'choices' => [
@@ -175,8 +201,8 @@ class UserType extends AbstractType
                     'class' => 'form-height-edit form-control'
                 )
             ))
-            ->add('height', ChoiceType::class, array(
-                'label' => 'Height',
+            ->add('weight', ChoiceType::class, array(
+                'label' => 'weight',
                 'choices' => [
                     'Ask me' => 'ask-me',
                     '80 lbs (36 kg)' => '80 lbs (36 kg)',
@@ -310,6 +336,13 @@ class UserType extends AbstractType
                     'class' => 'form-relation-edit form-control'
                 )
             ])
+            ->add('age', TextType::class, array(
+                'label' => 'Age',
+                'required' => 'required',
+                'attr' => array(
+                    'class' => 'form-age form-control'
+                )
+            ))
             ->add('Save', SubmitType::class, array(
                 "attr" => array(
                     "class" => "form-submit btn btn-info"

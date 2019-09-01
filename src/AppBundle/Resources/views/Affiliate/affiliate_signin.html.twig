@@ -1,5 +1,9 @@
 {# HEREDA DE LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/affiliate_signin.css') }}">
+{% endblock %}
 {% block javascripts %}
     {{ parent() }}
     <script type="text/javascript" src="{{ asset('assets/js/custom/home.js') }}"></script>
@@ -8,13 +12,12 @@
 
     <div class="container-fluid">
 
-        <div id="new-publication" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left box-default">
             <h1 class="box-header">AFFILIATE SIGN IN</h1>
             {# HSKNDR:  UNDERCONSTRUCTION #}
             <div class="text-center">
                 <img src="{{ asset('assets/image/under-construction.png') }}" class="img-responsive" alt="Responsive image">
             </div>
             {# HSKNDR:  UNDERCONSTRUCTION #}
-        </div>
+        <h2>Sign in Members</h2>
     </div>
 {% endblock %}

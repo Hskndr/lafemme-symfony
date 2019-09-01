@@ -5,6 +5,25 @@
     src: local('Futura Md BT'), url('../font/futura_lt_bt_light-webfont.woff') format('woff');
 }
 
+/* MODALS  */
+.modal-body {
+    color: black !important;
+}
+
+#flag-container img {
+    height: 20px;
+    width: 25px;
+}
+
+#flag-container-a img {
+    height: 10px;
+    width: 15px;
+}
+
+.no_show {
+    display: none;
+}
+
 /*GENERAL*/
 .mb-auto {
     margin-bottom: auto;
@@ -52,6 +71,7 @@ header {
 
 .header-center-left {
     text-align: center;
+    margin-left: -18px;
 }
 
 .header-center-right {
@@ -184,6 +204,7 @@ main section {
 
 .big-pic {
     height: 420px !important;
+    width: 250px;
 }
 
 .box-big-pic img {
@@ -209,30 +230,46 @@ main section {
 
 .section-three p {
     padding: 5px;
+}
 
+.section-three img {
+    height: 300px;
 }
 
 /* SECTION FOUR  */
-.section-right {
-    /*    background-image: url("../image/LF61.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;*/
-    margin: 5px;
-    position: relative;
+
+.section-four-v4 {
+    background-color: black;
 }
 
-.background-section {
-    position: absolute;
+.image-section-left-v4 {
+    height: 535px;
+}
+
+.image-section-left-v4 img {
     height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
+    width: 100%;
 }
 
-.image-section-left {
-    height: 430px;
+.section-up {
+    height: 165px;
+    width: 100%;
+}
+
+.section-down {
+    height: 370px !important;
+    background-image: url("../image/LF61.jpg");
+    background-size: cover;
+    width: 100%;
+}
+
+.section-down p {
+    margin-left: 15px;
+}
+
+.section-up img {
+    height: 100%;
+    width: 200%;
 }
 
 /* SECTION FIVE  */

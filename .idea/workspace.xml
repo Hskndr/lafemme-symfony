@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6c0ac252-1782-4d10-9e1a-51b7ca0962d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/RegisterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/RegisterType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/dating.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/dating.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Affiliate/affiliate_signin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Affiliate/affiliate_signin.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Following.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Following.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Notification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/PrivateMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/PrivateMessage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/Publication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/Publication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackendBundle/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackendBundle/Resources/config/doctrine/User.orm.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assets/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/mainpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/register.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +114,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/BackendBundle/Entity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AppBundle/Controller" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -137,11 +128,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/AppBundle/Controller" />
+      <recent name="$PROJECT_DIR$/src/AppBundle/Form" />
+      <recent name="$PROJECT_DIR$/web/assets/css" />
       <recent name="$PROJECT_DIR$/src/BackendBundle/Entity" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Resources/config/routing" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/views/Admin" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Controller" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/views/Affiliate" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/BackendBundle" />
@@ -227,11 +218,36 @@
       <workItem from="1564643249943" duration="533000" />
       <workItem from="1564644136831" duration="1810000" />
       <workItem from="1564699826267" duration="2455000" />
-      <workItem from="1564702537809" duration="2060000" />
-      <workItem from="1564733260760" duration="4512000" />
-      <workItem from="1564819126511" duration="6586000" />
-      <workItem from="1565211437986" duration="3153000" />
-      <workItem from="1565218995585" duration="2876000" />
+      <workItem from="1564702537809" duration="1694000" />
+      <workItem from="1565312772345" duration="3006000" />
+      <workItem from="1565338653542" duration="426000" />
+      <workItem from="1565527096104" duration="16900000" />
+      <workItem from="1565681093074" duration="314000" />
+      <workItem from="1566037343496" duration="10979000" />
+      <workItem from="1566135016563" duration="4971000" />
+      <workItem from="1566214874591" duration="9115000" />
+      <workItem from="1566239613160" duration="7937000" />
+      <workItem from="1566257965325" duration="2231000" />
+      <workItem from="1566289841846" duration="618000" />
+      <workItem from="1566523327875" duration="68000" />
+      <workItem from="1566545551593" duration="5793000" />
+      <workItem from="1566607835377" duration="210000" />
+      <workItem from="1566643134918" duration="7927000" />
+      <workItem from="1566692169344" duration="57000" />
+      <workItem from="1566692230283" duration="1987000" />
+      <workItem from="1566737696475" duration="3657000" />
+      <workItem from="1566746247953" duration="3540000" />
+      <workItem from="1566769375256" duration="5399000" />
+      <workItem from="1566904688416" duration="3269000" />
+      <workItem from="1566950129952" duration="365000" />
+      <workItem from="1566988141716" duration="4486000" />
+      <workItem from="1567030809638" duration="597000" />
+      <workItem from="1567076343349" duration="485000" />
+      <workItem from="1567101815440" duration="1462000" />
+      <workItem from="1567124990024" duration="172000" />
+      <workItem from="1567273049195" duration="432000" />
+      <workItem from="1567291524581" duration="1441000" />
+      <workItem from="1567336382702" duration="2303000" />
     </task>
     <task id="LOCAL-00001" summary="Add extras templates">
       <created>1564099251477</created>

@@ -1,24 +1,31 @@
-{# HEREDA DE LAYOUT #}
+{# IMPLEMENTS LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/buy_credits.css') }}">
+{% endblock %}
+
 {% block javascripts %}
     {{ parent() }}
     <script type="text/javascript" src="{{ asset('assets/js/custom/home.js') }}"></script>
 {% endblock %}
 {% block content %}
 
-    <div class="container-fluid">
+    <div class="container-fluid blackbgc">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left box-default">
             <h1 class="box-header">Buy Credits</h1>
             {# HSKNDR:  UNDERCONSTRUCTION #}
-            <div class="text-center">
-                <img src="{{ asset('assets/image/under-construction.png') }}"class="img-responsive" alt="Responsive image">
-            </div>
+            {#    <div class="text-center">
+                    <img src="{{ asset('assets/image/under-construction.png') }}" class="img-responsive"
+                         alt="Responsive image">
+                </div>#}
             {# HSKNDR:  UNDERCONSTRUCTION #}
-            <main class="container-fluid ">
+
+            <main class="container-fluid buy-credit-back">
                 <div class="row">
-                    <article class="col-lg-8 col-md-8 col-sm-12 p-1 ">
-                        <section class="sectionBlue text-left m-4">
+                    <article class="col-lg-8 col-md-8 col-sm-12 p-1">
+                        <section class="sectionBlue text-left">
                             <h2 class="text-center">Your Special Days Start Here</h2>
                             <br>
                             <p class="text-justify">We will always remind you when you get below 25 credits. Is always
@@ -26,9 +33,9 @@
                                 in hand.</p>
                         </section>
 
-                        <h3 class=" text-left">We have 3 Plans</h3>
+                        <h3 class="text-left">We have 3 Plans</h3>
                         {# PLANS DESCRIPTIONS #}
-                        <div class="row">
+                        <div class="row plans-content">
                             <div class="col-sm-4 col-md-4">
                                 <div class="thumbnail">
                                     <img src="{{ asset('assets/image/LF54.jpg') }}" class="img-responsive"
@@ -43,9 +50,7 @@
                                             <span>$ 0.18</span><br>
                                             <span>Per Coin</span>
                                         </p>
-                                        <p>
-                                            <a href="#" class="btn btn-primary" role="button">Buy</a>
-                                        </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -64,9 +69,7 @@
                                             <span>$ 0.25</span><br>
                                             <span>Per Coin</span>
                                         </p>
-                                        <p>
-                                            <a href="#" class="btn btn-primary" role="button">Buy</a>
-                                        </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -85,16 +88,13 @@
                                             <span>$ 0.39</span><br>
                                             <span>Per Coin</span>
                                         </p>
-                                        <p>
-                                            <a href="#" class="btn btn-primary" role="button">Buy</a>
-                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class=" m-3 text-center p-0">
-                            <img src="assets/image/LF60.jpg" class=" " alt="">
+                            <img src="{{ asset('assets/image/LF60.jpg') }}" class=" " alt="">
                         </div>
 
                         <section class=" sectionBlue">
@@ -108,130 +108,120 @@
                                 </ul>
                             </div>
 
-                            <form class="mt-2 p-1">
-                                <div class="row  m-0">
-                                    <div class="col-6 col-sm-4">
-                                        <p>Charge my card a Plan:</p>
-                                    </div>
+                            {{ form_start(form,{action:'','method':'POST'}) }}
+                            <div class="row  m-0">
+                                <div class="col-6 col-sm-4">
+                                    <p>Charge my card a Plan:</p>
+                                </div>
 
-                                    <div class="col-6 col-sm-8 ">
-                                        <div class="container-fluid ">
-                                            <div class="form-group form-check ">
-                                                <input type="checkbox" class="form-check-input col-2 "
-                                                       id="exampleCheck1">
-                                                <label class="form-check-label ml-2 col-10" for="exampleCheck1">Plan: A
-                                                    1200 Credits</label>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input col-2"
-                                                       id="exampleCheck2">
-                                                <label class="form-check-label ml-2 col-10" for="exampleCheck2">Plan: B
-                                                    500 Credits</label>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input col-2"
-                                                       id="exampleCheck3">
-                                                <label class="form-check-label ml-2 col-10" for="exampleCheck3">Plan: C
-                                                    200 Credits</label>
-                                            </div>
+                                <div class="col-6 col-sm-8 ">
+                                    <div class="container-fluid ">
+                                        <div class="form-group form-check ">
+                                            {{ form_row(form.planA) }}
+                                        </div>
+                                        <div class="form-group form-check">
+                                            {{ form_row(form.planB) }}
+                                        </div>
+                                        <div class="form-group form-check">
+                                            {{ form_row(form.planC) }}
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="form-group container-fluid justify-content-around p-auto m-0">
-                                    <div class="p-auto d-flex align-items-center">
-                                        <p>Card Type</p>
-                                        {# IMPROVE TO PAYMENT #}
+                            <div class="form-group container-fluid justify-content-around p-auto m-0">
+                                <div class="p-auto d-flex align-items-center">
+                                    <p>Card Type</p>
+                                    {# IMPROVE TO PAYMENT #}
 
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <input type="checkbox" aria-label="...">
-                                            </span>
-                                                    <img src="{{ asset('assets/image/visa_512_icon-icons.com_75986.png') }}"
-                                                         class="img-responsive" alt="Responsive image">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <input type="checkbox" aria-label="...">
-                                            </span>
-                                                    <img src="{{ asset('assets/image/mastercard_512_icon-icons.com_75982.png') }}"
-                                                         class="img-responsive" alt="Responsive image">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <input type="checkbox" aria-label="...">
-                                            </span>
-                                                    <img src="{{ asset('assets/image/american_express_512_icon-icons.com_75968.png') }}"
-                                                         class="img-responsive" alt="Responsive image">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <input type="checkbox" aria-label="...">
-                                            </span>
-                                                    <img src="{{ asset('assets/image/discover_512_icon-icons.com_75973.png') }}"
-                                                         class="img-responsive" alt="Responsive image">
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="container-fluid ">
-                                    <div class="form-group row m-2">
-                                        <label for="inputEmail3" class="col-3 col-form-label">Card Number:</label>
-                                        <div class="col-9 pr-lg-5 pr-md-5">
-                                            <input type="email" class="form-control" id="inputEmail3" placeholder="">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row m-2">
-                                        <label for="inputEmail3" class="col-3 col-form-label">Expiration date:</label>
-                                    </div>
                                     <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" aria-label="...">
+                                            </span>
+                                                <img src="{{ asset('assets/image/visa_512_icon-icons.com_75986.png') }}"
+                                                     class="img-responsive" alt="Responsive image">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" aria-label="...">
+                                            </span>
+                                                <img src="{{ asset('assets/image/mastercard_512_icon-icons.com_75982.png') }}"
+                                                     class="img-responsive" alt="Responsive image">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" aria-label="...">
+                                            </span>
+                                                <img src="{{ asset('assets/image/american_express_512_icon-icons.com_75968.png') }}"
+                                                     class="img-responsive" alt="Responsive image">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" aria-label="...">
+                                            </span>
+                                                <img src="{{ asset('assets/image/discover_512_icon-icons.com_75973.png') }}"
+                                                     class="img-responsive" alt="Responsive image">
+                                            </div>
+                                        </div>
 
-                                        <div class="col-lg-6">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search for...">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search for...">
-                                            </div>
-                                        </div>
                                     </div>
 
-                                    <div class="form-group row m-2 text-right align-items-center">
-                                        <div class="col-4">
-                                            <img src="assets/image/LF38.jpg" class="w-100 h-100" alt="">
+                                </div>
+                            </div>
+
+                            <div class="container-fluid ">
+                                <div class="form-group row m-2">
+                                    <label for="inputEmail3" class="col-3 col-form-label">Card Number:</label>
+                                    <div class="col-9 pr-lg-5 pr-md-5">
+                                        <input type="email" class="form-control" id="inputEmail3" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row m-2">
+                                    <label for="inputEmail3" class="col-3 col-form-label">Expiration date:</label>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
                                         </div>
-                                        <div class="col-sm-8 p-5">
-                                            <button type="submit" class="btn btn-warning">SUBMIT ORDER</button>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+
+                                <div class="form-group row m-2 text-right align-items-center">
+                                    <div class="col-4">
+                                        <img src="{{ asset('assets/image/LF38.jpg') }}" class="w-100 h-100" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                            {{ form_end(form) }}
                         </section>
 
                     </article>
-                    <aside class="col-lg-4 col-md-4 col-sm-0 d-flex flex-column " id="aside">
+                    <aside class="col-lg-4 col-md-4 col-sm-12">
                         <h2>LA FEMME</h2>
                         <h4 class="text-center">Is where snazzy Men and Women Meet</h4>
-                        <div class="container  text-center h-100">
-                            <img src="assets/image/LF37-1.jpg" alt="">
-                            <img src="assets/image/avatar/1.%20Attached%20Male%20Seeking%20Female-/AVATAR1-5.jpg"
+                        <div class="container-fluid buy-credit-image-content">
+                            <img src="{{ asset('assets/image/LF37-1.jpg') }}" alt="">
+                            <img src="{{ asset('assets/image/avatar/1.%20Attached%20Male%20Seeking%20Female-/AVATAR1-5.jpg') }}"
                                  alt="">
-                            <img src="assets/image/avatar/7.%20Sugar%20mommies%20seeking%20males/AVATAR7-5.jpg" alt="">
+                            <img src="{{ asset('assets/image/avatar/7.%20Sugar%20mommies%20seeking%20males/AVATAR7-5.jpg') }}"
+                                 alt="">
 
                         </div>
                     </aside>

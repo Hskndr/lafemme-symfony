@@ -890,6 +890,7 @@ class User implements UserInterface, \Serializable
     {
         return $this->image;
     }
+
     /**
      * @var \DateTime
      */
@@ -919,4 +920,5 @@ class User implements UserInterface, \Serializable
     {
         return $this->createdAt;
     }
+
 }

@@ -17,9 +17,18 @@
     {% endblock %}
 
     {% block javascripts %}
+        {# TRANSLATE #}
+        <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }</script>
         {#      javascripts      #}
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/custom/modals.js') }}"></script>
+
     {% endblock %}
 
 </head>
@@ -57,7 +66,7 @@
             </div>
 
             <div class="container-fluid responsive-custom">
-                <div class="col-lg-3 col-md-3 col-sm-3 header-center-left ">
+                <div class="col-lg-4 col-md-4 col-sm-4 header-center-left ">
                     <a href="{{ path("register") }}" class="btn btn-secondary btn-lg btn-register" type="button">
                         SELECT YOUR MATCH
                     </a>
@@ -69,7 +78,7 @@
                     <p class="h5">Private Affairs Club</p>
                 </div>
 
-                <div class="col-lg-9 col-md-9 col-sm-9 header-center-right ">
+                <div class="col-lg-8 col-md-8 col-sm-8 header-center-right ">
                     <span class="ramdon row  "></span>
                     <span class="h1 row  "> Shhhh...</span>
                     <span class="h5 row  ">It's a Secret</span>
@@ -78,7 +87,8 @@
             </div>
 
             <div class="container-fluid responsive-custom">
-                <p class="text-left col-lg-9 col-md-9 col-sm-9 " style="padding-left: 40px">Desire, Passion and Excitement is like
+                <p class="text-left col-lg-9 col-md-9 col-sm-9 " style="padding-left: 40px">Desire, Passion and
+                    Excitement is like
                     TIME... Time is like a RIVER. You cannot touch the same water TWICE, <br> because the flow that
                     has passed will never pass again... Enjoy every moment of your life.</p>
                 <div class="col-3">
@@ -107,7 +117,6 @@
 
                 <div class="col-lg-3 col-md-3 col-sm-3 footer-right ">
                     <div class="non-responsive-custom">
-
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
                             <a href="{{ path("register") }}"
                                class="btn btn-secondary btn-lg btn-register col-xs-12 col-sm-12"
@@ -131,10 +140,14 @@
                             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                             &nbsp;Language
                         </a>
+
                         <a class="btn btn-secondary btn-login" type="button" data-toggle="modal"
                            data-target="#countryModal" data-whatever="@fat">
-                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-                            &nbsp;Country
+                            {# HSKNDR: SHOW COUNTRY'S FLAG#}
+                            <span id="flag-container" aria-hidden="true">
+                                <img src="" alt="">
+                            </span>
+                            <span id="countryName"></span>
                         </a>
 
                         {#  MODAL  START  #}
@@ -143,32 +156,27 @@
                              aria-labelledby="exampleModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
-                                    <div class="modal-header">
+                                    <div class="modal-header ">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span></button>
                                         <h4 class="modal-title" id="exampleModalLabel">New message</h4>
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="control-label">Recipient:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="message-text" class="control-label">Message:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
-                                            </div>
+                                            <label class="control-label">Select your Language:</label>
+                                            <div id="google_translate_element"></div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close
                                         </button>
-                                        <button type="button" class="btn btn-primary">Send message</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+
+                        {#  MODAL  COUNTRY  #}
                         <div class="modal fade" id="countryModal" tabindex="-1" role="dialog"
                              aria-labelledby="exampleModalLabel">
                             <div class="modal-dialog" role="document">
@@ -176,24 +184,43 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="exampleModalLabel">New message2</h4>
+                                        <h4 class="modal-title" id="exampleModalLabel"></h4>
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="control-label">Recipient2:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="message-text" class="control-label">Message2:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
+                                            <label for="recipient-name" class="control-label">Select your
+                                                Country:</label>
+                                            <select id="countries">
+                                            </select>
+                                            {# <ul id="list-countries-container">
+
+                                                 <li id="list-countries">
+
+                                                 </li>
+                                             </ul>#}
+
+                                            {# TEST LANGUAGE REST COUNTRIES #}
+                                            <div id="main-container">
+                                                <div id="flag-container">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div id="info-container">
+                                                    {# <select id="countries">
+
+                                                     </select>#}
+                                                    <p class="no_show">Capital: <span id="capital"></span></p>
+                                                    <p class="no_show">Dialing code: <span id="dialing-code"></span></p>
+                                                    <p class="no_show">Population: <span id="population"></span></p>
+                                                    <p class="no_show">Currency: <span id="currencies"></span></p>
+                                                    <p class="no_show">Region: <span id="region"></span></p>
+                                                    <p class="no_show">Sub region: <span id="sub-region"></span></p>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close2
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
                                         </button>
-                                        <button type="button" class="btn btn-primary">Send message2</button>
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +230,7 @@
 
                     </div>
                     <div class="row text-center">
-                        <span>2019 La femme1 - Official website</span>
+                        <span>2019 <a href="https://lafemme1.com">www.lafemme1.com </a>- Official website</span>
 
                     </div>
                 </div>
@@ -218,8 +245,8 @@
     <section class=" section-one">
         <div class="container text-center">
             <button type="button" class="button1">PRIVATE AFFAIR CLUB</button>
-            <p class=" text-center"><a href="https://lafemme1.com"> www.LaFemme1.com</a></p>
-            <p class=" text-center">Adults Only Please, You Must Be 18 Years or Older. This Site
+            <p class=" text-center h3"><a href="https://lafemme1.com"> www.LaFemme1.com</a></p>
+            <p class=" text-center h3">Adults Only Please, You Must Be 18 Years or Older. This Site
                 is For Adults ONLY</p>
         </div>
         <div class="row image-content">
@@ -228,7 +255,7 @@
             <img src="{{ asset('assets/image/LF05.jpg') }}" alt="" class="medium-pic">
             <img src="{{ asset('assets/image/LF06.jpg') }}" alt="" class="medium-pic deleteTablet">
         </div>
-        <h2 class="text-center h1 ">Welcome to La Femme</h2>
+        <h1 class="text-center h1 ">Welcome to La Femme</h1>
     </section>
 
     <section class="section-two ">
@@ -240,13 +267,13 @@
             <div class="row box-big-pic">
 
                 <div class="col-lg-3 text-center">
-                    <img src="{{ asset('assets/image/LF63.png') }}" alt="" class="big-pic m-0 p-0 ">
+                    <img src="{{ asset('assets/image/LF62.png') }}" alt="" class="big-pic ">
                 </div>
 
                 <div class="col-lg-6  ">
                     <div class="box-small-pic text-center row ">
 
-                        <img src="{{ asset('assets/image/LF08.jpg') }}" alt="" class="col-lg-4">
+                        <img src="{{ asset('assets/image/La Femme Immage 344.png') }}" alt="" class="col-lg-4">
                         <img src="{{ asset('assets/image/LF09.jpg') }}" alt="" class="col-lg-4">
                         <img src="{{ asset('assets/image/LF10.jpg') }}" alt="" class="col-lg-4">
 
@@ -263,99 +290,106 @@
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <img src="{{ asset('assets/image/LF62.png') }}" alt="" class="big-pic ">
+                    <img src="{{ asset('assets/image/LafemmeImage.png') }}" alt="" class="big-pic m-0 p-0 ">
+
                 </div>
 
             </div>
         </div>
     </section>
-
 
     <section class=" section-three ">
         <div class="text-center">
             <button type="button" class="button1">DISCOVER YOUR FANTASIES</button>
         </div>
-        <div class="">
-            <div class="row d-flex justify-content-start">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="secImageSmall">
-                    <img class="img-responsive" src="{{ asset('assets/image/LF15.jpg') }}">
-                </div>
 
-                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                    <p>La Femme is the place to meet men and women who are seeking for the Ideal Partner who
-                        knows the value of Discretion of an intelligent individual who wants to share his or
-                        her time with you. </p>
-
-                    <p> Soon you will be having fun at La Femme! To help you, we are giving you 200 Coins
-                        credits to get you started. These are credits for you to use to start communicating
-                        with others. </p>
-
-                    <p>At La Femme you will find thousands of people like yourself looking for discreet
-                        relationships of all kinds. Most relationship options you can find them here.
-                        Choose the one you desire most!
-
-                    </p>
-                    <p>Secret desires ignite the circuits of our highest potential to enjoy our lives.
-                        Life is too short, you should enjoy every moment of it. </p>
-                    <p>Through La Femme you’ll be connected to the type of relationship you looking for, meet and
-                        live your FANTASY; with DESIRE, PASSION and EXCITEMENT!
-                    </p>
-                </div>
+        <div class="row d-flex justify-content-start">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <img class="img-responsive" src="{{ asset('assets/image/LF66.png') }}">
             </div>
-        </div>
-    </section>
 
-    <section class=" section-four">
-        <div class="row section-right">
-            <img src="{{ asset('assets/image/LF61.jpg') }}" class="img-responsive background-section"
-                 alt="Responsive image">
-            <div class=" col-lg-3 ">
-                <img src="{{ asset('assets/image/LF65.png') }}" class="img-responsive image-section-left"
-                     alt="Responsive image">
-            </div>
-            <div class=" col-lg-6">
-                <p class="h4 ">La Femme
-                    membership is GREAT for your INTIMATE FANTASIES</p>
-                <p class="text-center">This is how is GREAT for you.</p>
-                <div class="row ">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <p>La Femme is the place to meet men and women who are seeking for the Ideal Partner who
+                    knows the value of Discretion of an intelligent individual who wants to share his or
+                    her time with you. </p>
 
-                    <div class="col-lg-6">
-                        <ul>
-                            <li> 1. Helps Keep Your Immune System Humming
-                            </li>
-                            "Sexually active people take fewer sick days"
-                            <li>2. Boosts Your Libido</li>
-                            Longing for a more lively sex life? "Having sex will make sex better and will improve your
-                            libido"
-                            <li>3. Improves Women's Bladder Control</li>
-                            <li>4. Lowers Your Blood Pressure</li>
-                            <li>5.Counts as Exercise</li>
-                            "Sex is a great form of exercise"
-                            <li>6.Lowers Heart Attack Risk</li>
-                            A good sex life is good for your heart. Beside being a great way to raise your heart rate,
-                            sex
-                            helps keep
-                            your estrogen and testosterone levels in balance.
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul>
-                            <li>7. Lessens Pain</li>
-                            Before you reach for an aspirin, try for an orgasm.
-                            <li>8. May Make Prostate Cancer Less Likely</li>
-                            Going for the gusto may help ward off prostate cancer.
-                            <li>9. Improve Sleep</li>
-                            You may nod off more quickly after sex and for good. reason
-                            <li>10. Eases Stress</li>
-                            Being close to your partner can soothe stress and anxiety.
-                        </ul>
-                    </div>
-                </div>
+                <p> Soon you will be having fun at La Femme! To help you, we are giving you 200 Coins
+                    credits to get you started. These are credits for you to use to start communicating
+                    with others. </p>
+
+                <p>At La Femme you will find thousands of people like yourself looking for discreet
+                    relationships of all kinds. Most relationship options you can find them here.
+                    Choose the one you desire most!
+
+                </p>
+                <p>Secret desires ignite the circuits of our highest potential to enjoy our lives.
+                    Life is too short, you should enjoy every moment of it. </p>
+                <p>Through La Femme you’ll be connected to the type of relationship you looking for, meet and
+                    live your FANTASY; with DESIRE, PASSION and EXCITEMENT!
+                </p>
             </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <img class="img-responsive" src="{{ asset('assets/image/LF15.jpg') }}">
+            </div>
+
 
         </div>
+
     </section>
 
+    <section class=" section-four-v4">
+       <div class="row">
+           <div class="col-lg-3 image-section-left-v4">
+               <img src="{{ asset('assets/image/LF65.png') }}" class="img-responsive"
+                    alt="Responsive image">
+           </div>
+           <div class="col-lg-9">
+               <div class="row section-up">
+                   <img src="{{ asset('assets/image/LF61.jpg') }}" class="img-responsive"
+                        alt="Responsive image">
+               </div>
+               <div class="row section-down">
+                   <p class="h3 ">La Femme membership is GREAT for your INTIMATE FANTASIES</p>
+                   <p class="text-center">This is how is GREAT for you.</p>
+                   <div class="row ">
+
+                       <div class="col-lg-6">
+                           <ul>
+                               <li> 1. Helps Keep Your Immune System Humming
+                               </li>
+                               "Sexually active people take fewer sick days"
+                               <li>2. Boosts Your Libido</li>
+                               Longing for a more lively sex life? "Having sex will make sex better and will improve your
+                               libido"
+                               <li>3. Improves Women's Bladder Control</li>
+                               <li>4. Lowers Your Blood Pressure</li>
+                               <li>5.Counts as Exercise</li>
+                               "Sex is a great form of exercise"
+                               <li>6.Lowers Heart Attack Risk</li>
+                               A good sex life is good for your heart. Beside being a great way to raise your heart rate,
+                               sex
+                               helps keep
+                               your estrogen and testosterone levels in balance.
+                           </ul>
+                       </div>
+                       <div class="col-lg-6">
+                           <ul>
+                               <li>7. Lessens Pain</li>
+                               Before you reach for an aspirin, try for an orgasm.
+                               <li>8. May Make Prostate Cancer Less Likely</li>
+                               Going for the gusto may help ward off prostate cancer.
+                               <li>9. Improve Sleep</li>
+                               You may nod off more quickly after sex and for good. reason
+                               <li>10. Eases Stress</li>
+                               Being close to your partner can soothe stress and anxiety.
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </section>
 
     <div class="text-center">
         <button type="button" class="button1">SAME-SEX RELATIONSHIPS</button>
