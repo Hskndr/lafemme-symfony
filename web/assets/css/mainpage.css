@@ -237,54 +237,6 @@ main section {
 }
 
 /* SECTION FOUR  */
-.section-right {
-    /*    background-image: url("../image/LF61.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;*/
-    margin: 5px;
-    position: relative;
-}
-
-.background-section {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-}
-
-.image-section-left {
-    height: 470px;
-    margin-left: -17px;
-}
-
-/*PROPOSE*/
-.section-four-v1 {
-    color: black;
-    font-weight: revert;
-}
-
-.section-four-v1 p, .section-four-v1 ul {
-    background-color: rgba(108, 248, 202, 0.3);
-    border-radius: 10px;
-    box-shadow: 0 0 15px #ddd;
-}
-
-.section-four-v2 img {
-    width: 100%;
-}
-
-.carousel-caption {
-    color: #0f0f0f;
-    margin-left: -600px;
-}
-
-.section-four-v2 h5 {
-    margin-bottom: 15px;
-
-}
 
 .section-four-v4 {
     background-color: black;
@@ -292,7 +244,6 @@ main section {
 
 .image-section-left-v4 {
     height: 535px;
-
 }
 
 .image-section-left-v4 img {
@@ -302,12 +253,14 @@ main section {
 
 .section-up {
     height: 165px;
+    width: 100%;
 }
 
 .section-down {
     height: 370px !important;
     background-image: url("../image/LF61.jpg");
     background-size: cover;
+    width: 100%;
 }
 
 .section-down p {

@@ -68,8 +68,8 @@
                         </a>
                     </div>
                     <div class="clearfix"></div>
-
                 </div>
+
                 {# FOLLOW BUTTONS #}
                 <div class="content-follow-button">
                     {% if app.user.id != user.id %}
@@ -120,7 +120,7 @@
 
                 <div class="row ">
                     <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">Member Since:</div>
-                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 ">'5 years Ago'</div>
+                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 "> {{ user.createdAt | long_time }}</div>
                 </div>
                 <div class="row ">
                     <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">Looking for:</div>

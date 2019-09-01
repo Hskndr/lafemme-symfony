@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6c0ac252-1782-4d10-9e1a-51b7ca0962d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Affiliate/affiliate_signin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Affiliate/affiliate_signin.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/MainPage/main-page.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/profile.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assets/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/mainpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/image/LF61.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/image/LF61.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +56,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -239,7 +240,14 @@
       <workItem from="1566769375256" duration="5399000" />
       <workItem from="1566904688416" duration="3269000" />
       <workItem from="1566950129952" duration="365000" />
-      <workItem from="1566988141716" duration="4284000" />
+      <workItem from="1566988141716" duration="4486000" />
+      <workItem from="1567030809638" duration="597000" />
+      <workItem from="1567076343349" duration="485000" />
+      <workItem from="1567101815440" duration="1462000" />
+      <workItem from="1567124990024" duration="172000" />
+      <workItem from="1567273049195" duration="432000" />
+      <workItem from="1567291524581" duration="1441000" />
+      <workItem from="1567336382702" duration="2303000" />
     </task>
     <task id="LOCAL-00001" summary="Add extras templates">
       <created>1564099251477</created>
