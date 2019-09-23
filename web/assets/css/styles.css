@@ -22,6 +22,20 @@ body {
     padding: 5px;
 }
 
+/* HEADER */
+#header {
+    position: sticky !important;
+    top: 0;
+    z-index: 999;
+}
+
+.header-femme {
+    height: 60px;
+    border: 1px solid white;
+    background-color: #fff;
+    color: #0f0f0f;
+}
+
 .navbar {
     margin-bottom: 0px;
 }
@@ -74,6 +88,7 @@ body {
     font-style: italic;
     font-weight: bold;
 }
+
 .user-item {
     padding: 15px;
     background-color: rgba(32, 21, 61, 0.728) !important;
@@ -85,7 +100,8 @@ body {
     margin-bottom: 3px;
     padding-top: 3px;
 }
-.publication-item hr{
+
+.publication-item hr {
     border-color: rgba(32, 21, 61, 0.728);
 }
 

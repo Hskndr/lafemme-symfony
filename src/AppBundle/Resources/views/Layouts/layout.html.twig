@@ -34,8 +34,14 @@
 
 <body>
 {# PUT LA FEMME HEADERS #}
-<header>
+<header id="header">
+    <div class="header-femme">
+        {#IMPORTANT PUT VARIABLE HEADERS#}
+        {% block header %}
 
+        {% endblock %}
+
+    </div>
     {# NAV BAR #}
 
     <nav class="navbar navbar-default" id="main-nav">

@@ -1,5 +1,8 @@
 {# HEREDA DE LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
+{% block header %}
+    <p>EDIT PROFILE</p>
+{% endblock %}
 {% block javascripts %}
     {{ parent() }}
     <script type="text/javascript" src="{{ asset('assets/js/custom/buttons-following.js') }}"></script>
