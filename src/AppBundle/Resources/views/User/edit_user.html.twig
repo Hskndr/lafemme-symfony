@@ -44,14 +44,15 @@
                     <div class="input-edit-profile col-lg-12 {% if app.user.gender == 'male' %} user-male {% elseif app.user.gender == 'female' %} user-female {% endif %}">
                         {{ form_row(form.relationmatch) }}
                     </div>
-
+                    <div>
+                        {{ form_row(form.age) }}
+                    </div>
                 </div>
 
 
             </div>
 
             <div class="col-xs-12 col-sm-12 col-lg-4 col-md-4 content-data-user backg-dark">
-
 
 
                 <div class="input-edit-profile col-lg-12">{{ form_row(form.name) }}</div>
@@ -63,7 +64,6 @@
                 <div class="input-edit-profile col-lg-12">{{ form_row(form.bodytype) }}</div>
                 <div class="input-edit-profile col-lg-12">{{ form_row(form.height) }}</div>
                 <div class="input-edit-profile col-lg-12">{{ form_row(form.weight) }}</div>
-
 
 
             </div>

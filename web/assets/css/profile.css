@@ -36,7 +36,7 @@
     background-color: #FFFFFF;
 }
 
-.input-edit-profile{
+.input-edit-profile {
     height: 75px;
 }
 
@@ -62,9 +62,11 @@
     width: 100px;
     margin: auto;
 }
-.content-follow-button{
+
+.content-follow-button {
     margin-bottom: 10px;
 }
+
 .user-title {
     text-align: center;
     padding: 5px;
