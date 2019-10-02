@@ -20,11 +20,26 @@
         <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
     {% endblock %}
 
-</head >
+</head>
 
 <body>
-
-
+<header class="header-outpage">
+    <div class="header-femme">
+        <div class="header-femme header-profile ">
+            <div class="header-profile-row-left">
+                <img src="{{ asset('assets/image/LF289.png') }}" class="rounded float-left">
+                <p class="text-logo"> Fantasies.......<br>Everybody has One!</p>
+            </div>
+            <div class="header-profile-row-center">
+                <h3 class="text-center"> Dating at Lafemme </h3>
+                <h4 class="text-center font-italic h6"> Private Affairs Club</h4>
+                <h4 class="text-center h6"> Private Affairs Club, our members find <br> Snazzy Men & Women</h4>
+            </div>
+            <div class="header-profile-row-right">
+            </div>
+        </div>
+    </div>
+</header>
 <main class="container-fluid content-out-pages">
 
 
@@ -80,7 +95,8 @@
     </div>
 
     <div class="row dating-content-button">
-        <p class="col-lg-6 col-md-6 col-sm-12 col-xs-12"> Sign Up.. Is FREE plus you get 200 free credits as a welcome bonus </p>
+        <p class="col-lg-6 col-md-6 col-sm-12 col-xs-12"> Sign Up.. Is FREE plus you get 200 free credits as a welcome
+            bonus </p>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left">
             <a href="{{ path('register') }}" type="button" class="btn btn-info">Click Here</a>
         </div>
@@ -89,7 +105,6 @@
 
 
 </main>
-
 
 
 </body>

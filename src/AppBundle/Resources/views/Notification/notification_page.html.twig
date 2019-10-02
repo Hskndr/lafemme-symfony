@@ -1,32 +1,48 @@
 {# HEREDA DE LAYOUT #}
 {% extends "AppBundle:Layouts:layout.html.twig" %}
+{% block header %}
+    <div class="header-femme header-profile ">
+        <div class="header-profile-row-left">
+            <img src="{{ asset('assets/image/LF289.png') }}" class="rounded float-left">
+            <p class="text-logo"> Fantasies.......<br>Everybody has One!</p>
+        </div>
+        <div class="header-profile-row-center">
+            <h3 class="text-center"> Notifications </h3>
+            <h4 class="text-center font-italic h6"> Private Affairs Club</h4>
+            <h4 class="text-center h6"> Private Affairs Club, our members find <br> Snazzy Men & Women</h4>
+        </div>
+        <div class="header-profile-row-right">
+        </div>
+    </div>
+{% endblock %}
 {% block content %}
     <div class="container-fluid">
         <div class="col-lg-12 box-default box-notifications">
             <h1 class="box-header"> Notifications</h1>
-                <div class="box-content">
-                    {% for notification in pagination %}
-                        <div class="col-lg-12 notification-item">
-                            <span class="glyphicon glyphicon-info-sign"></span>
-                            {#notu is: notification user#}
-                            {% set notu = notification.typeId|get_user %}
-                            {% if notification.type == "follow" %}
-                                <a href="{{ path("user_profile",{'nickname':notu.nick}) }}">
-                                    {{ notu.name }} {{ notu.surname }} - {{ notu.nick }}
-                                </a>
-                                is following you!
-                            {% endif %}
+            <div class="box-content">
+                {% for notification in pagination %}
+                    <div class="col-lg-12 notification-item">
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                        {#notu is: notification user#}
+                        {% set notu = notification.typeId|get_user %}
+                        {% if notification.type == "follow" %}
+                            <a href="{{ path("user_profile",{'nickname':notu.nick}) }}">
+                                {{ notu.name }} {{ notu.surname }} - {{ notu.nick }}
+                            </a>
+                            is following you!
+                        {% endif %}
 
-                            {% if notification.type == "like" %}
-                                <a href="{{ path("user_profile",{'nickname':notu.nick}) }}">
-                                    {{ notu.name }} {{ notu.surname }} - <span class="label label-info">{{ notu.nick }}</span>
-                                </a>
-                                likes your publication!
-                            {% endif %}
-                        </div>
-                    {% endfor %}
-                    <div class="clearfix"></div>
-                </div>
+                        {% if notification.type == "like" %}
+                            <a href="{{ path("user_profile",{'nickname':notu.nick}) }}">
+                                {{ notu.name }} {{ notu.surname }} - <span
+                                        class="label label-info">{{ notu.nick }}</span>
+                            </a>
+                            likes your publication!
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <div class="clearfix"></div>
+            </div>
         </div>
     </div>
 {% endblock %}
