@@ -419,7 +419,20 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+.wrapper{
+    display: flex;
+}
+.wrapper-item{
+    background-color: blue;
+}
 
+.menu-left{
+    width: 30%;
+    text-align: left;
+}
+.menu-right{
+    width: 70%;
+}
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /* RESPONSIVE */
 /*// Extra small devices (portrait phones, less than 576px)*/

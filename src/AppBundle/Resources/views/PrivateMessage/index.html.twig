@@ -21,18 +21,15 @@
 {% endblock %}
 {% block content %}
     <div class="col-lg-12 box-default">
+
         <h1 class="box-header">
             Mail Box
         </h1>
-        {#  BUTTON SENT BOX #}
-        <div class="text-right">
-            <a href="{{ path('private_message_sended') }}" type="button" class="btn btn-default">Sent Messages</a>
 
-        </div>
         <br>
 
         {#BUTTON NEW MESSAGES#}
-        <div >
+        <div>
             <div class="dropdown new-publication-button">
                 <button class="btn btn-default dropdown-toggle
                                 {# HSKNDR: DISABLE BUTTON IF USER DOES NOT HAVE CREDITS IMPROVE#}
@@ -69,79 +66,99 @@
          </div>#}
 
         {#        HSKNDR: QUICK WAY, REMOVE AND DEVELOP A NEW PAGE#}
-        <div class="">
-            <h4>Inbox</h4>
-            <hr>
-            <div class="box-content box-message">
+        <div class="wrapper">
 
-                {% for message in pagination %}
-                    <div class="col-lg-12 publication-item ">
-                        <div class="avatar">
-                            {# AVATAR #}
-                            {% if message.emitter.image == null %}
-                                {# USER DEFAULT AVATAR #}
-                                {% if message.emitter.gender =='male' %}
-                                    <img src="{{ asset('assets/images/default.png') }}" alt=""
-                                         class="img-rounded h-100 w-100">
-                                {% else %}
-                                    <img src="{{ asset('assets/images/defaultF.png') }}" alt=""
-                                         class="img-rounded h-100 w-100">
+            <div class="wrapper-item menu-left">
+                {#  BUTTON SENT BOX #}
+                <div class="text-right">
+                    <ul>
+                        <li>
+                            <a href="{{ path('private_message_sended') }}" type="button" class="btn btn-default">Sent
+                                Messages</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('private_message_index') }}" type="button" class="btn btn-default">Inbox
+                                Messages</a>
+                        </li>
+                    </ul>
 
-                                {% endif %}
-                            {% else %}
-                                <img src="{{ asset('uploads/user/'~message.emitter.image) }}" alt=""
-                                     class="img-rounded h-100 w-100">
-                            {% endif %}
-                        </div>
-                        <div class="publication-item-content">
-                            <p>
-                                <a class="pub-name-link"
-                                   href="{{ path('user_profile',{'nickname':message.emitter.nick}) }}">
-                                    {{ message.emitter.name }} {{ message.emitter.surname }}
-                                </a>
-                                -
-                                {{ message.emitter.nick }}
-                                <span class="pub-date">
+
+                </div>
+            </div>
+            <div class="wrapper-item menu-right">
+                <div class="">
+                    <div class="box-content box-message">
+
+                        {% for message in pagination %}
+                            <div class="col-lg-12 publication-item ">
+                                <div class="avatar">
+                                    {# AVATAR #}
+                                    {% if message.emitter.image == null %}
+                                        {# USER DEFAULT AVATAR #}
+                                        {% if message.emitter.gender =='male' %}
+                                            <img src="{{ asset('assets/images/default.png') }}" alt=""
+                                                 class="img-rounded h-100 w-100">
+                                        {% else %}
+                                            <img src="{{ asset('assets/images/defaultF.png') }}" alt=""
+                                                 class="img-rounded h-100 w-100">
+
+                                        {% endif %}
+                                    {% else %}
+                                        <img src="{{ asset('uploads/user/'~message.emitter.image) }}" alt=""
+                                             class="img-rounded h-100 w-100">
+                                    {% endif %}
+                                </div>
+                                <div class="publication-item-content">
+                                    <p>
+                                        <a class="pub-name-link"
+                                           href="{{ path('user_profile',{'nickname':message.emitter.nick}) }}">
+                                            {{ message.emitter.name }} {{ message.emitter.surname }}
+                                        </a>
+                                        -
+                                        {{ message.emitter.nick }}
+                                        <span class="pub-date">
                                    - {{ message.createdAt | long_time }}
                                 </span>
-                            </p>
-                            <p>
-                                {{ message.message }}
-                            </p>
+                                    </p>
+                                    <p>
+                                        {{ message.message }}
+                                    </p>
 
 
-                            {% if (message.file is defined) and (message.file != null) %}
-                                <a href="{{ asset('uploads/messages/documents/'~message.file) }}"
-                                   class="btn-doc glyphicon glyphicon-save"
-                                   aria-hidden="true" target="_blank"></a>
-                            {% endif %}
+                                    {% if (message.file is defined) and (message.file != null) %}
+                                        <a href="{{ asset('uploads/messages/documents/'~message.file) }}"
+                                           class="btn-doc glyphicon glyphicon-save"
+                                           aria-hidden="true" target="_blank"></a>
+                                    {% endif %}
 
-                            {% if (message.image is defined) and (message.image != null) %}
-                                <a href="{{ asset('uploads/messages/images/'~message.image) }}"
-                                   class="btn-doc glyphicon glyphicon-picture"
-                                   aria-hidden="true" target="_blank"></a>
+                                    {% if (message.image is defined) and (message.image != null) %}
+                                        <a href="{{ asset('uploads/messages/images/'~message.image) }}"
+                                           class="btn-doc glyphicon glyphicon-picture"
+                                           aria-hidden="true" target="_blank"></a>
 
-                                {# HSKNDR: PUT ACTION LIKE PUBLICATIONS #}
-                                <span class="btn-img glyphicon glyphicon-picture" aria-hidden="true"></span>
-                                <div class="clearfix"></div>
-                                <div class="pub-image">
-                                    <img src="{{ asset('uploads/messages/images/'~message.image) }}"/>
+                                        {# HSKNDR: PUT ACTION LIKE PUBLICATIONS #}
+                                        <span class="btn-img glyphicon glyphicon-picture" aria-hidden="true"></span>
+                                        <div class="clearfix"></div>
+                                        <div class="pub-image">
+                                            <img src="{{ asset('uploads/messages/images/'~message.image) }}"/>
+                                        </div>
+
+                                    {% endif %}
+
                                 </div>
+                                <div class="clearfix"></div>
+                                <hr>
+                            </div>
+                        {% endfor %}
 
-                            {% endif %}
-
+                        <div class="navigation text-center">
+                            {{ knp_pagination_render(pagination) }}
                         </div>
                         <div class="clearfix"></div>
-                        <hr>
                     </div>
-                {% endfor %}
-
-                <div class="navigation text-center">
-                    {{ knp_pagination_render(pagination) }}
+                    <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
             </div>
-            <div class="clearfix"></div>
         </div>
 
     </div>
